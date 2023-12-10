@@ -302,6 +302,7 @@ body::-webkit-scrollbar-thumb {
   -webkit-backdrop-filter: blur(12.5px);
           backdrop-filter: blur(12.5px);
   transition: all 0.3s ease-in-out;
+  overflow-y: auto;
 }
 @media screen and (max-width: 999px) {
   .burger__content {

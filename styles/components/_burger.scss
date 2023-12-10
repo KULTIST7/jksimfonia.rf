@@ -25,6 +25,7 @@
         background-color: #FFFFFF99;
         backdrop-filter: blur(12.5px);
         transition: all .3s ease-in-out;
+        overflow-y: auto;
 
         @media #{$tablet} {
             padding-left: 25px;
