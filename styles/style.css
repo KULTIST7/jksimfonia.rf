@@ -283,7 +283,6 @@ body::-webkit-scrollbar-thumb {
   right: -100%;
   z-index: 100;
   transition: all 0.3s ease-in-out;
-  overflow-y: auto;
 }
 .burger__space {
   position: absolute;
@@ -302,7 +301,7 @@ body::-webkit-scrollbar-thumb {
   -webkit-backdrop-filter: blur(12.5px);
           backdrop-filter: blur(12.5px);
   transition: all 0.3s ease-in-out;
-  overflow-y: auto;
+  overflow: auto;
 }
 @media screen and (max-width: 999px) {
   .burger__content {

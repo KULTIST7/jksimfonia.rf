@@ -6,7 +6,6 @@
     right: -100%;
     z-index: 100;
     transition: all .3s ease-in-out;
-    overflow-y: auto;
 
     &__space {
         position: absolute;
@@ -25,7 +24,7 @@
         background-color: #FFFFFF99;
         backdrop-filter: blur(12.5px);
         transition: all .3s ease-in-out;
-        overflow-y: auto;
+        overflow: auto;
 
         @media #{$tablet} {
             padding-left: 25px;
