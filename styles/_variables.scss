@@ -1,0 +1,119 @@
+// Color system
+
+$color-white:               #fff !default;
+$color-black:               #000 !default;
+$color-blue:                #5C90AB !default;
+$color-light-blue:          #45809F !default;
+$color-dark-blue:           #4A7D98 !default;
+$color-gray:                #44565D !default;
+$color-light-gray:          #898989 !default;
+$color-dark-gray:           #554F4F !default;
+
+
+// Fonts
+
+$main-font:          'Bebas Neue', Arial, sans-serif !default;
+$second-font:          'Gilroy', Arial, sans-serif !default;
+
+$font-size-base:            16px !default;
+$font-size-lg:              ($font-size-base * 1.25) !default;
+$font-size-sm:              ($font-size-base * .875) !default;
+
+$font-weight-light:         300 !default;
+$font-weight-normal:        400 !default;
+$font-weight-bold:          700 !default;
+
+$font-weight-base:          $font-weight-normal !default;
+$line-height-base:          1.2em !default;
+
+// Links
+
+$link-color:                $color-blue !default;
+$link-decoration:           none !default;
+$link-hover-color:          $color-black !default;
+$link-hover-decoration:     none !default;
+
+
+// Page
+
+$body-bg:                   $color-white !default;
+$body-color:                $color-black !default;
+$transition1:      all 0.3s linear;
+
+// responsive width
+$desktop: 'screen and (max-width: 1279px)';
+$tablet: 'screen and (max-width: 999px)';
+$phone: 'screen and (max-width: 749px)';
+
+$only4kDesktop: 'screen and (min-width: 2000px)';
+$onlyWideDesktop: 'screen and (min-width: 1280px)';
+$onlyDesktop: 'screen and (min-width: 1000px) and (max-width: 1300px)';
+$onlySmallDesktop: 'screen and (min-width: 1000px) and (max-width: 1500px)';
+$onlyTablet: 'screen and (min-width: 750px) and (max-width: 999px)';
+$onlyXlPhone: 'screen and (min-width: 385px) and (max-width: 414px)';
+$onlyPhoneToTablet: 'screen and (min-width: 415px) and (max-width: 748px)';
+$onlyPhone: 'screen and (max-width: 749px)';
+$onlySmallPhone:'screen and (max-width: 414px)';
+$onlyTablet_and_Desktop:'screen and (min-width: 750px) and (max-width: 1279px)';
+
+$noPhone: 'screen and (min-width: 750px)';
+$noDesktop: '(max-width: 999px)';
+
+/*
+@media #{$desktop} {
+      font-size: 23px;
+  }
+*/
+// responsive height
+$onlySmallHeight: 'screen and (max-height: 700px)';
+
+// Grid
+$grid-columns: 12 !default; // Set number of columns in the grid
+
+
+$screen-xs-min:                 0;
+$screen-sm-min:                 576px !default;
+$screen-md-min:                 768px !default;
+$screen-lg-min:                 992px !default;
+$screen-xl-min:                 1250px !default;
+
+
+$screen-xs-max:              ($screen-sm-min - 0.1) !default;
+$screen-sm-max:              ($screen-md-min - 0.1) !default;
+$screen-md-max:              ($screen-lg-min - 0.1) !default;
+$screen-lg-max:              ($screen-xl-min - 0.1) !default;
+
+
+$container-sm:               530px;
+$container-md:               720px;
+$container-lg:               970px;
+$container-xl:               1220px;
+
+
+$gutter: 0 !default; // Set gutter size
+
+$content-well-max-width: "none" !default; // Set the max-width of the content well
+
+
+// Breakpoints
+// Create breakpoint range statements to be used in media queries
+$breakpoint-xs-only: "only screen and (max-width: #{$screen-xs-max})"; // 0 -> xs-max range
+
+$breakpoint-sm-up: "only screen and (min-width: #{$screen-sm-min})"; // sm-start -> up range
+
+$breakpoint-sm-only: "only screen and (min-width: #{$screen-sm-min}) and (max-width: #{$screen-sm-max})"; // sm-start -> sm-max range
+
+$breakpoint-md-up: "only screen and (min-width: #{$screen-md-min})"; // md-start -> up range
+
+$breakpoint-md-only: "only screen and (min-width: #{$screen-md-min}) and (max-width: #{$screen-md-max})"; // md-start -> md-max range
+
+$breakpoint-lg-up: "only screen and (min-width: #{$screen-lg-min})"; // lg-start -> up range
+
+$breakpoint-lg-only: "only screen and (min-width: #{$screen-lg-min}) and (max-width: #{$screen-lg-max})"; // lg-start -> lg-max range
+
+$breakpoint-xl-up: "only screen and (min-width: #{$screen-xl-min})"; // xl-start -> up range
+
+$breakpoints-all: ($breakpoint-xs-only, $breakpoint-sm-up, $breakpoint-sm-only, $breakpoint-md-up, $breakpoint-md-only, $breakpoint-lg-up, $breakpoint-lg-only, $breakpoint-xl-up);
+$breakpoint-ups: ($breakpoint-sm-up, $breakpoint-md-up, $breakpoint-lg-up, $breakpoint-xl-up);
+$breakpoint-all-prefixes: ("xs", "xs-only", "sm", "sm-only", "md", "md-only", "lg", "lg-only", "xl");
+$breakpoint-up-prefixes: ("xs", "sm", "md", "lg", "xl");

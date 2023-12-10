@@ -1,0 +1,37 @@
+.section-title {
+    position: relative;
+    font-family: $main-font;
+    font-size: 80px;
+    font-weight: $font-weight-base;
+    line-height: 80px;
+    color: $color-light-gray;
+    width: max-content;
+    margin-left: 163px;
+    z-index: 1;
+
+    @media screen and (max-width: 1534px) {
+        margin-left: 50px;
+    }
+
+    @media screen and (max-width: 1400px) {
+        font-size: 70px;
+    }
+
+    @media screen and (max-width: 1225px) {
+        font-size: 60px !important;
+        line-height: 60px !important;
+    }
+    
+    @media screen and (max-width: 1168px) {
+        margin-left: 10px;
+    }
+
+    @media #{$phone} {
+        font-size: 40px !important;
+        line-height: 40px !important;
+    }
+
+    span {
+        color: $color-blue;
+    }
+}

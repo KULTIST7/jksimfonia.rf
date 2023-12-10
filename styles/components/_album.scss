@@ -1,0 +1,203 @@
+.album {
+    margin-top: 94px;
+
+    @media #{$tablet} {
+        height: 685px;
+    }
+    
+    &__title {
+        line-height: 100px;
+
+        @media #{$phone} {
+            max-width: 200px;
+        }
+    }
+
+    &__form {
+        position: relative;
+        display: flex;
+        background: url(../imgs/album-bg.png) no-repeat;
+        background-size: cover;
+        height: 387px;
+
+        @media #{$tablet} {
+            height: 273px;
+        }
+        
+        &__content {
+            display: flex;
+            flex-direction: column;
+            margin-top: auto;
+            margin-left: 45%;
+            z-index: 2;
+
+            @media screen and (max-width: 1500px) {
+                margin: 0 auto;
+                margin-top: auto;
+            }
+
+            @media #{$tablet} {
+                transform: translateY(calc(100% + 52px));
+            }
+
+            @media screen and (max-width: 513px) {
+                width: 100%;
+                margin-left: 13px;
+                margin-right: 13px;
+            }
+        }
+
+        &__button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: $main-font;
+            font-size: 20px;
+            font-weight: $font-weight-base;
+            color: $color-white;
+            background-color: #5F9FC0;
+            width: 349px;
+            padding: 18px 0;
+            border: none;
+            border-radius: 31px;
+            box-shadow: 0px 0px 25px 0px #00000040;
+            z-index: 1;
+            margin-top: 3px;
+            margin-bottom: 20px;
+
+            @media #{$tablet} {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            svg {
+                margin-left: 10px;
+            }
+        }
+
+        &__warning {
+            position: absolute;
+            font-family: $second-font;
+            font-size: 18px;
+            font-weight: $font-weight-base;
+            color: #B7BECD;
+            bottom: -25px;
+            z-index: 1;
+
+            @media screen and (max-width: 1046px) {
+                bottom: -45px;
+            }
+            
+            @media #{$tablet} {
+                font-size: $font-size-base;
+                text-align: center;
+                bottom: -25px;
+            }
+
+            @media screen and (max-width: 381px) {
+                bottom: -35px;
+            }
+        }
+    }
+
+    &__input {
+        font-family: $main-font;
+        font-size: 20px;
+        font-weight: $font-weight-base;
+        width: 460px;
+        height: max-content;
+        background-color: #FFFFFF99;
+        color: $color-gray;
+        backdrop-filter: blur(2px);
+        padding: 18px 0 18px 27px;
+        border: none;
+        border-radius: 31px;
+        box-shadow: 0px 0px 25px 0px #00000040;
+        margin-bottom: 10px;
+        z-index: 1;
+        
+        @media screen and (max-width: 513px) {
+            width: calc(100% - 27px);
+        }
+
+        &::placeholder {
+            color: $color-gray;
+        }
+    }
+
+    &__desktop {
+        @media #{$tablet} {
+            display: none;
+        }
+    }
+
+    &__mobile {
+        display: none;
+
+        @media #{$tablet} {
+            display: block;
+        }
+    }
+
+    &__book {
+        position: absolute;
+        left: 56px;
+        pointer-events: none;
+        z-index: 1;
+
+        @media screen and (max-width: 1500px) {
+            height: 550px;
+            left: -75px;
+        }
+
+        @media #{$desktop} {
+            height: 500px;
+        }
+    
+        @media #{$tablet} {
+            height: auto;
+            left: calc(50% - 187.5px);
+            bottom: -112px;
+        }
+    }
+
+    &__house {
+        position: absolute;
+        height: 583px;
+        right: 102px;
+        bottom: 0;
+        pointer-events: none;
+
+        @media screen and (max-width: 1500px) {
+            right: 0;
+        }
+
+        @media #{$desktop} {
+            height: 550px;
+        }
+
+        @media #{$tablet} {
+            height: auto;
+        }
+    }
+
+    &__leaves {
+        height: 529px;
+        right: 0;
+
+        @media #{$tablet} {
+            height: auto;
+        }
+
+        &, &-bg {
+            position: absolute;
+            bottom: 0;
+            pointer-events: none;
+        }
+
+        &-bg {
+            height: 318px;
+            right: 0;
+        }
+    }
+}

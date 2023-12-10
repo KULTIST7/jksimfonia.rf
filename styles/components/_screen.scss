@@ -1,0 +1,239 @@
+.screen {
+    position: relative;
+    display: flex;
+    height: 1280px;
+    background: url(../imgs/screen-bg.png) no-repeat;
+    background-size: cover;
+    overflow: hidden;
+
+    @media #{$desktop} {
+        height: 1000px;
+    }
+
+    @media #{$tablet} {
+        height: 600px;
+    }
+
+    @media #{$phone} {
+        height: 550px;
+    }
+
+    &__logo {
+        position: absolute;
+        top: 40px;
+        left: 163px;
+        z-index: 1;
+        pointer-events: none;
+
+        @media screen and (max-width: 1288px) {
+            left: 50px;
+        }
+
+        @media #{$tablet} {
+            display: none;
+        }
+    }
+
+    &__title {
+        font-family: $main-font;
+        font-size: 90px;
+        font-weight: $font-weight-base;
+        line-height: 90px;
+        color: $color-white;
+        margin-top: 350px;
+        margin-left: 163px;
+        z-index: 1;
+
+        @media #{$desktop} {
+            margin-top: 300px;
+            margin-left: 100px;
+        }
+
+        @media screen and (max-width: 1150px) {
+            margin-top: 250px;
+            margin-left: 50px;
+        }
+        
+        @media #{$tablet} {
+            font-size: 75px;
+            line-height: 75px;
+            margin-top: 84px;
+            margin-left: 13px;
+        }
+
+        @media #{$phone} {
+            font-size: 60px;
+            line-height: 60px;
+        }
+
+        @media screen and (max-width: 600px) {
+            font-size: 50px;
+            line-height: 50px;
+        }
+    }
+
+    &__desktop {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        
+        @media #{$tablet} {
+            display: none;
+        }
+    }
+
+    &__mobile {
+        position: absolute;
+        display: none;
+        width: 100%;
+        height: 100%;
+        
+        @media #{$tablet} {
+            display: block;
+        }
+    }
+
+    &__cloud {
+        &-top, &-middle, &-bottom {
+            position: absolute;
+            width: 100%;
+            pointer-events: none;
+        }
+
+        &-middle {
+            bottom: -475px;
+            z-index: 1;
+
+            @media screen and (max-width: 1800px) {
+                bottom: -400px;
+            }
+
+            @media screen and (max-width: 1660px) {
+                bottom: -350px;
+            }
+
+            @media #{$desktop} {
+                bottom: -275px;
+            }
+
+            @media screen and (max-width: 1150px) {
+                bottom: -230px;
+            }
+
+            @media #{$tablet} {
+                bottom: -400px;
+            }
+
+            @media screen and (max-width: 900px) {
+                bottom: -350px;
+            }
+
+            @media screen and (max-width: 800px) {
+                bottom: -300px;
+            }
+
+            @media #{$phone} {
+                bottom: -275px;
+            }
+            
+            @media screen and (max-width: 650px) {
+                bottom: -225px;
+            }
+
+            @media screen and (max-width: 550px) {
+                bottom: -175px;
+            }
+
+            @media screen and (max-width: 450px) {
+                bottom: -150px;
+            }
+        }
+
+        &-bottom {
+            left: -375px;
+            bottom: -200px;
+
+            @media screen and (max-width: 1800px) {
+                bottom: -150px;
+            }
+
+            @media screen and (max-width: 1660px) {
+                bottom: -100px;
+            }
+
+            @media #{$desktop} {
+                bottom: 0;
+            }
+        }
+    }
+
+    &__house {
+        position: absolute;
+        right: 136px;
+        bottom: 0;
+        pointer-events: none;
+
+        @media screen and (max-width: 1800px) {
+            right: 0;
+        }
+
+        @media screen and (max-width: 1660px) {
+            right: -100px;
+        }
+
+        @media #{$desktop} {
+            height: 800px;
+            right: 0;
+        }
+
+        @media #{$tablet} {
+            height: auto;
+        }
+    }
+
+    &__light {
+        position: absolute;
+        right: 0;
+        pointer-events: none;
+
+        @media screen and (max-width: 1800px) {
+            right: -136px;
+        }
+
+        @media screen and (max-width: 1660px) {
+            right: -236px;
+        }
+
+        @media #{$desktop} {
+            top: 50px;
+            height: 900px;
+            right: -175px;
+        }
+
+        @media #{$tablet} {
+            height: 345px;
+            right: 0;
+        }
+    }
+
+    &__leaves {
+        @media #{$desktop} {
+            height: 600px;
+        }
+
+        &, &-bg {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            pointer-events: none;
+
+
+        }
+
+        &-bg {
+            @media #{$desktop} {
+                height: 400px;
+            }
+        }
+    }
+}

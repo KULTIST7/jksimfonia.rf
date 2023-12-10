@@ -1,0 +1,206 @@
+.scheme {
+    display: flex;
+    flex-direction: column;
+    margin-top: 57px;
+
+    &__title {
+        @media #{$phone} {
+            margin-bottom: 80px;
+        }
+    }
+
+    &__wrapper {
+        position: relative;
+        display: flex;
+        height: 652px;
+
+        @media #{$desktop} {
+            height: max-content;
+        }
+
+        @media #{$phone} {
+            overflow: hidden;
+        }
+    }
+
+    &__bg {
+        position: absolute;
+        margin-top: 11px;
+        margin-left: 230px;
+        pointer-events: none;
+
+        @media screen and (max-width: 1700px) {
+            margin-left: 80px;
+        }
+
+        @media screen and (max-width: 1400px) {
+            height: 600px;
+        }
+
+        @media screen and (max-width: 1330px) {
+            height: 500px;
+        }
+
+        @media screen and (max-width: 1100px) {
+            height: 400px;
+        }
+
+        @media #{$tablet} {
+            margin-left: 0;
+            width: 100%;
+            height: auto;
+        }
+
+        @media #{$phone} {
+            left: 12%;
+            width: 560px;
+        }
+
+        @media screen and (max-width: 630px) {
+            left: 5%;
+        }
+
+        @media screen and (max-width: 570px) {
+            left: 0;
+        }
+
+        @media screen and (max-width: 480px) {
+            left: -10%;
+        }
+    }
+
+    &__compass {
+        position: absolute;
+        bottom: 188px;
+        left: 163px;
+
+        @media screen and (max-width: 1700px) {
+            bottom: 80px;
+        }
+
+        @media #{$desktop} {
+            bottom: 50px;
+        }
+
+        @media #{$tablet} {
+            top: 0;
+            left: auto;
+            right: 25px;
+            bottom: auto;
+        }
+
+        @media #{$phone} {
+            right: 16px;
+        }
+    }
+    
+    &__content {
+        display: flex;
+        flex-direction: column;
+        height: 650px;
+        max-width: 615px;
+        border: 1px solid #D9D9D9;
+        border-radius: 53px;
+        background-color: #FFFFFF99;
+        margin-left: auto;
+        margin-right: 10%;
+        z-index: 1;
+        transform: translateY(-70px);
+
+        @media screen and (max-width: 1700px) {
+            margin-right: 80px;
+        }
+
+        @media screen and (max-width: 1500px) {
+            height: 550px;
+        }
+        
+        @media #{$desktop} {
+            height: 610px;
+            max-width: 400px;
+        }
+
+        @media #{$tablet} {
+            max-width: 100%;
+            margin: 0 auto;
+            margin-top: 700px;
+        }
+
+        @media screen and (max-width: 900px) {
+            margin-top: 650px;
+        }
+
+        @media screen and (max-width: 800px) {
+            margin-top: 450px;
+        }
+
+        @media #{$phone} {
+            border-radius: 30px;
+            margin-top: 400px;
+        }
+
+        @media screen and (max-width: 600px) {
+            height: 510px;
+            margin: 0 13px;
+            margin-top: 400px;
+        }
+    }
+
+    &__element {
+        display: flex;
+        height: max-content;
+        margin-top: 47px;
+        margin-left: 36px;
+
+        @media screen and (max-width: 1500px) {
+            margin-top: 27px;
+            margin-left: 16px;
+        }
+
+        @media #{$phone} {
+            margin-top: 5px;
+            margin-left: 12px;
+        }
+
+        &__icon {
+            margin-right: 6px;
+        }
+
+        &__wrapper {
+            margin-top: 16px;
+        }
+
+        &__title {
+            font-family: $main-font;
+            font-size: 25px;
+            font-weight: $font-weight-base;
+            line-height: 25px;
+            color: $color-light-gray;
+        }
+
+        &__text {
+            font-family: $second-font;
+            font-size: $font-size-base;
+            font-weight: $font-weight-base;
+            line-height: 19px;
+            text-transform: lowercase;
+            color: $color-dark-gray;
+            max-width: 456px;
+            margin-right: 60px;
+
+            @media screen and (max-width: 1500px) {
+                margin-right: 0;
+            }
+
+            @media #{$desktop} {
+                font-size: 14px;
+                margin-right: 20px;
+            }
+
+            @media #{$phone} {
+                margin-left: -30px;
+                margin-right: 0;
+            }
+        }
+    }
+}

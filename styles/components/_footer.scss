@@ -1,0 +1,139 @@
+.footer {
+    background-color: #F6F6F6;
+    margin-top: 98px;
+    padding-top: 36px;
+
+    @media #{$tablet} {
+        margin-top: 75px;
+    }
+
+    &__wrapper {
+        position: relative;
+        width: 83%;
+        margin: 0 auto;
+
+        @media screen and (max-width: 1168px) {
+            width: calc(100% - 10px);
+            margin-left: 10px;
+        }
+
+        &>div {
+            display: flex;
+            
+            @media screen and (max-width: 1600px) {
+                flex-direction: column;
+                margin-left: 3px;
+            }
+
+            &>div {
+                @media screen and (max-width: 1168px) {
+                    margin-right: 13px;
+                }
+            }
+        }
+    }
+
+    &__title {
+        margin-left: 0;
+    }
+
+    &__img {
+        display: flex;
+        height: auto;
+        max-width: 100%;
+        border-radius: 20px;
+        margin-bottom: 43px;
+        pointer-events: none;
+
+        @media #{$phone} {
+            margin-bottom: 37px;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        margin-left: 50px;
+
+        @media #{$phone} {
+            margin-left: 0;
+        }
+    }
+
+    &__tel-box {
+        display: flex;
+        margin-top: 40px;
+    }
+
+    &__text {
+        font-family: $main-font;
+        font-size: 25px;
+        font-weight: $font-weight-light;
+        line-height: 25px;
+        color: $color-black;
+        margin-bottom: 20px;
+        
+        b {
+            font-weight: $font-weight-bold;
+
+            @media screen and (max-width: 840px) {
+                color: $color-gray;
+            }
+        }
+
+        span {
+            color: $color-light-blue;
+        }
+    }
+
+    &__call-button {
+        display: flex;
+        align-items: center;
+        font-family: $main-font;
+        font-size: 20px;
+        font-weight: $font-weight-base;
+        text-decoration: none;
+        color: $color-white;
+        background-color: $color-gray;
+        height: 50px;
+        padding: 0 35px;
+        padding-top: 2px;
+        border-radius: 31px;
+        margin-left: 18px;
+    }
+
+    &__socials {
+        margin-top: 40px;
+        margin-bottom: 20px;
+
+        &>div {
+            display: flex;
+        }
+
+        &__element {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #C6CBCE33;
+            width: 48px;
+            height: 48px;
+            border-radius: 40px;
+            margin-right: 9px;
+        }
+    }
+
+    &__logo {
+        position: absolute;
+        right: 0;
+        bottom: 10px;
+
+        @media screen and (max-width: 1168px) {
+            right: 13px;
+            bottom: 10px;
+        }
+
+        @media #{$phone} {
+            bottom: 58px;
+        }
+    }
+}

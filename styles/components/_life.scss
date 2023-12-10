@@ -1,0 +1,50 @@
+.life {
+    margin-top: 76px;
+
+    @media #{$tablet} {
+        margin-top: 0;
+    }
+
+    &__title {
+        margin-bottom: 33px;
+    }
+
+    &__swiper {
+
+        &:before,
+        &:after {
+            content: '';
+            position: absolute;
+            height: 100%;
+            width: 300px;
+            top: 0;
+            z-index: 10;
+            pointer-events: none;
+
+            @media #{$tablet} {
+                width: 200px;
+            }
+
+            @media #{$phone} {
+                width: 150px;
+            }
+        }
+
+        &:before {
+            background: linear-gradient(90deg, rgb(255, 255, 255), rgba(255, 255, 255, 0));
+            left: 0;
+        }
+
+        &:after {
+            background: linear-gradient(-90deg, rgb(255, 255, 255), rgba(255, 255, 255, 0));
+            right: 0;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+        }
+    }
+}
+
+
