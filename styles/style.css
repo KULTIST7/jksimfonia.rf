@@ -283,6 +283,7 @@ body::-webkit-scrollbar-thumb {
   right: -100%;
   z-index: 100;
   transition: all 0.3s ease-in-out;
+  overflow-y: auto;
 }
 .burger__space {
   position: absolute;
