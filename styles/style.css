@@ -279,7 +279,7 @@ body::-webkit-scrollbar-thumb {
   position: fixed;
   display: flex;
   width: 100%;
-  height: 100%;
+  height: 100dvh;
   right: -100%;
   z-index: 100;
   transition: all 0.3s ease-in-out;
@@ -365,6 +365,10 @@ body::-webkit-scrollbar-thumb {
 }
 .burger-open, .burger-open > .burger__content {
   right: 0;
+}
+
+.body-noscroll {
+  overflow-y: hidden;
 }
 
 .screen {

@@ -1,7 +1,7 @@
 let rellax = new Rellax('.parallax');
 
 let swiper = new Swiper('.life__swiper', {
-    slidesPerView: 2.,
+    slidesPerView: 2,
     spaceBetween: 10,
     centerInsufficientSlides: true,
 
@@ -57,14 +57,17 @@ $(document).ready(function() {
 
     $('.header__burger-button').on('click', () => {
         $('.burger').addClass('burger-open');
+        $('body').addClass('body-noscroll');
     });
 
     $('.burger__close-button').on('click', () => {
         $('.burger').removeClass('burger-open');
+        $('body').removeClass('body-noscroll');
     });
 
     $('.burger__space').on('click', () => {
         $('.burger').removeClass('burger-open');
+        $('body').removeClass('body-noscroll');
     });
 
     Fancybox.bind("[data-fancybox]");
