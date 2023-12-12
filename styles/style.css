@@ -185,7 +185,6 @@ body::-webkit-scrollbar-thumb {
 @media screen and (max-width: 999px) {
   .header__logo {
     display: flex;
-    height: 30px;
   }
 }
 .header__tel {
@@ -405,6 +404,12 @@ body::-webkit-scrollbar-thumb {
 @media screen and (max-width: 1288px) {
   .screen__logo {
     left: 50px;
+  }
+}
+@media screen and (max-width: 1176px) {
+  .screen__logo {
+    height: 65px;
+    left: 25px;
   }
 }
 @media screen and (max-width: 999px) {

@@ -29,6 +29,11 @@
             left: 50px;
         }
 
+        @media screen and (max-width: 1176px) {
+            height: 65px;
+            left: 25px;
+        }
+
         @media #{$tablet} {
             display: none;
         }
