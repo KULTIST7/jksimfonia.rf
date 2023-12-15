@@ -1,0 +1,38 @@
+/*
+@media screen and (max-width: 1279px) {
+      font-size: 23px;
+  }
+*/
+.header__logo {
+  display: flex !important;
+  margin-right: 47px;
+}
+@media screen and (max-width: 999px) {
+  .header__logo {
+    margin-right: 0;
+  }
+}
+.header__menu {
+  padding-left: 29px;
+  padding-right: 16px;
+}
+.header__socials__element:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 999px) {
+  .header__button {
+    display: flex;
+    background-color: transparent;
+    color: #44565D;
+    padding: 0;
+    margin: 0;
+  }
+}
+@media screen and (max-width: 749px) {
+  .header__button {
+    position: absolute;
+    content: url(../imgs/svg/tel-icon.svg);
+    width: auto;
+    right: 20px;
+  }
+}/*# sourceMappingURL=building-progress.css.map */

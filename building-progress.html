@@ -4,29 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="styles/building-progress.css">
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="scripts/jquery.inputmask.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <script src="scripts/rellax.min.js"></script>
     <script src="scripts/jquery.nav.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
-    <script src="scripts/index.js"></script>
-
+    <script src="scripts/building-progress.js"></script>
+    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
-    <title>Симфония</title>
+    <title>Ход строительства</title>
 </head>
 <body>
     <div class="header__wrapper">
         <header class="header">
-            <img src="imgs/svg/header-logo.svg" alt="Симфония" class="header__logo">
-            <div class="header__menu invisible">
+            <a href="index.html"><img src="imgs/svg/header-logo.svg" alt="Симфония" class="header__logo"></a>
+            <div class="header__menu">
                 <nav class="header__nav">
                     <a href="#" class="header__nav__element">Квартиры</a>
                     <a href="#" class="header__nav__element">Ипотека</a>
                     <a href="#" class="header__nav__element">Новости</a>
-                    <a href="building-progress.html" class="header__nav__element">Ход строительства</a>
+                    <a href="#" class="header__nav__element">Ход строительства</a>
                     <a href="#" class="header__nav__element">Контакты</a>
                 </nav>
                 <div class="header__nav__more-box">
@@ -50,9 +47,8 @@
                         </svg>
                     </a>
                 </div>
-                <a href="tel:+74951532643" class="header__tel">+7 (495) 153 26 43</a>
             </div>
-            <a href="catalog.html" class="header__button">Выбрать квартиру</a>
+            <a href="tel:+74951532643" class="header__button">+7 (495) 153 26 43</a>
             <button class="header__burger-button">
                 <svg width="41" height="14" viewBox="0 0 41 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0 0H41V2H0V0Z" fill="#306079"/>
@@ -75,7 +71,7 @@
                 <a href="#" class="burger__nav__element">Квартиры</a>
                 <a href="#" class="burger__nav__element">Ипотека</a>
                 <a href="#" class="burger__nav__element">Новости</a>
-                <a href="building-progress.html" class="burger__nav__element">Ход строительства</a>
+                <a href="#" class="burger__nav__element">Ход строительства</a>
                 <a href="#" class="burger__nav__element">Контакты</a>
                 <a href="#" class="burger__nav__element">Проектная документация</a>
             </nav>
@@ -107,271 +103,46 @@
             </div>
         </div>
     </div>
-    <ul class="page-nav" id="page-nav">
-        <li class="page-nav__link page-nav__link_selected"><a href="#screen"></a></li>
-        <li class="page-nav__link"><a href="#utp"></a></li>
-        <li class="page-nav__link"><a href="#advantages"></a></li>
-        <li class="page-nav__link"><a href="#scheme"></a></li>
-        <li class="page-nav__link"><a href="#life"></a></li>
-    </ul>
-    <section class="screen" id="screen">
-        <img src="imgs/svg/logo.svg" alt="Симфония" class="screen__logo">
-        <h1 class="screen__title">ЖК Симфония -<br>гармония<br>ваших будней</h1>
-        <div class="screen__desktop">
-            <img src="imgs/cloud-1.png" alt="cloud" class="screen__cloud-top parallax" data-rellax-speed="-8">
-            <img src="imgs/cloud-2.png" alt="cloud" class="screen__cloud-middle parallax"data-rellax-speed="1">
-            <img src="imgs/cloud-3.png" alt="cloud" class="screen__cloud-bottom parallax"data-rellax-speed="-1">
-            <img src="imgs/screen-house.png" alt="house" class="screen__house parallax" data-rellax-speed="-2">
-            <img src="imgs/screen-light.png" alt="light" class="screen__light parallax" data-rellax-speed="-6">
-            <img src="imgs/leaves-1.png" alt="leaves" class="screen__leaves-bg parallax" data-rellax-speed="1">
-            <img src="imgs/leaves-2.png" alt="leaves" class="screen__leaves parallax" data-rellax-speed="3">
-        </div>
-        <div class="screen__mobile">
-            <img src="imgs/mobile-cloud.png" alt="cloud" class="screen__cloud-middle parallax"data-rellax-speed="1">
-            <img src="imgs/mobile-house.png" alt="house" class="screen__house parallax" data-rellax-speed="-2">
-            <img src="imgs/mobile-light.png" alt="light" class="screen__light parallax" data-rellax-speed="-6">
-        </div>
-    </section>
-    <section class="utp" id="utp">
-        <h1 class="section-title utp__title"><span>ЖК Симфония</span> - это<br>гармония ваших будней</h1>
-        <p class="utp__description">идеальное сочетания множества решающих элементов при выборе ЖК</p>
-        <div class="utp__spheres">
-            <div class="utp__spheres__wrapper">
-                <div class="utp__sphere parallax" data-rellax-speed=".2">
-                    <p class="utp__sphere__text">Комфорт</p>
-                </div>
-                <div class="utp__sphere parallax" data-rellax-speed=".3">
-                    <p class="utp__sphere__text">Качество</p>
-                </div>
-                <div class="utp__sphere parallax" data-rellax-speed=".4">
-                    <p class="utp__sphere__text">Практичность</p>
-                </div>
-                <div class="utp__sphere parallax" data-rellax-speed=".3">
-                    <p class="utp__sphere__text">Цена</p>
-                </div>
-                <div class="utp__sphere parallax" data-rellax-speed=".1">
-                    <p class="utp__sphere__text">Доступность</p>
-                </div>
-                <div class="utp__sphere"></div>
-                <div class="utp__sphere"></div>
-                <div class="utp__sphere"></div>
-                <div class="utp__sphere"></div>
-            </div>
-        </div>
-        <div class="utp__photos">
-            <img src="imgs/photo-1.png" alt="1" loading="lazy">
-            <div>
-                <img src="imgs/photo-2.png" alt="2" loading="lazy">
-                <img src="imgs/photo-3.png" alt="3" loading="lazy">
-                <img src="imgs/photo-4.png" alt="4" loading="lazy">
-                <img src="imgs/photo-5.png" alt="5" loading="lazy">
-            </div>
-        </div>
-    </section>
-    <section class="advantages" id="advantages">
-        <h1 class="section-title advantages__title">Преимущества<br><span>ЖК Симфония</span></h1>
-        <div class="advantages__content">
-            <div class="advantages__card">
-                <div class="advantages__card__wrapper">
-                    <h2 class="advantages__card__title">Быстро до центра</h2>
-                    <p class="advantages__card__text">МЕСТА АКТИВНОГО ПРЕОБРАЖЕНИЯ В ДУХЕ СОВРЕМЕННОГО УРБАНИЗМА. ТРАНСФОРМАЦИЯ НАЧАЛАСЬ С ВОЗВЕДЕНИЯ ЛЭНДМАРКОВ — ВЫСОТНОГО SWISS-ОТЕЛЯ И МОСКОВСКОГО ДОМА МУЗЫКИ С ТРЕМЯ КОНЦЕРТНЫМИ ЗАЛАМИ. </p>
-                </div>
-            </div>
-            <div class="advantages__card">
-                <div class="advantages__card__wrapper">
-                    <h2 class="advantages__card__title">Инфраструктура с потенциалом</h2>
-                    <p class="advantages__card__text">МЕСТА АКТИВНОГО ПРЕОБРАЖЕНИЯ В ДУХЕ СОВРЕМЕННОГО УРБАНИЗМА. ТРАНСФОРМАЦИЯ НАЧАЛАСЬ С ВОЗВЕДЕНИЯ ЛЭНДМАРКОВ — ВЫСОТНОГО SWISS-ОТЕЛЯ И МОСКОВСКОГО ДОМА МУЗЫКИ С ТРЕМЯ КОНЦЕРТНЫМИ ЗАЛАМИ. В ОКРУЖЕНИИ ПОЯВИЛИСЬ СУПЕРСОВРЕМЕННЫЕ БИЗНЕС</p>
-                </div>
-            </div>
-            <div class="advantages__card">
-                <div class="advantages__card__wrapper">
-                    <h2 class="advantages__card__title">Транспортная доступность</h2>
-                    <p class="advantages__card__text">МЕСТА АКТИВНОГО ПРЕОБРАЖЕНИЯ В ДУХЕ СОВРЕМЕННОГО УРБАНИЗМА. ТРАНСФОРМАЦИЯ НАЧАЛАСЬ С ВОЗВЕДЕНИЯ ЛЭНДМАРКОВ — ВЫСОТНОГО SWISS-ОТЕЛЯ И МОСКОВСКОГО ДОМА МУЗЫКИ С ТРЕМЯ КОНЦЕРТНЫМИ ЗАЛАМИ. В ОКРУЖЕНИИ ПОЯВИЛИСЬ</p>
-                </div>
-            </div>
-            <div class="advantages__card">
-                <div class="advantages__card__wrapper">
-                    <h2 class="advantages__card__title">Без пробок на свежий воздух</h2>
-                    <p class="advantages__card__text">МЕСТА АКТИВНОГО ПРЕОБРАЖЕНИЯ В ДУХЕ СОВРЕМЕННОГО УРБАНИЗМА. ТРАНСФОРМАЦИЯ НАЧАЛАСЬ С ВОЗВЕДЕНИЯ ЛЭНДМАРКОВ — ВЫСОТНОГО SWISS-ОТЕЛЯ И МОСКОВСКОГО ДОМА МУЗЫКИ С ТРЕМЯ КОНЦЕРТНЫМИ ЗАЛАМИ. В ОКРУЖЕНИИ ПОЯВИЛИСЬ СУПЕРСОВРЕМЕННЫЕ БИЗНЕС</p>
-                </div>
-            </div>
-            <div class="advantages__card">
-                <div class="advantages__card__wrapper">
-                    <h2 class="advantages__card__title">близко к природе и далеко от заводов</h2>
-                    <p class="advantages__card__text">МЕСТА АКТИВНОГО ПРЕОБРАЖЕНИЯ В ДУХЕ СОВРЕМЕННОГО УРБАНИЗМА. ТРАНСФОРМАЦИЯ НАЧАЛАСЬ С ВОЗВЕДЕНИЯ ЛЭНДМАРКОВ — ВЫСОТНОГО SWISS-ОТЕЛЯ И МОСКОВСКОГО ДОМА МУЗЫКИ С ТРЕМЯ КОНЦЕРТНЫМИ ЗАЛАМИ.</p>
-                </div>
-            </div>
-        </div>
-        <div class="advantages__clouds">
-            <img src="imgs/advantages-cloud-1.png" class="advantages__cloud"></img>
-            <img src="imgs/advantages-cloud-1.png" class="advantages__cloud"></img>
-            <img src="imgs/advantages-cloud-1.png" class="advantages__cloud"></img>
-            <img src="imgs/advantages-cloud-1.png" class="advantages__cloud"></img>
-            <img src="imgs/advantages-cloud-1.png" class="advantages__cloud"></img>
-            <img src="imgs/advantages-cloud-1.png" class="advantages__cloud"></img>
-            <img src="imgs/advantages-cloud-1.png" class="advantages__cloud"></img>
-            <img src="imgs/advantages-cloud-1.png" class="advantages__cloud"></img>
-            <img src="imgs/advantages-cloud-2.png" class="advantages__cloud"></img>
-        </div>
-    </section>
-    <section class="scheme" id="scheme">
-        <h1 class="section-title scheme__title">Схема квартала</h1>
-        <div class="scheme__wrapper">
-            <img src="imgs/scheme-bg.png" alt="map" class="scheme__bg" loading="lazy">
-            <img src="imgs/scheme-compass.png" alt="compass" class="scheme__compass" loading="lazy">
-            <div class="scheme__content">
-                <div class="scheme__element">
-                    <svg class="scheme__element__icon" width="57" height="57" viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10.0991 29.8257C10.0043 29.014 9.95683 28.6082 9.97679 28.2736C10.0815 26.5197 11.3749 25.0662 13.1049 24.7586C13.4349 24.7 13.8435 24.7 14.6607 24.7H34.7393C35.5566 24.7 35.9652 24.7 36.2952 24.7586C38.0251 25.0662 39.3186 26.5197 39.4232 28.2736C39.4432 28.6082 39.3958 29.014 39.3009 29.8257L38.5396 36.339C38.196 39.2786 36.6253 41.9356 34.2155 43.6537C32.44 44.9196 30.3138 45.6 28.1332 45.6H21.2668C19.0863 45.6 16.96 44.9196 15.1845 43.6537C12.7748 41.9356 11.204 39.2786 10.8604 36.339L10.0991 29.8257Z" stroke="#5F9FC0" stroke-width="2"/>
-                        <path d="M38 38.0001H41.8C44.948 38.0001 47.5 35.4481 47.5 32.3001C47.5 29.1521 44.948 26.6001 41.8 26.6001H38.95" stroke="#5F9FC0" stroke-width="2"/>
-                        <path d="M24.7003 9.5C23.6509 10.5493 23.6509 12.2507 24.7003 13.3C25.7496 14.3493 25.7496 16.0507 24.7003 17.1" stroke="#5F9FC0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M15.2 19.9501L15.4206 19.7295C16.3843 18.7659 16.4927 17.2403 15.675 16.1501C14.8574 15.0599 14.9658 13.5343 15.9294 12.5707L16.15 12.3501" stroke="#5F9FC0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M33.25 19.9501L33.4706 19.7295C34.4343 18.7659 34.5427 17.2403 33.725 16.1501C32.9074 15.0599 33.0158 13.5343 33.9794 12.5707L34.2 12.3501" stroke="#5F9FC0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                    <div class="scheme__element__wrapper">
-                        <h3 class="scheme__element__title">рестораны</h3>
-                        <p class="scheme__element__text">МЕСТА АКТИВНОГО ПРЕОБРАЖЕНИЯ В ДУХЕ СОВРЕМЕННОГО УРБАНИЗМА. ТРАНСФОРМАЦИЯ НАЧАЛАСЬ С ВОЗВЕДЕНИЯ ЛЭНДМАРКОВ ДОМА МУЗЫКИ С ТРЕМЯ КОНЦЕРТНЫМИ ЗАЛАМИ</p>
+    <section class="building">
+        <h1 class="section-title building__title">Ход строительства</h1>
+        <div class="building__month">
+            <h2 class="building__month__title">Ноябрь 2023</h2>
+            <div class="building__month__content">
+                <div class="building__month__column">
+                    <iframe src="https://www.youtube.com/embed/quRp4RTfqTI?si=NfTbkrFhbSi3Dt7w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <div class="building__month__small-box">
+                        <img src="imgs/photo-2.png" alt="img" class="bulding__month__img" data-fancybox="nov23">
+                        <img src="imgs/photo-3.png" alt="img" class="bulding__month__img" data-fancybox="nov23">
                     </div>
                 </div>
-                <div class="scheme__element">
-                    <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M21.3045 10.8327C23.6728 9.72242 26.327 9.72242 28.6953 10.8327L39.8473 16.0611C42.2731 17.1983 42.2731 21.1351 39.8473 22.2723L28.6955 27.5006C26.3271 28.6109 23.673 28.6109 21.3047 27.5006L10.1526 22.2723C7.72686 21.135 7.72687 17.1982 10.1527 16.061L21.3045 10.8327Z" stroke="#5F9FC0" stroke-width="2"/>
-                        <path d="M8.33331 19.1667V28.3334" stroke="#5F9FC0" stroke-width="2" stroke-linecap="round"/>
-                        <path d="M36.6666 24.1667V32.7091C36.6666 34.3892 35.8275 35.9621 34.3578 36.776C31.9105 38.1313 27.9933 40.0001 25 40.0001C22.0066 40.0001 18.0895 38.1313 15.6422 36.776C14.1725 35.9621 13.3333 34.3892 13.3333 32.7091V24.1667" stroke="#5F9FC0" stroke-width="2" stroke-linecap="round"/>
-                    </svg>                        
-                    <div class="scheme__element__wrapper">
-                        <h3 class="scheme__element__title">Школы</h3>
-                        <p class="scheme__element__text">МЕСТА АКТИВНОГО ПРЕОБРАЖЕНИЯ В ДУХЕ СОВРЕМЕННОГО УРБАНИЗМА. ТРАНСФОРМАЦИЯ НАЧАЛАСЬ С ВОЗВЕДЕНИЯ ЛЭНДМАРКОВ ДОМА МУЗЫКИ С ТРЕМЯ КОНЦЕРТНЫМИ ЗАЛАМИ</p>
+                <div class="building__month__column">
+                    <div class="building__month__small-box">
+                        <img src="imgs/photo-2.png" alt="img" class="bulding__month__img" data-fancybox="nov23">
+                        <img src="imgs/photo-3.png" alt="img" class="bulding__month__img" data-fancybox="nov23">
                     </div>
-                </div>
-                <div class="scheme__element">
-                    <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M11.8973 33.7224C10.4101 27.774 9.66659 24.7998 11.228 22.7999C12.7895 20.8 15.8552 20.8 21.9867 20.8H30.0133C36.1448 20.8 39.2105 20.8 40.772 22.7999C42.3334 24.7998 41.5898 27.774 40.1027 33.7224C39.1569 37.5057 38.684 39.3974 37.2734 40.4987C35.8629 41.6 33.913 41.6 30.0133 41.6H21.9867C18.087 41.6 16.1371 41.6 14.7266 40.4987C13.316 39.3974 12.8431 37.5057 11.8973 33.7224Z" stroke="#5F9FC0" stroke-width="2"/>
-                        <path d="M39 21.6666L37.7686 17.1507C37.2938 15.4094 37.0564 14.5387 36.5695 13.883C36.0845 13.23 35.4256 12.7267 34.668 12.4306C33.9073 12.1333 33.0049 12.1333 31.2 12.1333M13 21.6666L14.2314 17.1507C14.7062 15.4094 14.9436 14.5387 15.4305 13.883C15.9155 13.23 16.5744 12.7267 17.332 12.4306C18.0927 12.1333 18.9951 12.1333 20.8 12.1333" stroke="#5F9FC0" stroke-width="2"/>
-                        <path d="M20.8 12.1332C20.8 11.1759 21.576 10.3999 22.5333 10.3999H29.4667C30.4239 10.3999 31.2 11.1759 31.2 12.1332C31.2 13.0905 30.4239 13.8666 29.4667 13.8666H22.5333C21.576 13.8666 20.8 13.0905 20.8 12.1332Z" stroke="#5F9FC0" stroke-width="2"/>
-                        <path d="M19.0667 27.7334V34.6667" stroke="#5F9FC0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M32.9333 27.7334V34.6667" stroke="#5F9FC0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M26 27.7334V34.6667" stroke="#5F9FC0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>                        
-                    <div class="scheme__element__wrapper">
-                        <h3 class="scheme__element__title">Магазины</h3>
-                        <p class="scheme__element__text">МЕСТА АКТИВНОГО ПРЕОБРАЖЕНИЯ В ДУХЕ СОВРЕМЕННОГО УРБАНИЗМА. ТРАНСФОРМАЦИЯ НАЧАЛАСЬ С ВОЗВЕДЕНИЯ ЛЭНДМАРКОВ ДОМА МУЗЫКИ С ТРЕМЯ КОНЦЕРТНЫМИ ЗАЛАМИ</p>
-                    </div>
-                </div>
-                <div class="scheme__element">
-                    <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M31.2668 13.7332C31.2668 13.7332 30.6178 17.1 26.8586 20.8592C23.0994 24.6184 19.7332 25.2668 19.7332 25.2668M35.1113 29.1113C31.9264 32.2962 26.7626 32.2962 23.5777 29.1113L15.8887 21.4223C12.7038 18.2374 12.7038 13.0736 15.8887 9.88868C19.0736 6.70377 24.2374 6.70377 27.4223 9.88868L35.1113 17.5777C38.2962 20.7626 38.2962 25.9264 35.1113 29.1113Z" stroke="#5F9FC0" stroke-width="2"/>
-                        <path d="M26.25 14.25L24 12" stroke="#5F9FC0" stroke-width="2" stroke-linecap="round"/>
-                        <path d="M14.5953 19.7019C10.5396 20.5758 7.5 24.1829 7.5 28.5C7.5 33.4705 11.5294 37.5 16.5 37.5C20.8366 37.5 24.4569 34.4328 25.3098 30.3494" stroke="#5F9FC0" stroke-width="2"/>
-                    </svg>                        
-                    <div class="scheme__element__wrapper">
-                        <h3 class="scheme__element__title">Аптеки</h3>
-                        <p class="scheme__element__text">МЕСТА АКТИВНОГО ПРЕОБРАЖЕНИЯ В ДУХЕ СОВРЕМЕННОГО УРБАНИЗМА. ТРАНСФОРМАЦИЯ НАЧАЛАСЬ С ВОЗВЕДЕНИЯ ЛЭНДМАРКОВ ДОМА МУЗЫКИ С ТРЕМЯ КОНЦЕРТНЫМИ ЗАЛАМИ</p>
-                    </div>
+                    <img src="imgs/photo-1.png" alt="img" data-fancybox="nov23">
                 </div>
             </div>
         </div>
-    </section>
-    <section class="life" id="life">
-        <h1 class="section-title life__title">жизнь в симфонии</h1>
-        <div class="life__swiper swiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide"><a href="imgs/slide-1.png" data-fancybox="life"><img src="imgs/slide-1.png" alt="bg"></a></div>
-                <div class="swiper-slide"><a href="imgs/slide-2.png" data-fancybox="life"><img src="imgs/slide-2.png" alt="bg"></a></div>
-                <div class="swiper-slide"><a href="imgs/slide-3.png" data-fancybox="life"><img src="imgs/slide-3.png" alt="bg"></a></div>
-                <div class="swiper-slide"><a href="imgs/slide-4.png" data-fancybox="life"><img src="imgs/slide-4.png" alt="bg"></a></div>
-                <div class="swiper-slide"><a href="imgs/slide-5.png" data-fancybox="life"><img src="imgs/slide-5.png" alt="bg"></a></div>
-                <div class="swiper-slide"><a href="imgs/slide-6.png" data-fancybox="life"><img src="imgs/slide-6.png" alt="bg"></a></div>
-                <div class="swiper-slide"><a href="imgs/slide-7.png" data-fancybox="life"><img src="imgs/slide-7.png" alt="bg"></a></div>
-                <div class="swiper-slide"><a href="imgs/slide-8.png" data-fancybox="life"><img src="imgs/slide-8.png" alt="bg"></a></div>
-                <div class="swiper-slide"><a href="imgs/slide-8.png" data-fancybox="life"><img src="imgs/slide-8.png" alt="bg"></a></div>
-                <div class="swiper-slide"><a href="imgs/slide-7.png" data-fancybox="life"><img src="imgs/slide-7.png" alt="bg"></a></div>
-                <div class="swiper-slide"><a href="imgs/slide-6.png" data-fancybox="life"><img src="imgs/slide-6.png" alt="bg"></a></div>
-                <div class="swiper-slide"><a href="imgs/slide-5.png" data-fancybox="life"><img src="imgs/slide-5.png" alt="bg"></a></div>
-                <div class="swiper-slide"><a href="imgs/slide-4.png" data-fancybox="life"><img src="imgs/slide-4.png" alt="bg"></a></div>
-                <div class="swiper-slide"><a href="imgs/slide-3.png" data-fancybox="life"><img src="imgs/slide-3.png" alt="bg"></a></div>
-                <div class="swiper-slide"><a href="imgs/slide-2.png" data-fancybox="life"><img src="imgs/slide-2.png" alt="bg"></a></div>
-                <div class="swiper-slide"><a href="imgs/slide-1.png" data-fancybox="life"><img src="imgs/slide-1.png" alt="bg"></a></div>
-            </div>
-        </div>
-    </section>
-    <section class="album">
-        <h1 class="section-title album__title">альбом планировок</h1>
-        <form action="#" class="album__form">
-            <div class="album__form__content">
-                <input class="album__input album__input_email" type="email" placeholder="e-mail">
-                <input class="album__input album__input_tel" type="tel" placeholder="телефон">
-                <button class="album__form__button">скачать pdf
-                    <svg width="8" height="9" viewBox="0 0 8 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1 1L4 4L7 1" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M1 5L4 8L7 5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>                        
-                </button>
-                <p class="album__form__warning">нажимая кнопку «скачать PDF», вы принимаете условия передачи указанной информации</p>
-            </div>
-            <div class="album__desktop">
-                <img src="imgs/album-book.png" alt="book" class="album__book" loading="lazy">
-                <img src="imgs/screen-house.png" alt="house" class="album__house" loading="lazy">
-                <img src="imgs/leaves-2.png" alt="leaves" class="album__leaves" loading="lazy">
-                <img src="imgs/leaves-1.png" alt="leaves" class="album__leaves-bg" loading="lazy">
-            </div>
-            <div class="album__mobile">
-                <img src="imgs/mobile-album-book.png" alt="book" class="album__book" loading="lazy">
-                <img src="imgs/mobile-album-house.png" alt="house" class="album__house" loading="lazy">
-                <img src="imgs/mobile-album-leaves.png" alt="leaves" class="album__leaves" loading="lazy">
-            </div>
-
-        </form>
-    </section>
-    <section class="news">
-        <h1 class="section-title news__title">Новости</h1>
-        <div class="news__content">
-            <div class="news__card">
-                <div class="news__card__wrapper">
-                    <p class="news__card__date">28 <span>/ 09 / 23</span></p>
-                    <h2 class="news__card__title">На строительной площадке Симфония ведется бетонирование фундаментной плиты</h2>
-                    <p class="news__card__text">На строительной площадке первой очереди семейного премиального жилого квартала PRIDE на конец сентября залито 1150 кубометров бетона фундаментных плит паркинга. Ведется подготовка к бетонированию фундаментных плит секций . . .</p>
-                    <a href="#" class="news__card__button">
-                        <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="23" cy="23" r="22" stroke="#D3E2EA" stroke-width="2"/>
-                            <path d="M21 29L28 22.5L21 16" stroke="#44565D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>                            
-                    </a>
+        <div class="building__month">
+            <h2 class="building__month__title">Октябрь 2023</h2>
+            <div class="building__month__content">
+                <div class="building__month__column">
+                    <iframe src="https://www.youtube.com/embed/quRp4RTfqTI?si=NfTbkrFhbSi3Dt7w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <div class="building__month__small-box">
+                        <img src="imgs/photo-2.png" alt="img" class="bulding__month__img" data-fancybox="oct23">
+                        <img src="imgs/photo-3.png" alt="img" class="bulding__month__img" data-fancybox="oct23">
+                    </div>
                 </div>
-            </div>
-            <div class="news__card">
-                <div class="news__card__wrapper">
-                    <p class="news__card__date">28 <span>/ 09 / 23</span></p>
-                    <h2 class="news__card__title">На строительной площадке Симфония ведется бетонирование фундаментной плиты</h2>
-                    <p class="news__card__text">На строительной площадке первой очереди семейного премиального жилого квартала PRIDE на конец сентября залито 1150 кубометров бетона фундаментных плит паркинга. Ведется подготовка к бетонированию фундаментных плит секций . . .</p>
-                    <a href="#" class="news__card__button">
-                        <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="23" cy="23" r="22" stroke="#D3E2EA" stroke-width="2"/>
-                            <path d="M21 29L28 22.5L21 16" stroke="#44565D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>                            
-                    </a>
-                </div>
-            </div>
-            <div class="news__card">
-                <div class="news__card__wrapper">
-                    <p class="news__card__date">28 <span>/ 09 / 23</span></p>
-                    <h2 class="news__card__title">На строительной площадке Симфония ведется бетонирование фундаментной плиты</h2>
-                    <p class="news__card__text">На строительной площадке первой очереди семейного премиального жилого квартала PRIDE на конец сентября залито 1150 кубометров бетона фундаментных плит паркинга. Ведется подготовка к бетонированию фундаментных плит секций . . .</p>
-                    <a href="#" class="news__card__button">
-                        <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="23" cy="23" r="22" stroke="#D3E2EA" stroke-width="2"/>
-                            <path d="M21 29L28 22.5L21 16" stroke="#44565D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>                            
-                    </a>
+                <div class="building__month__column">
+                    <div class="building__month__small-box">
+                        <img src="imgs/photo-2.png" alt="img" class="bulding__month__img" data-fancybox="oct23">
+                        <img src="imgs/photo-3.png" alt="img" class="bulding__month__img" data-fancybox="oct23">
+                    </div>
+                    <img src="imgs/photo-1.png" alt="img" data-fancybox="oct23">
                 </div>
             </div>
         </div>
-        <a href="#" class="news__all-news">все новости
-            <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1 7.5L4 4.5L1 1.5" stroke="#5F9FC0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M5 7.5L8 4.5L5 1.5" stroke="#5F9FC0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>                
-        </a>
     </section>
     <footer class="footer">
         <div class="footer__wrapper">

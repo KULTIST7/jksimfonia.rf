@@ -53,9 +53,10 @@
             align-items: center;
             font-family: $main-font;
             font-size: 20px;
-            font-weight: $font-weight-base;
+            font-weight: $font-weight-bold;
             color: $color-white;
             background-color: #5F9FC0;
+            transition: all .1s linear;
             width: 349px;
             padding: 18px 0;
             border: none;
@@ -65,6 +66,15 @@
             margin-top: 3px;
             margin-bottom: 20px;
 
+            &:hover, &:active {
+                color: $second-color;
+                
+                path {
+                    stroke: $second-color;
+                }
+            }
+    
+
             @media #{$tablet} {
                 margin-left: auto;
                 margin-right: auto;
@@ -72,6 +82,10 @@
 
             svg {
                 margin-left: 10px;
+
+                path {
+                    transition: all .1s linear;
+                }
             }
         }
 
@@ -103,7 +117,7 @@
     &__input {
         font-family: $main-font;
         font-size: 20px;
-        font-weight: $font-weight-base;
+        font-weight: $font-weight-bold;
         width: 460px;
         height: max-content;
         background-color: #FFFFFF99;

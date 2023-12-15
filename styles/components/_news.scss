@@ -34,9 +34,14 @@
         height: max-content;
         max-height: 315px;
         border-radius: 10px;
-        box-shadow: 0px 0px 50px 0px #17334226;
         margin-right: 32px;
         overflow: hidden;
+        transition: all .1s linear;
+
+        &:hover {
+            box-shadow: 0px 0px 50px 0px #17334226;
+        }
+
 
         @media screen and (max-width: 1600px) {
             display: none;
@@ -92,7 +97,7 @@
         &__title {
             font-family: $main-font;
             font-size: 25px;
-            font-weight: $font-weight-base;
+            font-weight: $font-weight-bold;
             line-height: 25px;   
             color: $color-gray;
             margin-bottom: 24px;
@@ -132,11 +137,20 @@
         align-items: center;
         font-family: $main-font;
         font-size: 20px;
-        font-weight: $font-weight-base;
+        font-weight: $font-weight-bold;
         text-decoration: none;
+        transition: all .1s linear;
         color: #5F9FC0;
         top: 40px;
         right: 0;
+
+        &:hover {
+            color: $color-dark-blue;
+
+            path {
+                stroke: $color-dark-blue;
+            }
+        }
 
         @media #{$tablet} {
             top: auto;
@@ -147,6 +161,10 @@
         svg {
             margin-left: 13px;
             margin-bottom: 2px;
+
+            path {
+                transition: all .1s linear;
+            }
         }
     }
 }

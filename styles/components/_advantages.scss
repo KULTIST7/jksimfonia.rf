@@ -185,7 +185,7 @@
         &__title {
             font-family: $main-font;
             font-size: 30px;
-            font-weight: $font-weight-base;
+            font-weight: $font-weight-bold;
             line-height: 30px;
             text-align: center;
             color: $color-light-blue;
@@ -200,7 +200,7 @@
 
             @media #{$tablet} {
                 font-size: 18px;
-                font-weight: 18px;
+                line-height: 18px;
             }
         }
         &__text {

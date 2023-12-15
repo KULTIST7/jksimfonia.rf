@@ -42,40 +42,51 @@
     }
 
     &__close-button {
+        position: absolute;
         width: max-content;
         height: max-content;
         border: none;
         background-color: transparent;
-        margin: 29px 36px 0 auto;
-        
-        @media screen and (max-width: 840px) {
-            position: absolute;
-            margin: 0;
-            top: 15px;
-            right: 22px;
-        }
+        top: 29px;
+        right: 36px;
     }
 
     &__nav {
         display: flex;
         flex-direction: column;
         max-width: max-content;
+        margin-top: 50px;
         margin-bottom: 75px;
 
         @media screen and (max-width: 840px) {
             margin-top: 15px;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
+        }
+
+        @media screen and (max-height: 900px) {
+            margin-top: 15px;
+            margin-bottom: 30px;
         }
 
         &__element {
             font-family: $main-font;
             font-size: 40px;
-            font-weight: $font-size-base;
+            font-weight: $font-weight-bold;
             line-height: 60px;
             text-decoration: none;
             color: $color-gray;
+            transition: all .1s linear;
+
+            &:hover {
+                color: $color-dark-blue;
+            }
 
             @media screen and (max-width: 840px) {
+                font-size: 30px;
+                line-height: 50px;
+            }
+
+            @media screen and (max-height: 800px) {
                 font-size: 30px;
                 line-height: 50px;
             }

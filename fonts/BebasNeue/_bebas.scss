@@ -1,10 +1,21 @@
 @font-face {
     font-family: 'Bebas Neue';
+    src: local('Bebas Neue Cyrillic Bold'), local('Bebas-Neue-Cyrillic-Bold'),
+        url('../fonts/BebasNeue/700/BebasNeueCyrillic.woff2') format('woff2'),
+        url('../fonts/BebasNeue/700/BebasNeueCyrillic.woff') format('woff'),
+        url('../fonts/BebasNeue/700/BebasNeueCyrillic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bebas Neue';
     src: local('Bebas Neue Cyrillic Regular'), local('Bebas-Neue-Cyrillic-Regular'),
-        url('../fonts/BebasNeue/BebasNeueCyrillic.woff2') format('woff2'),
-        url('../fonts/BebasNeue/BebasNeueCyrillic.woff') format('woff'),
-        url('../fonts/BebasNeue/BebasNeueCyrillic.ttf') format('truetype');
+        url('../fonts/BebasNeue/400/BebasNeueCyrillic.woff2') format('woff2'),
+        url('../fonts/BebasNeue/400/BebasNeueCyrillic.woff') format('woff'),
+        url('../fonts/BebasNeue/400/BebasNeueCyrillic.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
-  }
+}

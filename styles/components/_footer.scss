@@ -68,7 +68,7 @@
     &__text {
         font-family: $main-font;
         font-size: 25px;
-        font-weight: $font-weight-light;
+        font-weight: $font-weight-base;
         line-height: 25px;
         color: $color-black;
         margin-bottom: 20px;
@@ -91,15 +91,20 @@
         align-items: center;
         font-family: $main-font;
         font-size: 20px;
-        font-weight: $font-weight-base;
+        font-weight: $font-weight-bold;
         text-decoration: none;
         color: $color-white;
         background-color: $color-gray;
+        transition: all .1s linear;
         height: 50px;
         padding: 0 35px;
         padding-top: 2px;
         border-radius: 31px;
         margin-left: 18px;
+
+        &:hover {
+            color: $second-color;
+        }
     }
 
     &__socials {
@@ -119,6 +124,28 @@
             height: 48px;
             border-radius: 40px;
             margin-right: 9px;
+
+            path {
+                transition: all .1s linear;
+            }
+
+            &_vk:hover {
+                path {
+                    fill: #0A74F9;
+                }
+            }
+
+            &_viber:hover {
+                path {
+                    fill: #8F53A4;
+                }
+            }
+
+            &_whatsapp:hover {
+                path {
+                    fill: #2ED470;
+                }
+            }
         }
     }
 

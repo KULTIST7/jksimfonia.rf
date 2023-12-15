@@ -41,27 +41,91 @@
         display: flex;
         transition: all .3s linear;
 
+        &_hidden {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            background-color: $color-white;
+            padding: 16px;
+            top: 50px;
+            left: 0;
+            opacity: 0;
+            transition: all .1s linear;
+            pointer-events: none;
+
+
+
+            &>.header__nav__element {
+                &::before {
+                    display: none;
+                }
+                color: $color-blue;
+            }
+        }
+
         &__element {
+            position: relative;
             font-family: $main-font;
             font-size: 25px;
-            font-weight: $font-weight-base;
+            font-weight: $font-weight-bold;
             line-height: 25px;
             text-decoration: none;
             text-transform: uppercase;
             text-wrap: nowrap;
             color: $color-white;
+            transition: all .1s linear;
             margin-right: 50px;
+
+            &::before {
+                content: '';
+                position: absolute;
+                background-color: #FC9D27;
+                transition: all .1s linear;
+                width: 100%;
+                height: 3px;
+                bottom: -12px;
+                opacity: 0;
+            }
+
+            &:hover, &:active {
+                color: $second-color;
+
+                &::before {
+                    opacity: 1;
+                }
+            }
         }
 
-        &_hidden {
-            display:none;
+        &__more {
+            display: none;
+            font-family: $main-font;
+            font-size: 25px;
+            color: $color-white;
+            background-color: transparent;
+            border: none;
+            text-decoration: none;
+
+            &.active {
+                display: block;
+            }
+
+            &-box {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                transition: all .1s linear;
+                margin-right: 50px;
+
+                @media #{$tablet} {
+                    display: none;
+                }
+            }
         }
     }
 
     &__socials {
         display: flex;
         align-items: center;
-        margin-left: 50px;
         transition: all .3s linear;
 
         @media screen and (max-width: 1129px) {
@@ -83,6 +147,11 @@
         &__element {
             display: flex;
             margin-right: 30px;
+            
+            path {
+                transition: all .1s linear;
+            }
+
 
             @media #{$tablet} {
                 margin-right: 20px;
@@ -90,6 +159,18 @@
                 path {
                     fill: $color-gray;
                 }
+            }
+
+            &_vk:hover path {
+                fill: #0A74F9;
+            }
+
+            &_viber:hover path {
+                fill: #8F53A4;
+            }
+
+            &_whatsapp:hover path {
+                fill: #2ED470;
             }
         }
     }
@@ -105,11 +186,17 @@
     &__tel {
         font-family: $main-font;
         font-size: 25px;
-        font-weight: $font-weight-base;
+        font-weight: $font-weight-bold;
         line-height: 25px;
         color: $color-white;
         text-decoration: none;
         text-wrap: nowrap;
+        transition: all .1s linear;
+        
+
+        &:hover, &:active {
+            color: $second-color;
+        }
 
         @media #{$tablet} {
             color: $color-gray;
@@ -122,16 +209,18 @@
         }
     }
 
-    &__select-ap {
+    &__button {
         display: flex;
         align-items: center;
         font-family: $main-font;
         font-size: 25px;
-        font-weight: $font-weight-base;
+        font-weight: $font-weight-bold;
         line-height: 25px;
         text-decoration: none;
         text-transform: uppercase;
+        text-wrap: nowrap;
         color: $color-white;
+        transition: all .1s linear;
         background-color: #6189AE80;
         backdrop-filter: blur(12.5px);
         width: 157px;
@@ -139,7 +228,10 @@
         padding-top: 2px;
         border-radius: 31px;
         margin-right: 30px;
-        text-wrap: nowrap;
+
+        &:hover, &:active {
+            color: $second-color;
+        }
 
         @media #{$tablet} {
             display: none;
@@ -152,6 +244,14 @@
         padding: 19px 31px 17px 34px;
         border: none;
         border-radius: 31px;
+
+        path {
+            transition: all .1s linear;
+        }
+
+        &:hover path {
+            fill: $second-color;
+        }
 
         @media #{$tablet} {
             position: absolute;
@@ -182,6 +282,10 @@
             @media #{$tablet} {
                 opacity: 1;
             }
+        }
+
+        &__nav__more-box {
+            opacity: 0;
         }
     }
 }

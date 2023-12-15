@@ -1,66 +1,9 @@
 $(document).ready(function() {
-    let rellax = new Rellax('.parallax');
-
-    let swiper = new Swiper('.life__swiper', {
-        slidesPerView: 2,
-        spaceBetween: 10,
-        centerInsufficientSlides: true,
-
-        grid: {
-            fill: 'row',
-            rows: 2
-        },
-
-        breakpoints: {
-            1279: {
-                slidesPerView: 5,
-
-                grid: {
-                    fill: 'row',
-                    rows: 2
-                }
-            },
-
-            999: {
-                slidesPerView: 4,
-
-                grid: {
-                    fill: 'row',
-                    rows: 2
-                }
-            },
-
-            749: {
-                slidesPerView: 3,
-                
-                grid: {
-                    fill: 'row',
-                    rows: 2
-                }
-            }
-        }
-    }); 
-
     setTimeout(adaptiveHeaderNav, 100);
 
     $(window).on('resize', adaptiveHeaderNav);
 
-    $('.page-nav').onePageNav({
-        currentClass: 'page-nav__link_selected',
-        scrollSpeed: 750,
-        scrollThreshold: 0.5,
-        easing: 'swing'
-    });
-
-    $('.album__input_tel').inputmask({
-        mask: '+7 (*{1}99) 999-99-99',
-        placeholder: "+7 (___) ___-__-__",
-        definitions: {
-            '*': {
-                validator: "[0-6,9]"
-            }
-        }
-    });
+    Fancybox.bind("[data-fancybox]");
 
     $('.header__burger-button').on('click', () => {
         $('.burger').addClass('burger-open');
@@ -90,18 +33,6 @@ $(document).ready(function() {
             });
         }
     });
-
-    Fancybox.bind("[data-fancybox]");
-
-    $(document).on('scroll', function() {
-        if ($(window).scrollTop() >= 200) {
-            $('.header__menu').removeClass('invisible');
-            $('.header__nav__more-box').removeClass('invisible');
-        } else {
-            $('.header__menu').addClass('invisible');
-            $('.header__nav__more-box').addClass('invisible');
-        }
-    });
 });
 
 function adaptiveHeaderNav() {
@@ -112,6 +43,7 @@ function adaptiveHeaderNav() {
 
     do {
         let menuWidth = $('.header__burger-button').outerWidth()
+            + $('.header__logo').outerWidth()
             + $('.header__button').outerWidth()
             + $('.header__menu').outerWidth()
             + 200
