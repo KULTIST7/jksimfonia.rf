@@ -1,40 +1,9 @@
+@import url(reset.css);
 @import "variables";
-
-.header {
-    &__logo {
-        display: flex !important;
-        margin-right: 47px;
-
-        @media #{$tablet} {
-            margin-right: 0;
-        }
-    }
-
-    &__menu {
-        padding-left: 29px;
-        padding-right: 16px;
-    }
-    
-    &__socials__element {
-        &:last-child {
-            margin-right: 0;
-        }
-    }
-
-    &__button {
-        @media #{$tablet} {
-            display: flex;
-            background-color: transparent;
-            color: $color-gray;
-            padding: 0;
-            margin: 0;
-        }
-
-        @media #{$phone} {
-            position: absolute;
-            content: url(../imgs/svg/tel-icon.svg);
-            width: auto;
-            right: 20px;
-        }
-    }
-}
+@import "fonts";
+@import "components/scrollbar";
+@import "components/section-title";
+@import "components/header";
+@import "components/burger";
+@import "components/building";
+@import "components/footer";
