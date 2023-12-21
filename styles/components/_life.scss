@@ -1,8 +1,8 @@
 .life {
-    margin-top: 76px;
+    margin-top: 180px;
 
-    @media #{$tablet} {
-        margin-top: 0;
+    @media screen and (max-width: 1330px) {
+        margin-top: 120px;
     }
 
     &__title {

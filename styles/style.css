@@ -1103,7 +1103,7 @@ body::-webkit-scrollbar-thumb {
 }
 .utp__photos {
   display: flex;
-  height: 711px;
+  height: 775px;
   margin-left: 163px;
   overflow: hidden;
 }
@@ -1231,10 +1231,8 @@ body::-webkit-scrollbar-thumb {
   }
 }
 .utp__photos > div img:last-child {
-  max-width: -moz-max-content;
-  max-width: max-content;
-  height: -moz-max-content;
-  height: max-content;
+  max-width: 630px;
+  height: 446px;
   margin: 0;
 }
 @media screen and (max-width: 1534px) {
@@ -1534,9 +1532,11 @@ body::-webkit-scrollbar-thumb {
   z-index: 1;
 }
 .advantages__cloud:nth-child(3) {
-  left: 47px;
+  top: -140px;
+  left: -183px;
 }
 .advantages__cloud:nth-child(4) {
+  top: -140px;
   left: 177px;
 }
 @media screen and (max-width: 999px) {
@@ -1545,7 +1545,7 @@ body::-webkit-scrollbar-thumb {
   }
 }
 .advantages__cloud:nth-child(5) {
-  right: 406px;
+  right: 534px;
 }
 .advantages__cloud:nth-child(6) {
   right: 145px;
@@ -1598,25 +1598,22 @@ body::-webkit-scrollbar-thumb {
     height: max-content;
   }
 }
-@media screen and (max-width: 749px) {
-  .scheme__wrapper {
-    overflow: hidden;
-  }
-}
 .scheme__bg {
   position: absolute;
-  margin-top: 11px;
-  margin-left: 230px;
+  margin-top: -176px;
+  margin-left: 94px;
   pointer-events: none;
 }
 @media screen and (max-width: 1700px) {
   .scheme__bg {
-    margin-left: 80px;
+    height: 800px;
+    margin-left: 0;
   }
 }
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1425px) {
   .scheme__bg {
     height: 600px;
+    margin-top: 0;
   }
 }
 @media screen and (max-width: 1330px) {
@@ -1647,41 +1644,41 @@ body::-webkit-scrollbar-thumb {
     left: 5%;
   }
 }
-@media screen and (max-width: 570px) {
-  .scheme__bg {
-    left: 0;
-  }
-}
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 590px) {
   .scheme__bg {
     left: -10%;
   }
 }
+@media screen and (max-width: 515px) {
+  .scheme__bg {
+    width: 500px;
+  }
+}
+@media screen and (max-width: 460px) {
+  .scheme__bg {
+    width: 450px;
+  }
+}
+@media screen and (max-width: 410px) {
+  .scheme__bg {
+    left: -20%;
+  }
+}
 .scheme__compass {
   position: absolute;
-  bottom: 188px;
+  bottom: 0;
   left: 163px;
-}
-@media screen and (max-width: 1700px) {
-  .scheme__compass {
-    bottom: 80px;
-  }
-}
-@media screen and (max-width: 1279px) {
-  .scheme__compass {
-    bottom: 50px;
-  }
 }
 @media screen and (max-width: 999px) {
   .scheme__compass {
-    top: 0;
+    top: 400px;
     left: auto;
     right: 25px;
-    bottom: auto;
   }
 }
 @media screen and (max-width: 749px) {
   .scheme__compass {
+    top: 200px;
     right: 16px;
   }
 }
@@ -1694,13 +1691,14 @@ body::-webkit-scrollbar-thumb {
   border-radius: 53px;
   background-color: rgba(255, 255, 255, 0.6);
   margin-left: auto;
-  margin-right: 10%;
+  margin-right: 7%;
   z-index: 1;
-  transform: translateY(-70px);
+  transform: translateY(130px);
 }
 @media screen and (max-width: 1700px) {
   .scheme__content {
-    margin-right: 80px;
+    margin-right: 40px;
+    transform: translateY(100px);
   }
 }
 @media screen and (max-width: 1500px) {
@@ -1716,32 +1714,28 @@ body::-webkit-scrollbar-thumb {
 }
 @media screen and (max-width: 999px) {
   .scheme__content {
+    height: 550px;
     max-width: 100%;
     margin: 0 auto;
-    margin-top: 700px;
-  }
-}
-@media screen and (max-width: 900px) {
-  .scheme__content {
-    margin-top: 650px;
+    margin-top: 500px;
   }
 }
 @media screen and (max-width: 800px) {
   .scheme__content {
-    margin-top: 450px;
+    margin-top: 400px;
   }
 }
 @media screen and (max-width: 749px) {
   .scheme__content {
+    height: 450px;
     border-radius: 30px;
-    margin-top: 400px;
+    margin-top: 300px;
   }
 }
 @media screen and (max-width: 600px) {
   .scheme__content {
-    height: 510px;
     margin: 0 13px;
-    margin-top: 400px;
+    margin-top: 250px;
   }
 }
 .scheme__element {
@@ -1805,11 +1799,11 @@ body::-webkit-scrollbar-thumb {
 }
 
 .life {
-  margin-top: 76px;
+  margin-top: 180px;
 }
-@media screen and (max-width: 999px) {
+@media screen and (max-width: 1330px) {
   .life {
-    margin-top: 0;
+    margin-top: 120px;
   }
 }
 .life__title {

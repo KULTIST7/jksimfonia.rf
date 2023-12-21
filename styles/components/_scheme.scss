@@ -17,24 +17,22 @@
         @media #{$desktop} {
             height: max-content;
         }
-
-        @media #{$phone} {
-            overflow: hidden;
-        }
     }
 
     &__bg {
         position: absolute;
-        margin-top: 11px;
-        margin-left: 230px;
+        margin-top: -176px;
+        margin-left: 94px;
         pointer-events: none;
 
         @media screen and (max-width: 1700px) {
-            margin-left: 80px;
+            height: 800px;
+            margin-left: 0;
         }
 
-        @media screen and (max-width: 1400px) {
+        @media screen and (max-width: 1425px) {
             height: 600px;
+            margin-top: 0;
         }
 
         @media screen and (max-width: 1330px) {
@@ -60,36 +58,37 @@
             left: 5%;
         }
 
-        @media screen and (max-width: 570px) {
-            left: 0;
+        @media screen and (max-width: 590px) {
+            left: -10%;
         }
 
-        @media screen and (max-width: 480px) {
-            left: -10%;
+        @media screen and (max-width: 515px) {
+            width: 500px;
+        }
+        
+        @media screen and (max-width: 460px) {
+            width: 450px;
+            
+        }
+
+        @media screen and (max-width: 410px) {
+            left: -20%;
         }
     }
 
     &__compass {
         position: absolute;
-        bottom: 188px;
+        bottom: 0;
         left: 163px;
 
-        @media screen and (max-width: 1700px) {
-            bottom: 80px;
-        }
-
-        @media #{$desktop} {
-            bottom: 50px;
-        }
-
         @media #{$tablet} {
-            top: 0;
+            top: 400px;
             left: auto;
             right: 25px;
-            bottom: auto;
         }
 
         @media #{$phone} {
+            top: 200px;
             right: 16px;
         }
     }
@@ -103,12 +102,13 @@
         border-radius: 53px;
         background-color: #FFFFFF99;
         margin-left: auto;
-        margin-right: 10%;
+        margin-right: 7%;
         z-index: 1;
-        transform: translateY(-70px);
+        transform: translateY(130px);
 
         @media screen and (max-width: 1700px) {
-            margin-right: 80px;
+            margin-right: 40px;
+            transform: translateY(100px);
         }
 
         @media screen and (max-width: 1500px) {
@@ -121,28 +121,25 @@
         }
 
         @media #{$tablet} {
+            height: 550px;
             max-width: 100%;
             margin: 0 auto;
-            margin-top: 700px;
-        }
-
-        @media screen and (max-width: 900px) {
-            margin-top: 650px;
+            margin-top: 500px;
         }
 
         @media screen and (max-width: 800px) {
-            margin-top: 450px;
+            margin-top: 400px;
         }
 
         @media #{$phone} {
+            height: 450px;
             border-radius: 30px;
-            margin-top: 400px;
+            margin-top: 300px;
         }
 
         @media screen and (max-width: 600px) {
-            height: 510px;
             margin: 0 13px;
-            margin-top: 400px;
+            margin-top: 250px;
         }
     }
 

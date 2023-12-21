@@ -297,7 +297,7 @@
 
     &__photos {
         display: flex;
-        height: 711px;
+        height: 775px;
         margin-left: 163px;
         overflow: hidden;
 
@@ -407,8 +407,8 @@
                 }
 
                 &:last-child {
-                    max-width: max-content;
-                    height: max-content;
+                    max-width: 630px;
+                    height: 446px;
                     margin: 0;
 
                     @media screen and (max-width: 1534px) {
