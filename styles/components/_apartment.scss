@@ -1,0 +1,361 @@
+.apartment {
+    display: flex;
+    flex-direction: column;
+
+    &__title {
+        font-size: 50px;
+        margin-top: 194px;
+        margin-bottom: 30px;
+
+        @media #{$tablet} {
+            margin: 100px 0 33px 13px;
+            max-width: 700px;
+        }
+
+        @media #{$phone} {
+            margin: 100px 0 10px 13px;
+            max-width: 350px;
+        }
+
+        @media screen and (max-width: 600px) {
+            margin-left: 13px;
+        }
+    }
+
+    &__wrapper {
+        width: 83%;
+        margin: 0 auto;
+
+        @media screen and (max-width: 1450px) {
+            width: 90%;
+        }
+
+        @media screen and (max-width: 1350px) {
+            width: 92.5%;
+        }
+
+        @media #{$tablet} {
+            width: 100%;
+        }
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+
+        @media #{$tablet} {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__view,
+    &__control {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__view {
+        position: relative;
+    }
+
+    &__compass {
+        position: absolute;
+        width: max-content;
+        height: max-content;
+        top: 50px;
+        right: -200px;
+
+        @media screen and (max-width: 1800px) {
+            right: -100px;
+        }
+
+        @media screen and (max-width: 1070px) {
+            width: 80px;
+            right: -30px;
+        }
+
+        @media #{$tablet} {
+            width: max-content;
+            right: -150px;
+        }
+
+        @media #{$phone} {
+            width: max-content;
+            right: -50px;
+        }
+
+        @media screen and (max-width: 550px) {
+            width: 80px;
+            top: 75px;
+            right: -30px;
+        }
+
+        @media screen and (max-width: 400px) {
+            right: 0;
+        }
+    }
+    
+    &__control {
+        width: 568px;
+        height: 783px;
+        padding: 35px 24px 0 24px;
+        box-sizing: border-box;
+        border-radius: 10px;
+        border: 1px solid #D9E3EB;
+        background: rgba(255, 255, 255, .2);
+        box-shadow: 0px 4px 50px 0px rgba(74, 125, 152, 0.10);
+
+        @media screen and (max-width: 1565px) {
+            width: 500px;
+        }
+
+        @media screen and (max-width: 1200px) {
+            width: 400px;
+        }
+
+        @media #{$tablet} {
+            width: 568px;
+        }
+
+        @media screen and (max-width: 600px) {
+            width: 400px;
+        }
+
+        @media screen and (max-width: 450px) {
+            width: 349px;
+        }
+    }
+
+    &__select {
+        font-family: $second-color;
+        font-size: 18px;
+        font-weight: $font-weight-base;
+        color: $color-gray;
+        width: calc(100% + 16px);
+        height: 100%;
+        padding: 14px 0 14px 16px;
+        border: none;
+        cursor: pointer;
+
+        &-box {
+            position: relative;
+            max-width: 282px;
+            border-radius: 10px;
+            border: 1px solid #C8D9E3;
+            margin-bottom: 47px;
+            overflow: hidden;
+
+            @media #{$tablet} {
+                margin-bottom: 75px;
+            }
+        }
+
+        &__arrow {
+            position: absolute;
+            top: 22px;
+            right: 20px;
+            pointer-events: none;
+        }
+    }
+
+    &__photo {
+        margin: 0 0 110px 73px;
+
+        @media screen and (max-width: 1700px) {
+            width: 500px;
+        }
+
+        @media screen and (max-width: 1300px) {
+            width: 400px;
+        }
+
+        @media #{$tablet} {
+            margin: 0 0 50px 0;
+        }
+
+        @media screen and (max-width: 550px) {
+            width: 300px;
+        }
+    }
+
+    &__floor-plan {
+        &__title {
+            font-family: $main-font;
+            font-size: 30px;
+            font-weight: $font-weight-bold;
+            color: $color-gray;
+            margin-bottom: 10px;
+        }
+    }
+
+    &__place {
+        font-family: $second-font;
+        font-size: $font-size-base;
+        font-weight: $font-weight-base;
+        line-height: 20px;
+        color: #8EA4B0;
+        margin-left: 17px;
+    }
+
+    &__square {
+        font-family: $second-font;
+        font-size: 30px;
+        font-weight: $font-weight-base;
+        line-height: 31px;
+        color: #373737;
+        margin: 0 0 60px 17px;
+    }
+
+    &__price {
+        font-family: $second-font;
+        font-size: 40px;
+        font-weight: $font-weight-base;
+        line-height: 31px;
+        color: #FC9D27;
+        margin: 0 0 10px 17px;
+
+        &-meter {
+            font-family: $second-font;
+            font-size: 25px;
+            font-weight: $font-weight-base;
+            line-height: 20px;
+            color: #8EA4B0;
+            margin: 0 0 44px 17px;
+        }
+    }
+
+    &__mortgage {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-decoration: none;
+        height: 111px;
+        background: $color-white;
+        box-sizing: border-box;
+        padding: 12px 17px 12px 20px;
+        border-radius: 10px;
+        border: 1px solid #DDE6ED;
+        margin-bottom: 20px;
+
+        &__content {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__title {
+            font-family: $main-font;
+            font-size: 25px;
+            font-weight: $font-weight-bold;
+            line-height: 24.5px;
+            color: #8EA4B0;
+            margin: 8px 0 4px 0;
+        }
+
+        &__bottom {
+            display: flex;
+            align-items: flex-end;
+        }
+
+        &__payment,
+        &__bid {
+            max-width: 145px;
+            font-family: $second-font;
+            font-size: 14px;
+            font-weight: $font-weight-base;
+            line-height: 24.5px;
+            color: #A1ADB4;
+            margin-right: 36px;
+
+            @media screen and (max-width: 1200px) {
+                max-width: none;
+            }
+
+            @media #{$tablet} {
+                max-width: 145px;
+            }
+
+            @media screen and (max-width: 600px) {
+                max-width: none;
+            }
+
+            @media screen and (max-width: 450px) {
+                margin-right: 0;
+            }
+
+            span {
+                font-family: $main-font;
+                font-size: 25px;
+                font-weight: $font-weight-bold;
+                color: #45809F;
+            }
+
+            b {
+                font-size: 18px;
+                color: #0F0F0F;
+            }
+        }
+    }
+
+    &__buy {
+        font-family: $main-font;
+        font-size: 20px;
+        font-weight: $font-weight-bold;
+        color: $color-white;
+        text-align: center;
+        text-decoration: none;
+        background-color: #FC9D27;
+        padding: 16px 0;
+        border-radius: 10px;
+        margin-bottom: 50px;
+        transition: all .1s linear;
+
+        &:hover {
+            color: $second-color;
+        }
+    }
+
+    &__characteristic {
+        margin-left: 17px;
+
+        &__element {
+            padding: 17px 0;
+            border-bottom: 1px solid #DFE7EE;
+
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+
+        &__text {
+            display: flex;
+            font-family: $second-font;
+            font-size: 18px;
+            font-weight: $font-weight-base;
+            color: $color-gray;
+
+            span {
+                width: 218px;
+                font-family: $main-font;
+                font-size: 20px;
+                font-weight: $font-weight-bold;
+                
+                @media screen and (max-width: 1565px) {
+                    width: 180px;
+                }
+
+                @media screen and (max-width: 1200px) {
+                    width: 130px;
+                }
+
+                @media #{$tablet} {
+                    width: 218px;
+                }
+
+                @media screen and (max-width: 600px) {
+                    width: 130px;
+                }
+            }
+        }
+    }
+}
