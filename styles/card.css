@@ -1878,6 +1878,440 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
+.calc-ipoteka {
+  margin-bottom: 175px;
+}
+.calc-ipoteka__title {
+  margin-top: 164px;
+  margin-bottom: 66px;
+}
+.calc-ipoteka__wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 83%;
+  height: 531px;
+  margin: 0 auto;
+  border-radius: 87px;
+  border: 1px solid #DEE7EE;
+}
+@media screen and (max-width: 1279px) {
+  .calc-ipoteka__wrap {
+    flex-direction: column;
+    height: auto;
+  }
+}
+@media screen and (max-width: 749px) {
+  .calc-ipoteka__wrap {
+    border-radius: 50px;
+    width: calc(100% - 26px);
+    margin: 0 13px;
+  }
+}
+.calc-ipoteka__calc {
+  margin-right: 37px;
+}
+@media screen and (max-width: 749px) {
+  .calc-ipoteka__calc {
+    margin: 0;
+  }
+}
+.calc-ipoteka__banks {
+  transform: translate(60px, -20px);
+}
+@media screen and (max-width: 1880px) {
+  .calc-ipoteka__banks {
+    transform: translate(20px, -20px);
+  }
+}
+@media screen and (max-width: 1800px) {
+  .calc-ipoteka__banks {
+    transform: translate(60px, -20px);
+  }
+}
+@media screen and (max-width: 1520px) {
+  .calc-ipoteka__banks {
+    transform: translate(20px, -20px);
+  }
+}
+@media screen and (max-width: 1420px) {
+  .calc-ipoteka__banks {
+    transform: translate(0, -20px);
+  }
+}
+@media screen and (max-width: 1350px) {
+  .calc-ipoteka__banks {
+    transform: translate(60px, -20px);
+  }
+}
+@media screen and (max-width: 1279px) {
+  .calc-ipoteka__banks {
+    transform: translate(0, 60px);
+  }
+}
+.calc-ipoteka__banks__title {
+  font-family: "Bebas Neue", Arial, sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: #4A7D98;
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 999px) {
+  .calc-ipoteka__banks__title {
+    width: -moz-max-content;
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.calc-ipoteka__banks_list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 800px;
+}
+@media screen and (max-width: 1700px) {
+  .calc-ipoteka__banks_list {
+    width: 640px;
+  }
+}
+@media screen and (max-width: 1350px) {
+  .calc-ipoteka__banks_list {
+    width: 620px;
+  }
+}
+@media screen and (max-width: 1279px) {
+  .calc-ipoteka__banks_list {
+    width: 800px;
+  }
+}
+@media screen and (max-width: 820px) {
+  .calc-ipoteka__banks_list {
+    width: 640px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .calc-ipoteka__banks_list {
+    width: 380px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .calc-ipoteka__banks_list {
+    width: 300px;
+  }
+}
+.calc-ipoteka__banks_item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #F4F6F9;
+  box-sizing: border-box;
+  width: 380px;
+  height: 193px;
+  padding: 0 25px 15px;
+  border-radius: 31px;
+  margin: 0 20px 20px 0;
+  transition: opacity 0.3s linear;
+}
+@media screen and (max-width: 1700px) {
+  .calc-ipoteka__banks_item {
+    width: 300px;
+    padding: 0 20px 15px;
+  }
+}
+@media screen and (max-width: 1350px) {
+  .calc-ipoteka__banks_item {
+    margin: 0 10px 20px 0;
+  }
+}
+@media screen and (max-width: 1279px) {
+  .calc-ipoteka__banks_item {
+    width: 380px;
+    padding: 0 25px 15px;
+    margin: 0 10px 20px 10px;
+  }
+}
+@media screen and (max-width: 820px) {
+  .calc-ipoteka__banks_item {
+    width: 300px;
+    padding: 0 20px 15px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .calc-ipoteka__banks_item {
+    width: 380px;
+    margin: 0 0 10px 0;
+  }
+}
+.calc-ipoteka__banks_item_logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.calc-ipoteka__banks_item_footer {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.calc-ipoteka__banks_item_stavka {
+  display: flex;
+  align-items: flex-end;
+}
+.calc-ipoteka__banks_item .title {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #A1ADB4;
+  margin-right: 5px;
+}
+.calc-ipoteka__banks_item .value {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #0F0F0F;
+}
+.calc-ipoteka__banks_item .value span {
+  font-family: "Bebas Neue", Arial, sans-serif;
+  font-size: 25px;
+  font-weight: 700;
+  color: #45809F;
+}
+.calc-ipoteka__control {
+  position: relative;
+  width: 725px;
+  margin-left: 48px;
+}
+@media screen and (max-width: 1800px) {
+  .calc-ipoteka__control {
+    width: 600px;
+  }
+}
+@media screen and (max-width: 1520px) {
+  .calc-ipoteka__control {
+    width: 500px;
+  }
+}
+@media screen and (max-width: 1350px) {
+  .calc-ipoteka__control {
+    width: 400px;
+  }
+}
+@media screen and (max-width: 1279px) {
+  .calc-ipoteka__control {
+    width: 725px;
+  }
+}
+@media screen and (max-width: 999px) {
+  .calc-ipoteka__control {
+    width: 600px;
+  }
+}
+@media screen and (max-width: 820px) {
+  .calc-ipoteka__control {
+    width: 500px;
+  }
+}
+@media screen and (max-width: 820px) {
+  .calc-ipoteka__control {
+    width: 400px;
+  }
+}
+@media screen and (max-width: 749px) {
+  .calc-ipoteka__control {
+    margin: 0;
+  }
+}
+@media screen and (max-width: 450px) {
+  .calc-ipoteka__control {
+    width: 300px;
+  }
+}
+.calc-ipoteka__content {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.ipoteka-control {
+  position: relative;
+  z-index: 5;
+}
+@media screen and (max-width: 1279px) {
+  .ipoteka-control {
+    margin-top: 50px;
+  }
+}
+@media screen and (max-width: 749px) {
+  .ipoteka-control {
+    margin-top: 25px;
+  }
+}
+.ipoteka-control__payment {
+  font-family: "Officina Serif", Arial, sans-serif;
+  font-weight: 500;
+  margin-bottom: 25px;
+}
+.ipoteka-control__payment i {
+  font-style: normal;
+}
+.ipoteka-control__payment p {
+  font-size: 24px;
+  line-height: 1.2em;
+  margin: 0;
+  color: #5D666F;
+}
+.ipoteka-control__payment b {
+  font-size: 35px;
+  line-height: 1em;
+  font-weight: 500;
+  color: rgb(242, 161, 0);
+}
+.ipoteka-control__payment b.hide {
+  opacity: 0.2;
+  filter: grayscale(1);
+}
+.ipoteka-control__payment b span {
+  color: black;
+}
+.ipoteka-control__item {
+  margin-bottom: 53px;
+}
+.ipoteka-control__item:last-child {
+  margin-bottom: 0;
+}
+.ipoteka-control__item--vznos .ipoteka-control__input {
+  display: flex;
+  justify-content: space-between;
+}
+.ipoteka-control__item--vznos .ipoteka-control__input #ipoteka_percent {
+  width: 50px;
+  font-size: 20px;
+  text-align: right;
+}
+@media screen and (max-width: 820px) {
+  .ipoteka-control__item--vznos .ipoteka-control__input #ipoteka_percent {
+    text-align: center;
+  }
+}
+.ipoteka-control__title {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #96ABB2;
+}
+.ipoteka-control__input {
+  margin-bottom: 10px;
+}
+.ipoteka-control__input input {
+  font-family: "Bebas Neue", Arial, sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: #44565D;
+  background: none;
+  width: 150px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: none;
+  padding: 0;
+  border: none;
+}
+.ipoteka-control .ui-widget.ui-widget-content {
+  border: 0;
+}
+.ipoteka-control .ui-slider-horizontal {
+  width: calc(100% - 27px);
+  height: 2px;
+  background-color: #DDE7ED;
+  margin-left: 25px;
+  position: relative;
+}
+.ipoteka-control .ui-slider-horizontal:before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  background-color: #45809F;
+  left: -24px;
+  width: 25px;
+}
+.ipoteka-control .ui-slider-horizontal:after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  background-color: transparent;
+  right: -25px;
+  width: 50px;
+}
+.ipoteka-control .ui-widget-header {
+  background: #45809F;
+}
+.ipoteka-control .ui-slider .ui-slider-handle {
+  width: 27px;
+  height: 12px;
+  border-radius: 5px;
+  background: #45809F;
+  outline: none;
+  border: none !important;
+  cursor: grab;
+  margin-left: -13.5px;
+}
+.ipoteka-control .ui-slider-horizontal .ui-slider-handle {
+  top: -6px;
+}
+.ipoteka-control__order {
+  display: flex;
+  align-items: center;
+  margin-top: 35px;
+}
+@media screen and (max-width: 820px) {
+  .ipoteka-control__order {
+    flex-direction: column;
+  }
+}
+.ipoteka-control__order .ipoteka-control__btn.btn.btn-new {
+  font-family: "Bebas Neue", Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #44565D;
+  background-color: #C8D9E3;
+  white-space: nowrap;
+  padding: 21px 65px;
+  border-radius: 31px;
+  margin-right: 40px;
+  cursor: pointer;
+  transition: all 0.1s linear;
+}
+.ipoteka-control__order .ipoteka-control__btn.btn.btn-new:hover {
+  color: #233237;
+}
+@media screen and (max-width: 820px) {
+  .ipoteka-control__order .ipoteka-control__btn.btn.btn-new {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
+.ipoteka-control__order p {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #B5BDC0;
+}
+@media screen and (max-width: 1350px) {
+  .ipoteka-control__order p {
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 1279px) {
+  .ipoteka-control__order p {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 820px) {
+  .ipoteka-control__order p {
+    text-align: center;
+  }
+}
+
 .footer {
   background-color: #F6F6F6;
   margin-top: 98px;

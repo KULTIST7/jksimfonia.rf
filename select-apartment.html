@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/select-apartment.css">
+    <link rel="stylesheet" href="scripts/jquery-ui.min.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="scripts/jquery-ui.min.js"></script>
+    <script src="scripts/jquery.ui.touch-punch.min.js"></script>
     <script src="scripts/select-apartment.js"></script>
 
     <title>Выбрать квартиру</title>
@@ -330,6 +333,164 @@
                     </svg>
                 </div>
             </a>
+        </div>
+    </section>
+    <section class="calc-ipoteka">
+        <h1 class="section-title calc-ipoteka__title">Ипотека  от застройщика</h1>
+        <div class="calc-ipoteka__wrap">
+            <div class="calc-ipoteka__calc">
+                <div class="calc-ipoteka__content">
+                    <div class="calc-ipoteka__control">
+                        <div class="ipoteka-control">
+                            <div class="ipoteka-control__item">
+                                <div class="ipoteka-control__title">Стоимость недвижимости</div>
+                                <div class="ipoteka-control__input">
+                                    <input disabled type="text" id="ipoteka_price_all_text" value="7 040 000 руб." />
+                                </div>
+                                <div class="slider" id="ipoteka_price_all"></div>
+                            </div>
+                            <div class="ipoteka-control__item ipoteka-control__item--vznos">
+                                <div class="ipoteka-control__title">Первоначальный взнос</div>
+                                <div class="ipoteka-control__input">
+                                    <input disabled type="text" id="ipoteka_vznos_text" value="3 401 666 руб." />
+                                    <input value="" class="percent" disabled type="text" id="ipoteka_percent">
+                                </div>
+                                <div class="slider" id="ipoteka_vznos"></div>
+                            </div>
+                            <div class="ipoteka-control__item">
+                                <div class="ipoteka-control__title">Срок кредита</div>
+                                <div class="ipoteka-control__input">
+                                    <input disabled type="text" id="ipoteka_srok_text" value="300 мес." />
+                                </div>
+                                <div class="slider-range" id="ipoteka_srok"></div>
+                            </div>
+                            <div class="ipoteka-control__order">
+                                <a class="btn btn-new ipoteka-control__btn">оставить заявку</a>
+                                <p>Приведенные расчеты носят предварительный характер.Окончательный расчет суммы крелита и размер ежемесечного платежа производится банком после предоставления полного комплекта документов и проведения оценки платежеспосопности клиента.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="calc-ipoteka__banks">
+                <h3 class="calc-ipoteka__banks__title">Вам подходят программы:</h3>
+                <div class="calc-ipoteka__banks_list">
+                    <div 
+                    class="calc-ipoteka__banks_item"
+                    data-stavka="8.8"
+                    data-srok-min="1"
+                    data-srok-max="30"
+                    data-vznos="25"
+                    >
+                        <div class="calc-ipoteka__banks_item_logo"><img src="imgs/sber-logo.png" alt="logo"></div>
+                        <div class="calc-ipoteka__banks_item_footer">
+                            <div class="calc-ipoteka__banks_item_platezh">
+                                <div class="title">Ежемесячный платеж</div>
+                                <div class="value"><span>113 242</span> руб/мес</div>
+                            </div>
+                            <div class="calc-ipoteka__banks_item_stavka">
+                                <div class="title">Ставка от </div>
+                                <div class="value"><span>8,8%</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div 
+                    class="calc-ipoteka__banks_item"
+                    data-stavka="5.3"
+                    data-srok-min="3"
+                    data-srok-max="30"
+                    data-vznos="20"
+                    >
+                        <div class="calc-ipoteka__banks_item_logo"><img src="imgs/domrf-logo.png" alt="logo"></div>
+                        <div class="calc-ipoteka__banks_item_footer">
+                            <div class="calc-ipoteka__banks_item_platezh">
+                                <div class="title">Ежемесячный платеж</div>
+                                <div class="value"><span>113 242</span> руб/мес</div>
+                            </div>
+                            <div class="calc-ipoteka__banks_item_stavka">
+                                <div class="title">Ставка от </div>
+                                <div class="value"><span>5,3%</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                    class="calc-ipoteka__banks_item"
+                    data-stavka="5"
+                    data-srok-min="1"
+                    data-srok-max="30"
+                    data-vznos="20"
+                    >
+                        <div class="calc-ipoteka__banks_item_logo"><img src="imgs/vtb-logo.png" alt="logo"></div>
+                        <div class="calc-ipoteka__banks_item_footer">
+                            <div class="calc-ipoteka__banks_item_platezh">
+                                <div class="title">Ежемесячный платеж</div>
+                                <div class="value"><span>113 242</span> руб/мес</div>
+                            </div>
+                            <div class="calc-ipoteka__banks_item_stavka">
+                                <div class="title">Ставка от </div>
+                                <div class="value"><span>5%</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                    class="calc-ipoteka__banks_item"
+                    data-stavka="5"
+                    data-srok-min="1"
+                    data-srok-max="30"
+                    data-vznos="20"
+                    >
+                        <div class="calc-ipoteka__banks_item_logo"><img src="imgs/alphabank-logo.png" alt="logo"></div>
+                        <div class="calc-ipoteka__banks_item_footer">
+                            <div class="calc-ipoteka__banks_item_platezh">
+                                <div class="title">Ежемесячный платеж</div>
+                                <div class="value"><span>113 242</span> руб/мес</div>
+                            </div>
+                            <div class="calc-ipoteka__banks_item_stavka">
+                                <div class="title">Ставка от </div>
+                                <div class="value"><span>5%</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                    class="calc-ipoteka__banks_item"
+                    data-stavka="5"
+                    data-srok-min="1"
+                    data-srok-max="30"
+                    data-vznos="20"
+                    >
+                        <div class="calc-ipoteka__banks_item_logo"><img src="imgs/psb-logo.png" alt="logo"></div>
+                        <div class="calc-ipoteka__banks_item_footer">
+                            <div class="calc-ipoteka__banks_item_platezh">
+                                <div class="title">Ежемесячный платеж</div>
+                                <div class="value"><span>113 242</span> руб/мес</div>
+                            </div>
+                            <div class="calc-ipoteka__banks_item_stavka">
+                                <div class="title">Ставка от </div>
+                                <div class="value"><span>5%</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                    class="calc-ipoteka__banks_item"
+                    data-stavka="5"
+                    data-srok-min="1"
+                    data-srok-max="30"
+                    data-vznos="20"
+                    >
+                        <div class="calc-ipoteka__banks_item_logo"><img src="imgs/gasprombank-logo.png" alt="logo"></div>
+                        <div class="calc-ipoteka__banks_item_footer">
+                            <div class="calc-ipoteka__banks_item_platezh">
+                                <div class="title">Ежемесячный платеж</div>
+                                <div class="value"><span>113 242</span> руб/мес</div>
+                            </div>
+                            <div class="calc-ipoteka__banks_item_stavka">
+                                <div class="title">Ставка от </div>
+                                <div class="value"><span>5%</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     <footer class="footer">
