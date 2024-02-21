@@ -7,6 +7,10 @@
         margin-top: 75px;
     }
 
+    @media #{$phone} {
+        margin-top: 15px;
+    }
+
     &__wrapper {
         position: relative;
         width: 83%;
@@ -35,6 +39,11 @@
 
     &__title {
         margin-left: 0;
+        margin-bottom: 10px;
+
+        @media #{$phone} {
+            margin-bottom: 25px;
+        }
     }
 
     &__img {
@@ -68,7 +77,7 @@
     &__text {
         font-family: $main-font;
         font-size: 25px;
-        font-weight: $font-weight-base;
+        font-weight: 300;
         line-height: 25px;
         color: $color-black;
         margin-bottom: 20px;
@@ -94,7 +103,7 @@
         font-weight: $font-weight-bold;
         text-decoration: none;
         color: $color-white;
-        background-color: $color-gray;
+        background-color: #FC9D27;
         transition: all .1s linear;
         height: 50px;
         padding: 0 35px;
@@ -129,22 +138,12 @@
                 transition: all .1s linear;
             }
 
-            &_vk:hover {
-                path {
-                    fill: #0A74F9;
-                }
+            &_vk:hover path {
+                fill: #0A74F9;
             }
 
-            &_viber:hover {
-                path {
-                    fill: #8F53A4;
-                }
-            }
-
-            &_whatsapp:hover {
-                path {
-                    fill: #2ED470;
-                }
+            &_tg:hover path {
+                fill: #29ABF0;
             }
         }
     }

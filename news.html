@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="scripts/jquery.inputmask.min.js"></script>
+    <script src="scripts/news.js"></script>
+
+    <link rel="stylesheet" href="styles/style.css">
+
+    <title>Новости</title>
+</head>
+<body>
+    <header class="header header-inner">
+        <div class="header__wrapper">
+            <a href="index.html"><img src="imgs/svg/header-logo.svg" alt="Симфония" class="header__logo"></a>
+            <div class="header__menu">
+                <nav class="header__nav">
+                    <a href="select-apartment.html" class="header__nav__element">Квартиры</a>
+                    <a href="#" class="header__nav__element">Ипотека</a>
+                    <a href="#" class="header__nav__element">Новости</a>
+                    <a href="building-progress.html" class="header__nav__element">Ход строительства</a>
+                    <a href="contacts.html" class="header__nav__element">Контакты</a>
+                </nav>
+                <div class="header__nav__more-box">
+                    <button class="header__nav__more active">. . .</button>
+                    <div class="header__nav_hidden"></div>
+                </div>
+                <div class="header__socials">
+                    <a href="#" class="header__socials__element header__socials__element_vk">
+                        <svg width="29" height="17" viewBox="0 0 29 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.56001 1.44354C9.94563 1.62636 10.8453 1.53123 11.1684 2.64587C11.4596 3.64994 11.4476 6.05117 11.2226 7.16886C10.6004 10.2596 7.97397 5.37118 7.32556 4.29734C6.98988 3.74126 6.40586 2.47297 6.14634 1.85417C5.69864 0.786426 4.62528 1.01385 3.34599 1.01385C2.86475 1.01385 2.53986 1.05789 2.0858 1.05694C1.3753 1.05522 0 0.919299 0 1.57241C0 2.07206 0.28632 2.57134 0.506893 3.00465L1.69536 5.35269C1.90302 5.7473 2.09351 6.14287 2.32816 6.53157L2.97387 7.6546C4.67444 10.4312 6.71763 13.688 9.77731 15.1923C12.0964 16.3325 13.1879 16.3094 15.7306 16.3094C16.1265 16.3094 16.6237 16.0963 16.7612 15.8246C16.929 15.4933 16.9118 14.945 16.9484 14.5058C17.0381 13.436 17.5637 12.0239 18.8343 12.8969C19.4362 13.3105 20.1677 14.274 20.7171 14.8163C21.0148 15.1101 21.3749 15.4948 21.7092 15.7259C21.8805 15.8443 22.1639 16.0151 22.3409 16.0896C23.3915 16.5319 24.5981 16.309 25.8992 16.3094C26.6212 16.3096 27.8799 16.4274 28.4886 16.0339C29.4536 15.41 28.4886 14.295 27.9416 13.6026C27.629 13.2072 26.4234 11.9444 25.9965 11.5727C23.2022 9.13983 23.7613 9.53425 26.6565 5.71547C27.2639 4.91423 28.8975 2.81478 28.8975 1.70128C28.8975 1.11756 28.2719 1.06761 27.8035 1.01843C27.5627 0.993265 27.4958 1.05541 27.248 1.05846C26.4784 1.06799 22.9733 0.975154 22.5349 1.12461C22.2516 1.22126 22.0906 1.50931 21.9755 1.77467C21.3242 3.2742 20.8802 4.30687 19.9462 5.69755C19.5681 6.26049 18.3571 8.14605 17.5992 8.14605C17.0562 8.14605 16.8605 7.07679 16.8605 6.55635C16.8605 4.9779 16.9475 3.53785 16.9475 2.0021C16.9475 1.67516 16.8759 1.3324 16.7672 1.10612C16.2923 0.11749 13.7062 0.326426 12.515 0.326426C11.6547 0.326426 10.2676 0.414499 9.732 1.09792C9.6487 1.20449 9.57544 1.26149 9.56001 1.44354Z" fill="white" fill-opacity="0.6"/>
+                        </svg>                        
+                    </a>
+                    <a href="#" class="header__socials__element header__socials__element_tg">
+                        <svg width="27" height="22" viewBox="0 0 27 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.5946 14.4995L10.1479 20.6418C10.787 20.6418 11.0637 20.3734 11.3956 20.0511L14.3915 17.2517L20.5994 21.6967C21.738 22.3171 22.5401 21.9904 22.8472 20.6726L26.9221 2.00354L26.9232 2.00244C27.2844 0.356844 26.3146 -0.286652 25.2053 0.117045L1.25348 9.0831C-0.381184 9.7035 -0.356434 10.5945 0.975599 10.9982L7.09912 12.8605L21.3228 4.15842C21.9922 3.72503 22.6009 3.96483 22.1002 4.39822L10.5946 14.4995Z" fill="white" fill-opacity="0.6"></path>
+                        </svg>                    
+                    </a>
+                </div>
+            </div>
+            <a href="tel:+73512451515" class="header__button">+7 (351) 245-15-15</a>
+            <button class="header__burger-button">
+                <svg width="41" height="14" viewBox="0 0 41 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0H41V2H0V0Z" fill="#306079"/>
+                    <path d="M0 6H41V8H0V6Z" fill="#306079"/>
+                    <path d="M0 12H28V14H0V12Z" fill="#306079"/>
+                </svg>                
+            </button>
+        </div>
+    </header>
+    <div class="burger">
+        <div class="burger__space"></div>
+        <div class="burger__content">
+            <button class="burger__close-button">
+                <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M24.6596 0.230044C24.9662 -0.0765937 25.4634 -0.0765935 25.77 0.230044C26.0767 0.536682 26.0767 1.03384 25.77 1.34048L1.34042 25.77C1.03378 26.0767 0.536618 26.0767 0.229979 25.77C-0.0766597 25.4634 -0.0766597 24.9662 0.229979 24.6596L24.6596 0.230044Z" fill="#6B6B6B"/>
+                    <path d="M24.6596 25.77C24.9662 26.0766 25.4634 26.0766 25.77 25.77C26.0767 25.4633 26.0767 24.9662 25.77 24.6595L1.34042 0.229978C1.03378 -0.0766595 0.536618 -0.0766594 0.229979 0.229978C-0.0766597 0.536616 -0.0766597 1.03377 0.229979 1.34041L24.6596 25.77Z" fill="#6B6B6B"/>
+                </svg>  
+            </button>
+            <nav class="burger__nav">
+                <a href="select-apartment.html" class="burger__nav__element">Квартиры</a>
+                <a href="#" class="burger__nav__element">Ипотека</a>
+                <a href="#" class="burger__nav__element">Новости</a>
+                <a href="building-progress.html" class="burger__nav__element">Ход строительства</a>
+                <a href="contacts.html" class="burger__nav__element">Контакты</a>
+                <a href="#" class="burger__nav__element">Проектная документация</a>
+            </nav>
+            <p class="footer__text">Офис продаж:<br><b>ул. Ленина корпус 2 оф.360</b></p>
+            <div class="footer__tel-box">
+                <p class="footer__text">Телефон:<br><span>+7 (351) 245-15-15</span></p>
+                <a href="tel:+73512451515" class="footer__call-button">Заказать звонок</a>
+            </div>
+            <p class="footer__text">график работы:<br><b>пн-пт 9-18.00,</b> <span>Сб 10.00-16.00</span></p>
+            <div class="footer__socials">
+                <p class="footer__text">Мы в социальных сетях:</p>
+                <div>
+                    <a href="#" class="footer__socials__element footer__socials__element_vk">
+                        <svg width="30" height="17" viewBox="0 0 30 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M10.5389 2.04669C10.9245 2.22951 11.8242 2.13438 12.1473 3.24902C12.4384 4.25309 12.4265 6.65432 12.2015 7.77201C11.5793 10.8628 8.95285 5.97433 8.30444 4.90049C7.96876 4.34441 7.38474 3.07612 7.12522 2.45732C6.67752 1.38958 5.60416 1.617 4.32488 1.617C3.84363 1.617 3.51875 1.66104 3.06468 1.66009C2.35418 1.65837 0.978882 1.52245 0.978882 2.17556C0.978882 2.67521 1.2652 3.17448 1.48577 3.6078L2.67424 5.95584C2.8819 6.35045 3.07239 6.74602 3.30704 7.13472L3.95276 8.25775C5.65333 11.0343 7.69651 14.2911 10.7562 15.7954C13.0753 16.9356 14.1668 16.9125 16.7095 16.9125C17.1054 16.9125 17.6026 16.6994 17.7401 16.4278C17.9078 16.0964 17.8907 15.5482 17.9273 15.109C18.017 14.0391 18.5426 12.6271 19.8132 13.5C20.4151 13.9137 21.1466 14.8771 21.6959 15.4195C21.9936 15.7133 22.3538 16.098 22.6881 16.329C22.8593 16.4474 23.1428 16.6182 23.3198 16.6927C24.3704 17.135 25.577 16.9122 26.878 16.9125C27.6001 16.9127 28.8588 17.0306 29.4675 16.6371C30.4325 16.0131 29.4675 14.8981 28.9205 14.2057C28.6079 13.8104 27.4023 12.5476 26.9754 12.1759C24.181 9.74298 24.7402 10.1374 27.6354 6.31862C28.2427 5.51738 29.8764 3.41792 29.8764 2.30443C29.8764 1.72071 29.2507 1.67076 28.7824 1.62158C28.5416 1.59641 28.4747 1.65856 28.2269 1.66161C27.4572 1.67114 23.9522 1.5783 23.5137 1.72776C23.2305 1.82441 23.0695 2.11246 22.9544 2.37782C22.3031 3.87735 21.8591 4.91002 20.9251 6.3007C20.547 6.86364 19.336 8.7492 18.578 8.7492C18.0351 8.7492 17.8394 7.67994 17.8394 7.1595C17.8394 5.58105 17.9263 4.141 17.9263 2.60525C17.9263 2.27831 17.8548 1.93555 17.7461 1.70927C17.2712 0.72064 14.685 0.929575 13.4939 0.929575C12.6336 0.929575 11.2465 1.01765 10.7109 1.70107C10.6276 1.80764 10.5543 1.86464 10.5389 2.04669Z" fill="#44565D"/>
+                        </svg>                                    
+                    </a>
+                    <a href="#" class="footer__socials__element footer__socials__element_tg">
+                        <svg width="67" height="62" viewBox="0 0 67 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g filter="url(#filter0_d_1495_4)">
+                                <path d="M30.5946 34.4995L30.1479 40.6418C30.787 40.6418 31.0637 40.3734 31.3956 40.0511L34.3915 37.2517L40.5994 41.6967C41.738 42.3171 42.5401 41.9904 42.8472 40.6726L46.9221 22.0035L46.9232 22.0024C47.2844 20.3568 46.3146 19.7133 45.2053 20.117L21.2535 29.0831C19.6188 29.7035 19.6436 30.5945 20.9756 30.9982L27.0991 32.8605L41.3228 24.1584C41.9922 23.725 42.6009 23.9648 42.1002 24.3982L30.5946 34.4995Z" fill="#44565D"></path>
+                            </g>
+                            <defs>
+                                <filter id="filter0_d_1495_4" x="0" y="0" width="67" height="62" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                    <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+                                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"></feColorMatrix>
+                                    <feOffset></feOffset>
+                                    <feGaussianBlur stdDeviation="10"></feGaussianBlur>
+                                    <feComposite in2="hardAlpha" operator="out"></feComposite>
+                                    <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0"></feColorMatrix>
+                                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1495_4"></feBlend>
+                                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1495_4" result="shape"></feBlend>
+                                </filter>
+                            </defs>
+                        </svg>                                 
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="up up-invisible">
+        <img src="imgs/svg/up.svg" alt="up">
+    </div>
+    <div class="nav-chain">
+        <a class="nav-chain__back" href="/">Главная   >  </a><a class="nav-chain__select" href="#">Новости</a>
+    </div>
+    <section class="news-content">
+        <h1 class="section-title news-content__title">Новости</h1>
+        <div class="news-content__content">
+            <a href="#" class="news__card">
+                <div class="news__card__wrapper">
+                    <p class="news__card__date">28 <span>/ 09 / 23</span></p>
+                    <h2 class="news__card__title">На строительной площадке Симфония ведется бетонирование фундаментной плиты</h2>
+                    <p class="news__card__text">На строительной площадке первой очереди семейного премиального жилого квартала PRIDE на конец сентября залито 1150 кубометров бетона фундаментных плит паркинга. Ведется подготовка к бетонированию фундаментных плит секций . . .</p>
+                    <svg class="news__card__button" width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="23" cy="23" r="22" stroke="#D3E2EA" stroke-width="2"/>
+                        <path d="M21 29L28 22.5L21 16" stroke="#44565D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+            </a>
+            <a href="#" class="news__card">
+                <div class="news__card__wrapper">
+                    <p class="news__card__date">28 <span>/ 09 / 23</span></p>
+                    <h2 class="news__card__title">На строительной площадке Симфония ведется бетонирование фундаментной плиты</h2>
+                    <p class="news__card__text">На строительной площадке первой очереди семейного премиального жилого квартала PRIDE на конец сентября залито 1150 кубометров бетона фундаментных плит паркинга. Ведется подготовка к бетонированию фундаментных плит секций . . .</p>
+                    <svg class="news__card__button" width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="23" cy="23" r="22" stroke="#D3E2EA" stroke-width="2"/>
+                        <path d="M21 29L28 22.5L21 16" stroke="#44565D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+            </a>
+            <a href="#" class="news__card">
+                <div class="news__card__wrapper">
+                    <p class="news__card__date">28 <span>/ 09 / 23</span></p>
+                    <h2 class="news__card__title">На строительной площадке Симфония ведется бетонирование фундаментной плиты</h2>
+                    <p class="news__card__text">На строительной площадке первой очереди семейного премиального жилого квартала PRIDE на конец сентября залито 1150 кубометров бетона фундаментных плит паркинга. Ведется подготовка к бетонированию фундаментных плит секций . . .</p>
+                    <svg class="news__card__button" width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="23" cy="23" r="22" stroke="#D3E2EA" stroke-width="2"/>
+                        <path d="M21 29L28 22.5L21 16" stroke="#44565D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+            </a>
+            <a href="#" class="news__card">
+                <div class="news__card__wrapper">
+                    <p class="news__card__date">28 <span>/ 09 / 23</span></p>
+                    <h2 class="news__card__title">На строительной площадке Симфония ведется бетонирование фундаментной плиты</h2>
+                    <p class="news__card__text">На строительной площадке первой очереди семейного премиального жилого квартала PRIDE на конец сентября залито 1150 кубометров бетона фундаментных плит паркинга. Ведется подготовка к бетонированию фундаментных плит секций . . .</p>
+                    <svg class="news__card__button" width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="23" cy="23" r="22" stroke="#D3E2EA" stroke-width="2"/>
+                        <path d="M21 29L28 22.5L21 16" stroke="#44565D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+            </a>
+            <a href="#" class="news__card">
+                <div class="news__card__wrapper">
+                    <p class="news__card__date">28 <span>/ 09 / 23</span></p>
+                    <h2 class="news__card__title">На строительной площадке Симфония ведется бетонирование фундаментной плиты</h2>
+                    <p class="news__card__text">На строительной площадке первой очереди семейного премиального жилого квартала PRIDE на конец сентября залито 1150 кубометров бетона фундаментных плит паркинга. Ведется подготовка к бетонированию фундаментных плит секций . . .</p>
+                    <svg class="news__card__button" width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="23" cy="23" r="22" stroke="#D3E2EA" stroke-width="2"/>
+                        <path d="M21 29L28 22.5L21 16" stroke="#44565D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+            </a>
+            <a href="#" class="news__card">
+                <div class="news__card__wrapper">
+                    <p class="news__card__date">28 <span>/ 09 / 23</span></p>
+                    <h2 class="news__card__title">На строительной площадке Симфония ведется бетонирование фундаментной плиты</h2>
+                    <p class="news__card__text">На строительной площадке первой очереди семейного премиального жилого квартала PRIDE на конец сентября залито 1150 кубометров бетона фундаментных плит паркинга. Ведется подготовка к бетонированию фундаментных плит секций . . .</p>
+                    <svg class="news__card__button" width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="23" cy="23" r="22" stroke="#D3E2EA" stroke-width="2"/>
+                        <path d="M21 29L28 22.5L21 16" stroke="#44565D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+            </a>
+            <a href="#" class="news__card">
+                <div class="news__card__wrapper">
+                    <p class="news__card__date">28 <span>/ 09 / 23</span></p>
+                    <h2 class="news__card__title">На строительной площадке Симфония ведется бетонирование фундаментной плиты</h2>
+                    <p class="news__card__text">На строительной площадке первой очереди семейного премиального жилого квартала PRIDE на конец сентября залито 1150 кубометров бетона фундаментных плит паркинга. Ведется подготовка к бетонированию фундаментных плит секций . . .</p>
+                    <svg class="news__card__button" width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="23" cy="23" r="22" stroke="#D3E2EA" stroke-width="2"/>
+                        <path d="M21 29L28 22.5L21 16" stroke="#44565D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+            </a>
+            <a href="#" class="news__card">
+                <div class="news__card__wrapper">
+                    <p class="news__card__date">28 <span>/ 09 / 23</span></p>
+                    <h2 class="news__card__title">На строительной площадке Симфония ведется бетонирование фундаментной плиты</h2>
+                    <p class="news__card__text">На строительной площадке первой очереди семейного премиального жилого квартала PRIDE на конец сентября залито 1150 кубометров бетона фундаментных плит паркинга. Ведется подготовка к бетонированию фундаментных плит секций . . .</p>
+                    <svg class="news__card__button" width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="23" cy="23" r="22" stroke="#D3E2EA" stroke-width="2"/>
+                        <path d="M21 29L28 22.5L21 16" stroke="#44565D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+            </a>
+            <a href="#" class="news__card">
+                <div class="news__card__wrapper">
+                    <p class="news__card__date">28 <span>/ 09 / 23</span></p>
+                    <h2 class="news__card__title">На строительной площадке Симфония ведется бетонирование фундаментной плиты</h2>
+                    <p class="news__card__text">На строительной площадке первой очереди семейного премиального жилого квартала PRIDE на конец сентября залито 1150 кубометров бетона фундаментных плит паркинга. Ведется подготовка к бетонированию фундаментных плит секций . . .</p>
+                    <svg class="news__card__button" width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="23" cy="23" r="22" stroke="#D3E2EA" stroke-width="2"/>
+                        <path d="M21 29L28 22.5L21 16" stroke="#44565D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+            </a>
+        </div>
+        <div class="news-content__show-more">
+            <button class="news-content__show-more__button">
+                Показать еще...
+                <svg width="21" height="17" viewBox="0 0 21 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.29861 3.47366H8.75897L6.37564 1.10648C6.11993 0.852417 6.11993 0.438602 6.37564 0.184509C6.62327 -0.0618284 7.05609 -0.0618284 7.3039 0.184509L10.8077 3.66487C10.9317 3.78796 11 3.95177 11 4.1259C11 4.30012 10.9317 4.46393 10.8077 4.58702L7.30409 8.0672C7.05628 8.31354 6.62402 8.31391 6.37564 8.0672C6.11993 7.81304 6.11993 7.39932 6.37564 7.14514L8.75897 4.77777H5.29861C3.10099 4.77777 1.31292 6.55384 1.31292 8.73671C1.31292 10.9198 3.10099 12.6956 5.29861 12.6956H7.17422C7.48503 12.6956 7.73691 12.946 7.73691 13.2546V13.4409C7.73691 13.7496 7.48503 13.9998 7.17422 13.9998H5.29861C2.37704 13.9998 0 11.6388 0 8.73671C0 5.83475 2.37704 3.47366 5.29861 3.47366Z" fill="#8FA7B1"/>
+                    <path d="M15.7014 13.5259L12.241 13.5259L14.6244 15.893C14.8801 16.1471 14.8801 16.5609 14.6244 16.815C14.3767 17.0613 13.9439 17.0613 13.6961 16.815L10.1923 13.3346C10.0683 13.2116 10 13.0477 10 12.8736C10 12.6994 10.0683 12.5356 10.1923 12.4125L13.6959 8.93231C13.9437 8.68598 14.376 8.68561 14.6244 8.93231C14.8801 9.18647 14.8801 9.60019 14.6244 9.85437L12.241 12.2217L15.7014 12.2217C17.899 12.2217 19.6871 10.4457 19.6871 8.2628C19.6871 6.07975 17.899 4.30387 15.7014 4.30387L13.8258 4.30387C13.515 4.30387 13.2631 4.05353 13.2631 3.74495L13.2631 3.55864C13.2631 3.24991 13.515 2.99976 13.8258 2.99976L15.7014 2.99976C18.623 2.99976 21 5.36075 21 8.2628C21 11.1648 18.623 13.5259 15.7014 13.5259Z" fill="#8FA7B1"/>
+                </svg>                                     
+            </button>
+            <div class="news-content__show-more__pages">
+                <button class="news-content__show-more__back news-content__show-more__back_disabled">
+                    <svg width="7" height="11" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.33999 11L6.9255 9.34757L1.77259 3.97718L0.18708 5.62961L5.33999 11Z" fill="#9AB2BC"/>
+                        <path d="M7.00003 1.65243L5.41452 -1.89067e-08L6.6184e-08 5.44993L1.58551 7.10236L7.00003 1.65243Z" fill="#9AB2BC"/>
+                    </svg>                        
+                </button>
+                <a href="#" class="news-content__show-more__page news-content__show-more__page_selected">1</a>
+                <a href="#" class="news-content__show-more__page">2</a>
+                <a href="#" class="news-content__show-more__page">3</a>
+                <p>. . .</p>
+                <a href="#" class="news-content__show-more__last-page">58</a>
+                <button class="news-content__show-more__next news-content__show-more__next">
+                    <svg width="7" height="11" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.33999 11L6.9255 9.34757L1.77259 3.97718L0.18708 5.62961L5.33999 11Z" fill="#9AB2BC"/>
+                        <path d="M7.00003 1.65243L5.41452 -1.89067e-08L6.6184e-08 5.44993L1.58551 7.10236L7.00003 1.65243Z" fill="#9AB2BC"/>
+                    </svg>                        
+                </button>
+            </div>
+        </div>
+    </section>
+    <section class="album album_callback">
+        <h1 class="section-title album__title album__title_callback">заказать обратный звонок</h1>
+        <form action="#" class="album__form album__form_callback">
+            <div class="album__form__content album__form__content_callback">
+                <input class="album__input album__input_email" type="text" placeholder="ваше имя">
+                <input class="album__input album__input_tel" type="tel" placeholder="телефон">
+                <button class="album__form__button">заказать</button>
+                <p class="album__form__warning album__form__warning_callback">нажимая кнопку «заказать», вы принимаете условия передачи указанной информации</p>
+            </div>
+        </form>
+        <div class="album__desktop album__desktop_callback">
+            <img src="imgs/advantages-cloud-1.png" alt="cloud" class="album__desktop__cloud">
+            <img src="imgs/advantages-cloud-1.png" alt="cloud" class="album__desktop__cloud">
+            <img src="imgs/advantages-cloud-1.png" alt="cloud" class="album__desktop__cloud">
+            <img src="imgs/advantages-cloud-1.png" alt="cloud" class="album__desktop__cloud">
+            <img src="imgs/advantages-cloud-1.png" alt="cloud" class="album__desktop__cloud">
+            <img src="imgs/advantages-cloud-2.png" alt="cloud" class="album__desktop__cloud">
+            <img src="imgs/advantages-cloud-1.png" alt="cloud" class="album__desktop__cloud">
+            <img src="imgs/advantages-cloud-2.png" alt="cloud" class="album__desktop__cloud">
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer__wrapper">
+            <h1 class="section-title footer__title">Контакты</h1>
+            <div>
+                <div>
+                    <img src="imgs/footer-img.png" alt="img" class="footer__img" loading="lazy">
+                </div>
+                <div class="footer__content">
+                    <p class="footer__text">Офис продаж:<br><b>ул. Энгельса, 4</b></p>
+                    <div class="footer__tel-box">
+                        <p class="footer__text">Телефон:<br><span>+7 (351) 245-15-15</span></p>
+                        <a href="tel:+73512451515" class="footer__call-button">Заказать звонок</a>
+                    </div>
+                    <p class="footer__text">график работы:<br><b>пн-пт 9-18.00,</b> <span>Сб 10.00-16.00</span></p>
+                    <div class="footer__socials">
+                        <p class="footer__text">Мы в социальных сетях:</p>
+                        <div>
+                            <a href="#" class="footer__socials__element footer__socials__element_vk">
+                                <svg width="30" height="17" viewBox="0 0 30 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10.5389 2.04669C10.9245 2.22951 11.8242 2.13438 12.1473 3.24902C12.4384 4.25309 12.4265 6.65432 12.2015 7.77201C11.5793 10.8628 8.95285 5.97433 8.30444 4.90049C7.96876 4.34441 7.38474 3.07612 7.12522 2.45732C6.67752 1.38958 5.60416 1.617 4.32488 1.617C3.84363 1.617 3.51875 1.66104 3.06468 1.66009C2.35418 1.65837 0.978882 1.52245 0.978882 2.17556C0.978882 2.67521 1.2652 3.17448 1.48577 3.6078L2.67424 5.95584C2.8819 6.35045 3.07239 6.74602 3.30704 7.13472L3.95276 8.25775C5.65333 11.0343 7.69651 14.2911 10.7562 15.7954C13.0753 16.9356 14.1668 16.9125 16.7095 16.9125C17.1054 16.9125 17.6026 16.6994 17.7401 16.4278C17.9078 16.0964 17.8907 15.5482 17.9273 15.109C18.017 14.0391 18.5426 12.6271 19.8132 13.5C20.4151 13.9137 21.1466 14.8771 21.6959 15.4195C21.9936 15.7133 22.3538 16.098 22.6881 16.329C22.8593 16.4474 23.1428 16.6182 23.3198 16.6927C24.3704 17.135 25.577 16.9122 26.878 16.9125C27.6001 16.9127 28.8588 17.0306 29.4675 16.6371C30.4325 16.0131 29.4675 14.8981 28.9205 14.2057C28.6079 13.8104 27.4023 12.5476 26.9754 12.1759C24.181 9.74298 24.7402 10.1374 27.6354 6.31862C28.2427 5.51738 29.8764 3.41792 29.8764 2.30443C29.8764 1.72071 29.2507 1.67076 28.7824 1.62158C28.5416 1.59641 28.4747 1.65856 28.2269 1.66161C27.4572 1.67114 23.9522 1.5783 23.5137 1.72776C23.2305 1.82441 23.0695 2.11246 22.9544 2.37782C22.3031 3.87735 21.8591 4.91002 20.9251 6.3007C20.547 6.86364 19.336 8.7492 18.578 8.7492C18.0351 8.7492 17.8394 7.67994 17.8394 7.1595C17.8394 5.58105 17.9263 4.141 17.9263 2.60525C17.9263 2.27831 17.8548 1.93555 17.7461 1.70927C17.2712 0.72064 14.685 0.929575 13.4939 0.929575C12.6336 0.929575 11.2465 1.01765 10.7109 1.70107C10.6276 1.80764 10.5543 1.86464 10.5389 2.04669Z" fill="#44565D"/>
+                                </svg>                                    
+                            </a>
+                            <a href="#" class="footer__socials__element footer__socials__element_tg">
+                                <svg width="67" height="62" viewBox="0 0 67 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g filter="url(#filter0_d_1495_4)">
+                                        <path d="M30.5946 34.4995L30.1479 40.6418C30.787 40.6418 31.0637 40.3734 31.3956 40.0511L34.3915 37.2517L40.5994 41.6967C41.738 42.3171 42.5401 41.9904 42.8472 40.6726L46.9221 22.0035L46.9232 22.0024C47.2844 20.3568 46.3146 19.7133 45.2053 20.117L21.2535 29.0831C19.6188 29.7035 19.6436 30.5945 20.9756 30.9982L27.0991 32.8605L41.3228 24.1584C41.9922 23.725 42.6009 23.9648 42.1002 24.3982L30.5946 34.4995Z" fill="#44565D"></path>
+                                    </g>
+                                    <defs>
+                                        <filter id="filter0_d_1495_4" x="0" y="0" width="67" height="62" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                            <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+                                            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"></feColorMatrix>
+                                            <feOffset></feOffset>
+                                            <feGaussianBlur stdDeviation="10"></feGaussianBlur>
+                                            <feComposite in2="hardAlpha" operator="out"></feComposite>
+                                            <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0"></feColorMatrix>
+                                            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1495_4"></feBlend>
+                                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1495_4" result="shape"></feBlend>
+                                        </filter>
+                                    </defs>
+                                </svg>                                 
+                            </a>
+                        </div>
+                    </div>
+                    <p class="footer__text">Проектная документация</p>
+                </div>
+                <a href="https://luxar.group/" target="_blank" class="footer__logo">
+                    <img src="imgs/luxargroup-logo.png" alt="luxargroup" loading="lazy">
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

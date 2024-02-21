@@ -3,28 +3,37 @@
     display: flex;
     overflow: hidden;
     flex-direction: column;
-    height: 1006px;
+    height: 914px;
     background: url(../imgs/advantages-bg.png) no-repeat;
     background-size: cover;
     margin-top: 100px;
 
+    @media screen and (max-width:1440px) {
+        height: 750px;
+    }
+
     @media #{$tablet} {
-        background-position: right;
+        background-position: center;
         height: 476px;
         margin-top: 0;
     }
 
     &__title {
         font-size: 100px;
-        line-height: 100px;
+        line-height: 80px;
 
         @media #{$phone} {
+            font-size: 40px !important;
+            line-height: 40px !important;
             z-index: 2;
         }
 
         span {
             font-size: 80px;
-            line-height: 80px;
+
+            @media #{$tablet} {
+                font-size: 60px;
+            }
 
             @media #{$phone} {
                 font-size: 40px;
@@ -38,6 +47,7 @@
         display: flex;
         height: 100%;
         margin-left: 172px;
+        bottom: -90px;
         z-index: 1;
 
         @media screen and (max-width: 1800px) {
@@ -50,7 +60,7 @@
 
         @media #{$tablet} {
             height: auto;
-            margin-top: -40px;
+            margin-bottom: 100px;
             margin-left: 45%;
         }
 
@@ -80,7 +90,7 @@
         height: 323px;
         background-color: #FFFFFFCC;
         backdrop-filter: blur(2px);
-        border-radius: 20px;
+        border-radius: 50px;
         rotate: 45deg;
         margin-top: auto;
 
@@ -92,10 +102,10 @@
         @media #{$tablet} {
             width: 130px;
             height: 130px;
+            border-radius: 20px;
         }
 
-        &:nth-child(1),
-        &:nth-child(5) {
+        &:nth-child(1) {
             margin-bottom: 85px;
 
             @media screen and (max-width: 1440px) {
@@ -138,7 +148,7 @@
         }
 
         &:nth-child(4) {
-            margin-bottom: 250px;
+            margin-bottom: 350px;
 
             @media screen and (max-width: 1854px) {
                 margin-bottom: 85px;
@@ -159,15 +169,17 @@
         }
 
         &:nth-child(5) {
+            margin-bottom: 185px;
+
             @media screen and (max-width: 1854px) {
-                margin-top: 919px;
+                margin-top: 823px;
                 margin-bottom: 0;
                 transform: translateY(455px);
                 transform: translateX(-455px);
             }
 
             @media screen and (max-width: 1440px) {
-                margin-top: 885px;
+                margin-top: 630px;
                 transform: translateX(-358px);
             }
 
@@ -187,15 +199,16 @@
             font-size: 30px;
             font-weight: $font-weight-bold;
             line-height: 30px;
-            text-align: center;
             color: $color-light-blue;
-            max-width: 213px;
-            margin: 0 auto;
+            max-width: 222px;
+            margin-left: 45.5px;
             
             @media screen and (max-width: 1440px) {
                 font-size: 25px;
                 line-height: 25px;
+                text-align: center;
                 max-width: 200px;
+                margin-left: 0;
             }
 
             @media #{$tablet} {
@@ -208,10 +221,9 @@
             font-size: $font-size-base;
             font-weight: $font-weight-base;
             line-height: 19px;
-            text-align: center;
-            text-transform: lowercase;
             color: $color-black;
             max-width: 254px;
+            margin-left: 45.5px;
 
             @media screen and (max-width: 1440px) {
                 font-size: 12px;
@@ -257,7 +269,7 @@
         }
 
         &:nth-child(1) {
-            top: 120px;
+            top: 90px;
             left: 300px;
             z-index: 1;
         }

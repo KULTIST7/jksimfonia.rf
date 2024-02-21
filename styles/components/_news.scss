@@ -1,11 +1,15 @@
 .news {
     position: relative;
     width: 83%;
-    margin: 278px auto 0 auto;
+    margin: 122px auto 0 auto;
 
     @media #{$tablet} {
         width: 100%;
-        margin: 0;
+        margin-top: 350px;
+    }
+
+    @media screen and (max-width: 435px) {
+        margin-top: 0;
     }
 
     &__title {
@@ -14,6 +18,10 @@
 
         @media #{$tablet} {
             margin-left: 10px;
+        }
+
+        @media #{$phone} {
+            margin-bottom: 25px;
         }
     }
 
@@ -33,13 +41,17 @@
         max-width: 510px;
         height: max-content;
         max-height: 315px;
+        background-color: $color-white;
         border-radius: 10px;
         margin-right: 32px;
         overflow: hidden;
         transition: all .1s linear;
+        text-decoration: none;
+        box-shadow: 0px 0px 50px 0px #17334226;
 
         &:hover {
-            box-shadow: 0px 0px 50px 0px #17334226;
+            cursor: pointer;
+            box-shadow: 0px 0px 50px 0px rgba($color: $color-blue, $alpha: 0.3);
         }
 
 
@@ -140,15 +152,15 @@
         font-weight: $font-weight-bold;
         text-decoration: none;
         transition: all .1s linear;
-        color: #5F9FC0;
+        color: #FC9D27;
         top: 40px;
         right: 0;
 
         &:hover {
-            color: $color-dark-blue;
+            color: $second-color;
 
             path {
-                stroke: $color-dark-blue;
+                stroke: $second-color;
             }
         }
 

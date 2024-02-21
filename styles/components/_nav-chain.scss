@@ -1,0 +1,26 @@
+.nav-chain {
+    margin: 150px 8.5% 0;
+
+    @media screen and (max-width: 1169px) {
+        margin: 150px 10px 0;
+    }
+
+    @media #{$tablet} {
+        margin-top: 82px;
+    }
+
+    &__back,
+    &__select {
+        font-family: $second-font;
+        font-size: 14px;
+        text-decoration: none;
+    }
+
+    &__back {
+        color: #B6C6CF;
+    }
+
+    &__select {
+        color: #7997A8;
+    }
+}

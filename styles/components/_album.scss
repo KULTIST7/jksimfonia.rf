@@ -1,15 +1,69 @@
 .album {
-    margin-top: 94px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
 
-    @media #{$tablet} {
-        height: 685px;
+    @media screen and (max-width: 435px) {
+        height: 850px;
+        overflow: hidden;
     }
     
+    &_callback {
+        @media #{$tablet} {
+            margin-bottom: 150px;
+        }
+
+        @media #{$phone} {
+            margin-top: 0;
+        }
+
+        @media screen and (max-width: 435px) {
+            height: 650px;
+            margin-bottom: 0;
+        }
+    }
+
     &__title {
-        line-height: 100px;
+        margin-top: 153px;
+        margin-bottom: 62px;
+        z-index: 3;
+
+        @media screen and (max-width: 1865px) {
+            margin-left: 50px;
+        }
+
+        @media screen and (max-width: 1649px) {
+            max-width: 350px;
+            margin-top: 75px;
+        }
+
+        @media #{$tablet} {
+            margin-left: 12px;
+        }
 
         @media #{$phone} {
             max-width: 200px;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        &_callback {
+            max-width: max-content;
+            margin-top: 0;
+            margin-left: 8.5%;
+            margin-bottom: 0;
+            
+            @media screen and (max-width: 1168px) {
+                margin-left: 10px;
+            }
+
+            @media #{$phone} {
+                font-size: 40px;
+                line-height: 40px;
+                width: 265px;
+                transform: translateY(80px);
+            }
         }
     }
 
@@ -17,19 +71,57 @@
         position: relative;
         display: flex;
         background: url(../imgs/album-bg.png) no-repeat;
-        background-size: cover;
         height: 387px;
 
         @media #{$tablet} {
             height: 273px;
         }
+
+        @media screen and (max-width: 590px) {
+            background: none;
+        }
         
+        &_callback {
+            height: 410px;
+            background: url(../imgs/callback-bg.png) no-repeat;
+
+            @media #{$phone} {
+                background-position: -140px;
+            }
+
+            &::before,
+            &::after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 50px;
+        
+                @media #{$tablet} {
+                    height: 75px;
+                }
+            }
+        
+            &::before {
+                background: linear-gradient(180deg, rgba(244,246,249,1) 50%, rgba(0,0,0,0) 100%);
+                top: 0;
+
+                @media #{$phone} {
+                    height: 150px;
+                }
+            }
+        
+            &::after {
+                background: linear-gradient(0deg, rgba(244,246,249,1) 50%, rgba(0,0,0,0) 100%);
+                bottom: 0;
+            }
+        }
+
         &__content {
             display: flex;
             flex-direction: column;
             margin-top: auto;
             margin-left: 45%;
-            z-index: 2;
+            z-index: 3;
 
             @media screen and (max-width: 1500px) {
                 margin: 0 auto;
@@ -45,6 +137,15 @@
                 margin-left: 13px;
                 margin-right: 13px;
             }
+
+            &_callback {
+                margin-top: 98px;
+
+                @media #{$tablet} {
+                    transform: translateY(0);
+                    margin-top: 300px;
+                }
+            }
         }
 
         &__button {
@@ -54,20 +155,21 @@
             font-family: $main-font;
             font-size: 20px;
             font-weight: $font-weight-bold;
-            color: $color-white;
-            background-color: #5F9FC0;
+            color: #FC9D27;
+            background-color: rgba(255, 255, 255, .9);
             transition: all .1s linear;
             width: 349px;
             padding: 18px 0;
-            border: none;
+            border: 2px #FC9D27 solid;
             border-radius: 31px;
-            box-shadow: 0px 0px 25px 0px #00000040;
-            z-index: 1;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, .25);
             margin-top: 3px;
-            margin-bottom: 20px;
+            margin-bottom: 21px;
+            z-index: 3;
 
             &:hover, &:active {
                 color: $second-color;
+                border: 2px $second-color solid;
                 
                 path {
                     stroke: $second-color;
@@ -96,7 +198,7 @@
             font-weight: $font-weight-base;
             color: #B7BECD;
             bottom: -25px;
-            z-index: 1;
+            z-index: 3;
 
             @media screen and (max-width: 1046px) {
                 bottom: -45px;
@@ -111,27 +213,35 @@
             @media screen and (max-width: 381px) {
                 bottom: -35px;
             }
+
+            &_callback {
+                position: initial;
+                max-width: 487px;
+            }
         }
     }
 
     &__input {
         font-family: $main-font;
         font-size: 20px;
-        font-weight: $font-weight-bold;
+        font-weight: $font-weight-base;
         width: 460px;
         height: max-content;
         background-color: #FFFFFF99;
         color: $color-gray;
         backdrop-filter: blur(2px);
-        padding: 18px 0 18px 27px;
+        padding: 20.5px 0 20.5px 27px;
         border: none;
         border-radius: 31px;
         box-shadow: 0px 0px 25px 0px #00000040;
         margin-bottom: 10px;
-        z-index: 1;
+        z-index: 3;
         
-        @media screen and (max-width: 513px) {
-            width: calc(100% - 27px);
+        @media screen and (max-width: 600px) {
+            width: 322px;
+            margin: 0 auto 10px;
+            box-shadow: none;
+            border: 1px #C8D9E3 solid;
         }
 
         &::placeholder {
@@ -139,9 +249,92 @@
         }
     }
 
+    &__desktop,
+    &__mobile {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        overflow: hidden;
+    }
+
     &__desktop {
+        height: 941px;
+
         @media #{$tablet} {
             display: none;
+        }
+
+        &_callback {
+            top: -150px;
+        }
+
+        &__cloud {
+            position: absolute;
+            pointer-events: none;
+    
+            &:nth-child(1),
+            &:nth-child(2),
+            &:nth-child(3),
+            &:nth-child(4),
+            &:nth-child(5) {
+                width: 869px;
+                top: 50px;
+
+                @media screen and (max-width: 1649px) {
+                    top: 0;
+                }
+            }
+
+            &:nth-child(1) {
+                left: -256px;
+            }
+
+            &:nth-child(2) {
+                left: 36px;
+            }
+
+            &:nth-child(3) {
+                left: 634px;
+            }
+
+            &:nth-child(4) {
+                right: 417px;
+            }
+
+            &:nth-child(5) {
+                right: -253px;
+            }
+
+            &:nth-child(6) {
+                width: 790px;
+                left: -134px;
+                bottom: 50px;
+
+                @media screen and (max-width: 1649px) {
+                    bottom: 125px;
+                }
+            }
+
+            &:nth-child(7) {
+                left: 312px;
+                bottom: 0;
+
+                @media screen and (max-width: 1649px) {
+                    bottom: 75px;
+                }
+            }
+
+            &:nth-child(8) {
+                width: 1387px;
+                height: 535px;
+                right: -40px;
+                bottom: 0;
+
+                @media screen and (max-width: 1649px) {
+                    bottom: 75px;
+                }
+            }
         }
     }
 
@@ -151,13 +344,18 @@
         @media #{$tablet} {
             display: block;
         }
+
+        @media screen and (max-width: 435px) {
+            height: 475px;
+        }
     }
 
     &__book {
         position: absolute;
-        left: 56px;
         pointer-events: none;
-        z-index: 1;
+        z-index: 2;
+        left: 6.6%;
+        bottom: -153px;
 
         @media screen and (max-width: 1500px) {
             height: 550px;
@@ -169,35 +367,62 @@
         }
     
         @media #{$tablet} {
-            height: auto;
-            left: calc(50% - 187.5px);
-            bottom: -112px;
+            height: 400px;
+            left: 0;
+            bottom: -124px;
+        }
+
+        @media #{$phone} {
+            left: -100px;
+        }
+        
+        @media screen and (max-width: 590px) {
+            left: 0;
+            height: 305px;
+        }
+
+        @media screen and (max-width: 490px) {
+            left: -54px;
+        }
+
+        @media screen and (max-width: 435px) {
+            bottom: 250px;
         }
     }
 
     &__house {
         position: absolute;
-        height: 583px;
-        right: 102px;
+        right: 0;
         bottom: 0;
         pointer-events: none;
 
-        @media screen and (max-width: 1500px) {
-            right: 0;
+        @media screen and (max-width: 1740px) {
+            right: -100px;
+        }
+
+        @media screen and (max-width:1375px) {
+            right: -200px;
         }
 
         @media #{$desktop} {
+            right: 0;
             height: 550px;
         }
 
         @media #{$tablet} {
             height: auto;
         }
+
+        @media screen and (max-width: 590px) {
+            left: -24px;
+            right: auto;
+        }
     }
 
     &__leaves {
         height: 529px;
         right: 0;
+        z-index: 1;
 
         @media #{$tablet} {
             height: auto;
@@ -211,7 +436,31 @@
 
         &-bg {
             height: 318px;
-            right: 0;
+            right: -66px;
+        }
+    }
+
+    &__light {
+        position: absolute;
+        bottom: 0;
+        left: calc(50% - 336px);
+        z-index: 1;
+
+        @media #{$desktop} {
+            left: 336px;
+        }
+
+        @media #{$tablet} {
+            left: 300px;
+            height: 100px;
+        }
+
+        @media #{$phone} {
+            left: 200px;
+        }
+
+        @media screen and (max-width: 590px) {
+            display: none;
         }
     }
 }

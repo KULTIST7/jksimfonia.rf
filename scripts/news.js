@@ -3,8 +3,6 @@ $(document).ready(function() {
 
     $(window).on('resize', adaptiveHeaderNav);
 
-    Fancybox.bind("[data-fancybox]");
-
     $('.header__burger-button').on('click', () => {
         $('.burger').addClass('burger-open');
         $('body').addClass('body-noscroll');
@@ -31,6 +29,16 @@ $(document).ready(function() {
                 $('.header__nav_hidden').css('opacity', 0);
                 $('.header__nav_hidden').css('pointer-events', 'none');
             });
+        }
+    });
+
+    $('.album__input_tel').inputmask({
+        mask: '+7 (*{1}99) 999-99-99',
+        placeholder: "+7 (___) ___-__-__",
+        definitions: {
+            '*': {
+                validator: "[0-6,9]"
+            }
         }
     });
 

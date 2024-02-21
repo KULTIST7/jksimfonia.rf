@@ -1,16 +1,27 @@
 .life {
-    margin-top: 180px;
+    margin-top: 20px;
 
-    @media screen and (max-width: 1330px) {
-        margin-top: 120px;
+    @media #{$desktop} {
+        margin-top: -100px;
+    }
+
+    @media #{$tablet} {
+        margin-top: 50px;
+    }
+
+    @media #{$phone} {
+        margin-top: 40px;
     }
 
     &__title {
-        margin-bottom: 33px;
+        margin-bottom: 60px;
+
+        @media #{$tablet} {
+            margin-bottom: 30px;
+        }
     }
 
     &__swiper {
-
         &:before,
         &:after {
             content: '';
@@ -22,11 +33,11 @@
             pointer-events: none;
 
             @media #{$tablet} {
-                width: 200px;
+                width: 150px;
             }
 
             @media #{$phone} {
-                width: 150px;
+                width: 100px;
             }
         }
 
@@ -44,7 +55,31 @@
             display: block;
             width: 100%;
         }
+
+        &-pagination {
+            position: initial;
+            margin-top: 22px;
+            display: none;
+
+            @media #{$tablet} {
+                display: block;
+            }
+        }
     }
 }
 
+.swiper-pagination {
+    &-bullet {
+        width: 9px;
+        height: 9px;
+        margin: 0 12px 5px 12px !important;
 
+        &-active {
+            width: 12px;
+            height: 12px;
+            border: 4px $color-white solid;
+            background-color: $color-blue;
+            margin: 0 12px !important;
+        }
+    }
+}

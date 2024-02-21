@@ -1,0 +1,21 @@
+.up {
+    position: fixed;
+    z-index: 10;
+    right: 44px;
+    bottom: 100px;
+    cursor: pointer;
+    transition: all .1s linear;
+    opacity: 1;
+
+    @media #{$tablet} {
+        display: none;
+    }
+
+    img {
+        pointer-events: none;
+    }
+
+    &-invisible {
+        opacity: 0;
+    }
+}

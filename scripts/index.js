@@ -38,12 +38,30 @@ $(document).ready(function() {
                     rows: 2
                 }
             }
+        },
+
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true
+        },
+
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false
         }
     }); 
 
-    setTimeout(adaptiveHeaderNav, 100);
+    setTimeout(screenTitle, 150);
+    setTimeout(adaptiveHeaderNav, 150);
+
+    $(window).on('resize', screenTitle);
 
     $(window).on('resize', adaptiveHeaderNav);
+
+    $('.up').on('click', () => {
+        const body = $("html, body");
+        body.animate({scrollTop:0}, 500, 'swing');
+    });
 
     $('.page-nav').onePageNav({
         currentClass: 'page-nav__link_selected',
@@ -102,7 +120,25 @@ $(document).ready(function() {
             $('.header__nav__more-box').addClass('invisible');
         }
     });
+
+    $(document).on('scroll', function() {
+        if ($(window).scrollTop() >= 800) {
+            $('.up').removeClass('up-invisible');
+            $('.up').removeClass('up-invisible');
+        } else {
+            $('.up').addClass('up-invisible');
+            $('.up').addClass('up-invisible');
+        }
+    });
 });
+
+function screenTitle() {
+    if ($(window).width() < 750) {
+        $('.screen__title').html('ЖК Симфония - гармония<br>ваших будней');
+    } else {
+        $('.screen__title').html('Жилой комплекс «Симфония»<span>— гармония внутри, гармония снаружи</span>');
+    }
+}
 
 function adaptiveHeaderNav() {
     let windowWidth = $(window).width();
