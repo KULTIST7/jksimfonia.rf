@@ -3,10 +3,8 @@
     font-family: $main-font;
     font-size: 80px;
     font-weight: $font-weight-bold;
-    line-height: 80px;
+    line-height: 100px;
     color: $color-light-gray;
-    width: max-content;
-    margin-left: 8.5%;
     z-index: 1;
 
     @media screen and (max-width: 1400px) {
@@ -14,20 +12,29 @@
     }
 
     @media screen and (max-width: 1225px) {
-        font-size: 60px;
-        line-height: 60px;
+        font-size: 60px !important;
+        line-height: 60px !important;
     }
     
     @media screen and (max-width: 1168px) {
-        margin-left: 10px;
+        margin-left: 13px;
     }
 
     @media #{$phone} {
-        font-size: 50px;
-        line-height: 50px;
+        font-size: 40px !important;
+        line-height: 40px !important;
     }
 
     span {
         color: $color-blue;
+    }
+}
+
+h1.section-title, .h1 {
+    width: 83%;
+    margin: 0 auto;
+
+    @media #{$phone} {
+        margin-left: 10px;
     }
 }

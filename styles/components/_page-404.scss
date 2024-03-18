@@ -1,0 +1,178 @@
+.page-404 {
+    position: relative;
+    justify-content: end;
+    margin-bottom: 268px;
+
+    @media #{$tablet} {
+        margin-bottom: -150px;
+    }
+
+    @media #{$phone} {
+        margin-bottom: -75px;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 280px;
+        height: 350px;
+        background: linear-gradient(90deg, rgba(244, 246, 249,1) 0%, rgba(244, 246, 249,0) 100%);
+        left: 50%;
+        bottom: 0;
+        z-index: 1;
+
+        @media screen and (min-width: 1921px) {
+            left: auto;
+            right: 682px;
+        }
+
+        @media #{$tablet} {
+            display: none;
+        }
+    }
+    
+    &__img-box {
+        position: relative;
+        width: 100%;
+        height: 540px;
+        overflow: hidden;
+
+        @media #{$phone} {
+            height: 475px;
+        }
+
+        @media screen and (max-width: 650px) {
+            height: 400px;
+        }
+
+        @media screen and (max-width: 565px) {
+            height: 380px;
+        }
+
+        img {
+            position: absolute;
+            width: 962px;
+            left: 50%;
+            bottom: 0;
+    
+            @media screen and (min-width: 1921px) {
+                left: auto;
+                right: 0;
+            }
+    
+            @media #{$tablet} {
+                width: 100%;
+                left: 0;
+            }
+    
+            @media screen and (max-width: 962px) {
+                width: 962px;
+            }
+    
+            @media #{$phone} {
+                width: 100%;
+            }
+    
+            @media screen and (max-width: 565px) {
+                width: 565px;
+            }
+
+            @media screen and (max-width: 545px) {
+                margin-left: -20px;
+            }
+        }
+    }
+
+    h1 {
+        position: absolute;
+        font-family: $main-font;
+        font-size: 60px;
+        font-weight: 300;
+        color: $color-gray;
+        z-index: 2;
+        top: 85px;
+        left: 30%;
+
+        @media #{$tablet} {
+            font-size: 40px;
+            top: 30px;
+            left: 13px;
+        }
+    }
+
+    p {
+        position: absolute;
+        font-family: $main-font;
+        font-size: 500px;
+        font-weight: $font-weight-bold;
+        line-height: 350px;
+        color: rgba($color: #FC9D27, $alpha: 0.9);
+        z-index: 2;
+        left: 27%;
+        bottom: 0;
+
+        @media #{$tablet} {
+            font-size: 350px;
+            line-height: 245px;
+            left: calc(50% - 208px);
+            bottom: 480px;
+        }
+
+        @media #{$phone} {
+            font-size: 250px;
+            line-height: 150px;
+            left: calc(50% - 148.5px);
+        }
+    }
+
+    &__menu {
+        position: absolute;
+        width: 337px;
+        background-color: $color-white;
+        box-sizing: border-box;
+        padding: 40px 48px;
+        border-radius: 43px;
+        left: 14%;
+        bottom: 0;
+
+        @media #{$tablet} {
+            position: initial;
+            background-color: rgba($color: $color-white, $alpha: 0.9);
+            width: 500px;
+            padding: 140px 48px 40px;
+            margin: 0 auto;
+            transform: translateY(-102px);
+        }
+
+        @media #{$phone} {
+            width: 337px;
+            padding: 140px 16px 28px;
+        }
+
+        h2 {
+            font-family: $main-font;
+            font-size: 20px;
+            line-height: 50px;
+            color: #AABFD4;
+        }
+
+        nav {
+            display: flex;
+            flex-direction: column;
+        }
+
+        a {
+            font-family: $main-font;
+            font-size: 25px;
+            font-weight: $font-weight-bold;
+            line-height: 50px;
+            text-decoration: none;
+            color: $color-gray;
+            transition: all 0.1s linear;
+
+            &:hover {
+                color: $color-dark-blue;
+            }
+        }
+    }
+}

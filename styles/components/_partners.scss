@@ -1,0 +1,148 @@
+.partners {
+    width: 83%;
+    margin: 0 auto 113px;
+
+    @media #{$phone} {
+        width: 100%;
+    }
+
+    &__content {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px 1.8%;
+        margin-top: 32px;
+
+        @media #{$tablet} {
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        @media #{$phone} {
+            width: calc(100% - 26px);
+            padding: 0 13px;
+        }
+    }
+
+    &__card {
+        display: flex;
+        align-items: center;
+        width: 49%;
+        height: 193px;
+        box-sizing: border-box;
+        background-color: #FCFCFD;
+        border-radius: 31px;
+
+        @media #{$desktop} {
+            height: 150px;
+        }
+
+        @media #{$tablet} {
+            height: 193px;
+            width: auto;
+        }
+
+        @media #{$phone} {
+            align-items: start;
+            border-radius: 18px;
+            flex-direction: column;
+            padding: 14px 14px 0;
+        }
+
+        &__img-box {
+            display: flex;
+            width: 50%;
+            height: calc(100% - 24px);
+            align-items: center;
+            justify-content: center;
+            border-right: 1px #EAF1F4 solid;
+
+            @media #{$phone} {
+                width: auto;
+                height: auto;
+                border: none;
+                align-items: start;
+                justify-content: start;
+            }
+        }
+
+        &__content {
+            display: flex;
+            box-sizing: border-box;
+            flex-direction: column;
+            justify-content: center;
+            width: 50%;
+            height: calc(100% - 24px);
+            padding-left: 6.4%;
+
+            @media screen and (max-width: 1700px) {
+                padding-left: 3.2%;
+            }
+
+            @media #{$phone} {
+                width: auto;
+                height: auto;
+                padding: 0;
+                margin-top: 22px;
+            }
+
+            div {
+                display: flex;
+            }
+
+            h3 {
+                font-family: $main-font;
+                font-size: 24px;
+                color: $color-light-gray;
+
+                @media screen and (max-width: 1700px) {
+                    font-size: 22px;
+                }
+
+                @media screen and (max-width: 1430px) {
+                    font-size: 20px;
+                }
+                
+                @media #{$tablet} {
+                    font-size: 24px;
+                }
+            }
+
+            ul {
+                width: max-content;
+                margin: 0;
+                padding: 0;
+
+                &:first-of-type {
+                    margin-right: 13px;
+                }
+
+                &:last-of-type li {
+                    color: $color-black;
+                    font-weight: $font-weight-bold;
+                }
+            }
+
+            li {
+                font-family: $second-font;
+                font-size: $font-size-base;
+                color: $color-gray;
+
+                @media screen and (max-width: 1700px) {
+                    font-size: 14px;
+                }
+
+                @media screen and (max-width: 1430px) {
+                    font-size: 12px;
+                }
+
+                @media #{$desktop} {
+                    font-size: 10px;
+                }
+
+                @media #{$tablet} {
+                    font-size: $font-size-base;
+                }
+            }
+        }
+    }
+}

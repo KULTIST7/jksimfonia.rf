@@ -50,11 +50,8 @@ body::-webkit-scrollbar-thumb {
   font-family: "Bebas Neue", Arial, sans-serif;
   font-size: 80px;
   font-weight: 700;
-  line-height: 80px;
+  line-height: 100px;
   color: #898989;
-  width: -moz-max-content;
-  width: max-content;
-  margin-left: 8.5%;
   z-index: 1;
 }
 @media screen and (max-width: 1400px) {
@@ -64,23 +61,33 @@ body::-webkit-scrollbar-thumb {
 }
 @media screen and (max-width: 1225px) {
   .section-title {
-    font-size: 60px;
-    line-height: 60px;
+    font-size: 60px !important;
+    line-height: 60px !important;
   }
 }
 @media screen and (max-width: 1168px) {
   .section-title {
-    margin-left: 10px;
+    margin-left: 13px;
   }
 }
 @media screen and (max-width: 749px) {
   .section-title {
-    font-size: 50px;
-    line-height: 50px;
+    font-size: 40px !important;
+    line-height: 40px !important;
   }
 }
 .section-title span {
   color: #5C90AB;
+}
+
+h1.section-title, .h1 {
+  width: 83%;
+  margin: 0 auto;
+}
+@media screen and (max-width: 749px) {
+  h1.section-title, .h1 {
+    margin-left: 10px;
+  }
 }
 
 .up {
@@ -591,7 +598,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .nav-chain {
-  margin: 150px 8.5% 0;
+  margin: 150px 8.5% 35px;
 }
 @media screen and (max-width: 1169px) {
   .nav-chain {
@@ -2438,56 +2445,17 @@ body::-webkit-scrollbar-thumb {
 @media screen and (max-width: 435px) {
   .album_callback {
     height: 650px;
-    margin-bottom: 0;
-  }
-}
-.album__title {
-  margin-top: 153px;
-  margin-bottom: 62px;
-  z-index: 3;
-}
-@media screen and (max-width: 1865px) {
-  .album__title {
-    margin-left: 50px;
-  }
-}
-@media screen and (max-width: 1649px) {
-  .album__title {
-    max-width: 350px;
-    margin-top: 75px;
-  }
-}
-@media screen and (max-width: 999px) {
-  .album__title {
-    margin-left: 12px;
+    margin-bottom: 100px;
+    overflow: initial;
   }
 }
 @media screen and (max-width: 749px) {
-  .album__title {
-    max-width: 200px;
-    margin-top: 0;
-    margin-bottom: 20px;
-  }
-}
-.album__title_callback {
-  max-width: -moz-max-content;
-  max-width: max-content;
-  margin-top: 0;
-  margin-left: 8.5%;
-  margin-bottom: 0;
-}
-@media screen and (max-width: 1168px) {
-  .album__title_callback {
-    margin-left: 10px;
-  }
-}
-@media screen and (max-width: 749px) {
-  .album__title_callback {
-    font-size: 40px;
-    line-height: 40px;
-    width: 265px;
+  .album_callback h2 {
     transform: translateY(80px);
   }
+}
+.album h2 {
+  z-index: 3;
 }
 .album__form {
   position: relative;
@@ -3106,35 +3074,30 @@ body::-webkit-scrollbar-thumb {
     margin-right: 13px;
   }
 }
-.footer__title {
-  margin-left: 0;
-  margin-bottom: 10px;
-}
-@media screen and (max-width: 749px) {
-  .footer__title {
-    margin-bottom: 25px;
-  }
-}
 .footer__img {
   display: flex;
   height: auto;
   max-width: 100%;
   border-radius: 20px;
+  margin-top: 10px;
   margin-bottom: 43px;
   pointer-events: none;
 }
 @media screen and (max-width: 749px) {
   .footer__img {
+    margin-top: 25px;
     margin-bottom: 37px;
   }
 }
 .footer__content {
   display: flex;
   flex-direction: column;
+  margin-top: 10px;
   margin-left: 50px;
 }
 @media screen and (max-width: 749px) {
   .footer__content {
+    margin-top: 0;
     margin-left: 0;
   }
 }
@@ -3906,19 +3869,22 @@ body::-webkit-scrollbar-thumb {
 }
 
 .calc-ipoteka {
-  margin-bottom: 175px;
+  position: relative;
+  width: 83%;
+  margin: 0 auto 175px;
 }
-.calc-ipoteka__title {
-  margin-top: 164px;
-  margin-bottom: 66px;
+@media screen and (max-width: 749px) {
+  .calc-ipoteka {
+    width: calc(100% - 26px);
+    margin: 25px 13px 175px;
+  }
 }
 .calc-ipoteka__wrap {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 83%;
   height: 531px;
-  margin: 0 auto;
+  margin-top: 100px;
   border-radius: 87px;
   border: 1px solid #DEE7EE;
 }
@@ -3926,13 +3892,8 @@ body::-webkit-scrollbar-thumb {
   .calc-ipoteka__wrap {
     flex-direction: column;
     height: auto;
-  }
-}
-@media screen and (max-width: 749px) {
-  .calc-ipoteka__wrap {
-    border-radius: 50px;
-    width: calc(100% - 26px);
-    margin: 0 13px;
+    border: none;
+    margin-top: 25px;
   }
 }
 .calc-ipoteka__calc {
@@ -3941,39 +3902,16 @@ body::-webkit-scrollbar-thumb {
 @media screen and (max-width: 749px) {
   .calc-ipoteka__calc {
     margin: 0;
+    width: 100%;
   }
 }
 .calc-ipoteka__banks {
-  transform: translate(60px, -20px);
-}
-@media screen and (max-width: 1880px) {
-  .calc-ipoteka__banks {
-    transform: translate(20px, -20px);
-  }
-}
-@media screen and (max-width: 1800px) {
-  .calc-ipoteka__banks {
-    transform: translate(60px, -20px);
-  }
-}
-@media screen and (max-width: 1520px) {
-  .calc-ipoteka__banks {
-    transform: translate(20px, -20px);
-  }
-}
-@media screen and (max-width: 1420px) {
-  .calc-ipoteka__banks {
-    transform: translate(0, -20px);
-  }
-}
-@media screen and (max-width: 1350px) {
-  .calc-ipoteka__banks {
-    transform: translate(60px, -20px);
-  }
+  transform: translate(40px, -20px);
 }
 @media screen and (max-width: 1279px) {
   .calc-ipoteka__banks {
-    transform: translate(0, 60px);
+    transform: translate(0);
+    margin-top: 20px;
   }
 }
 .calc-ipoteka__banks__title {
@@ -3987,43 +3925,19 @@ body::-webkit-scrollbar-thumb {
   .calc-ipoteka__banks__title {
     width: -moz-max-content;
     width: max-content;
-    margin-left: auto;
-    margin-right: auto;
+    margin-top: 38px;
+    margin-bottom: 14px;
   }
 }
 .calc-ipoteka__banks_list {
   display: flex;
   flex-wrap: wrap;
-  width: 800px;
+  gap: 20px;
+  width: 100%;
 }
-@media screen and (max-width: 1700px) {
+@media screen and (max-width: 749px) {
   .calc-ipoteka__banks_list {
-    width: 640px;
-  }
-}
-@media screen and (max-width: 1350px) {
-  .calc-ipoteka__banks_list {
-    width: 620px;
-  }
-}
-@media screen and (max-width: 1279px) {
-  .calc-ipoteka__banks_list {
-    width: 800px;
-  }
-}
-@media screen and (max-width: 820px) {
-  .calc-ipoteka__banks_list {
-    width: 640px;
-  }
-}
-@media screen and (max-width: 640px) {
-  .calc-ipoteka__banks_list {
-    width: 380px;
-  }
-}
-@media screen and (max-width: 450px) {
-  .calc-ipoteka__banks_list {
-    width: 300px;
+    justify-content: center;
   }
 }
 .calc-ipoteka__banks_item {
@@ -4031,43 +3945,18 @@ body::-webkit-scrollbar-thumb {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background: #F4F6F9;
+  background: #FCFCFD;
   box-sizing: border-box;
-  width: 380px;
+  width: 48%;
   height: 193px;
   padding: 0 25px 15px;
   border-radius: 31px;
-  margin: 0 20px 20px 0;
   transition: opacity 0.3s linear;
 }
-@media screen and (max-width: 1700px) {
+@media screen and (max-width: 749px) {
   .calc-ipoteka__banks_item {
-    width: 300px;
-    padding: 0 20px 15px;
-  }
-}
-@media screen and (max-width: 1350px) {
-  .calc-ipoteka__banks_item {
-    margin: 0 10px 20px 0;
-  }
-}
-@media screen and (max-width: 1279px) {
-  .calc-ipoteka__banks_item {
-    width: 380px;
-    padding: 0 25px 15px;
-    margin: 0 10px 20px 10px;
-  }
-}
-@media screen and (max-width: 820px) {
-  .calc-ipoteka__banks_item {
-    width: 300px;
-    padding: 0 20px 15px;
-  }
-}
-@media screen and (max-width: 640px) {
-  .calc-ipoteka__banks_item {
-    width: 380px;
-    margin: 0 0 10px 0;
+    width: 100%;
+    height: 150px;
   }
 }
 .calc-ipoteka__banks_item_logo {
@@ -4105,7 +3994,6 @@ body::-webkit-scrollbar-thumb {
   color: #45809F;
 }
 .calc-ipoteka__control {
-  position: relative;
   width: 725px;
   margin-left: 48px;
 }
@@ -4114,44 +4002,29 @@ body::-webkit-scrollbar-thumb {
     width: 600px;
   }
 }
-@media screen and (max-width: 1520px) {
+@media screen and (max-width: 1590px) {
   .calc-ipoteka__control {
     width: 500px;
   }
 }
-@media screen and (max-width: 1350px) {
+@media screen and (max-width: 1460px) {
   .calc-ipoteka__control {
     width: 400px;
   }
 }
 @media screen and (max-width: 1279px) {
   .calc-ipoteka__control {
-    width: 725px;
-  }
-}
-@media screen and (max-width: 999px) {
-  .calc-ipoteka__control {
-    width: 600px;
-  }
-}
-@media screen and (max-width: 820px) {
-  .calc-ipoteka__control {
-    width: 500px;
-  }
-}
-@media screen and (max-width: 820px) {
-  .calc-ipoteka__control {
-    width: 400px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 30px;
+    border: 1px solid #DEE7EE;
+    border-radius: 30px;
+    margin: 0;
   }
 }
 @media screen and (max-width: 749px) {
   .calc-ipoteka__control {
-    margin: 0;
-  }
-}
-@media screen and (max-width: 450px) {
-  .calc-ipoteka__control {
-    width: 300px;
+    padding: 0 15px;
   }
 }
 .calc-ipoteka__content {
@@ -4160,7 +4033,6 @@ body::-webkit-scrollbar-thumb {
 }
 
 .ipoteka-control {
-  position: relative;
   z-index: 5;
 }
 @media screen and (max-width: 1279px) {
@@ -4292,17 +4164,26 @@ body::-webkit-scrollbar-thumb {
 }
 @media screen and (max-width: 820px) {
   .ipoteka-control__order {
-    flex-direction: column;
+    flex-direction: column-reverse;
+  }
+}
+@media screen and (max-width: 749px) {
+  .ipoteka-control__order {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: -175px;
   }
 }
 .ipoteka-control__order .ipoteka-control__btn.btn.btn-new {
   font-family: "Bebas Neue", Arial, sans-serif;
   font-size: 20px;
   font-weight: 700;
+  line-height: 62px;
   color: #44565D;
   background-color: #C8D9E3;
   white-space: nowrap;
-  padding: 21px 65px;
+  padding: 0 65px;
   border-radius: 31px;
   margin-right: 40px;
   cursor: pointer;
@@ -4314,7 +4195,14 @@ body::-webkit-scrollbar-thumb {
 @media screen and (max-width: 820px) {
   .ipoteka-control__order .ipoteka-control__btn.btn.btn-new {
     margin-right: 0;
-    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 749px) {
+  .ipoteka-control__order .ipoteka-control__btn.btn.btn-new {
+    text-align: center;
+    width: 320px;
+    padding: 0;
+    line-height: 40px;
   }
 }
 .ipoteka-control__order p {
@@ -4336,6 +4224,7 @@ body::-webkit-scrollbar-thumb {
 @media screen and (max-width: 820px) {
   .ipoteka-control__order p {
     text-align: center;
+    margin-bottom: 20px;
   }
 }
 
@@ -5188,4 +5077,436 @@ body::-webkit-scrollbar-thumb {
 }
 .news-content__show-more__last-page {
   margin-left: 4px;
+}
+
+.ipoteka {
+  display: flex;
+  width: 83%;
+  background: url(../imgs/ipoteka-bg.png) no-repeat;
+  background-position: 65% top;
+  background-size: auto 591px;
+  box-sizing: border-box;
+  padding: 40px 0 0 40px;
+  margin: 0 auto 45px;
+}
+@media screen and (min-width: 1921px) {
+  .ipoteka {
+    background-size: cover;
+  }
+}
+@media screen and (max-width: 999px) {
+  .ipoteka {
+    width: 100%;
+    background-size: auto 500px;
+    padding: 442px 0 0;
+  }
+}
+@media screen and (max-width: 749px) {
+  .ipoteka {
+    background-size: auto 311px;
+    padding: 253px 0 0;
+  }
+}
+.ipoteka__content {
+  width: 34%;
+  height: 641px;
+  background-color: rgba(255, 255, 255, 0.8);
+  -webkit-backdrop-filter: blur(12.5px);
+          backdrop-filter: blur(12.5px);
+  box-sizing: border-box;
+  padding: 50px 30px 0;
+}
+@media screen and (max-width: 1760px) {
+  .ipoteka__content {
+    width: 40%;
+    height: -moz-max-content;
+    height: max-content;
+    padding: 50px 30px;
+  }
+}
+@media screen and (max-width: 1279px) {
+  .ipoteka__content {
+    width: 55%;
+  }
+}
+@media screen and (max-width: 999px) {
+  .ipoteka__content {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 749px) {
+  .ipoteka__content {
+    width: auto;
+    margin: 0 13px;
+    padding: 15px 15px 50px;
+  }
+}
+.ipoteka__content h2 {
+  font-family: "Bebas Neue", Arial, sans-serif;
+  font-size: 29px;
+  font-weight: 700;
+  color: #44565D;
+  margin-bottom: 25px;
+}
+@media screen and (max-width: 749px) {
+  .ipoteka__content h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+}
+.ipoteka__content p {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-size: 16px;
+  color: #44565D;
+  line-height: 25px;
+}
+@media screen and (max-width: 749px) {
+  .ipoteka__content p {
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
+
+.partners {
+  width: 83%;
+  margin: 0 auto 113px;
+}
+@media screen and (max-width: 749px) {
+  .partners {
+    width: 100%;
+  }
+}
+.partners__content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 1.8%;
+  margin-top: 32px;
+}
+@media screen and (max-width: 999px) {
+  .partners__content {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+@media screen and (max-width: 749px) {
+  .partners__content {
+    width: calc(100% - 26px);
+    padding: 0 13px;
+  }
+}
+.partners__card {
+  display: flex;
+  align-items: center;
+  width: 49%;
+  height: 193px;
+  box-sizing: border-box;
+  background-color: #FCFCFD;
+  border-radius: 31px;
+}
+@media screen and (max-width: 1279px) {
+  .partners__card {
+    height: 150px;
+  }
+}
+@media screen and (max-width: 999px) {
+  .partners__card {
+    height: 193px;
+    width: auto;
+  }
+}
+@media screen and (max-width: 749px) {
+  .partners__card {
+    align-items: start;
+    border-radius: 18px;
+    flex-direction: column;
+    padding: 14px 14px 0;
+  }
+}
+.partners__card__img-box {
+  display: flex;
+  width: 50%;
+  height: calc(100% - 24px);
+  align-items: center;
+  justify-content: center;
+  border-right: 1px #EAF1F4 solid;
+}
+@media screen and (max-width: 749px) {
+  .partners__card__img-box {
+    width: auto;
+    height: auto;
+    border: none;
+    align-items: start;
+    justify-content: start;
+  }
+}
+.partners__card__content {
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  height: calc(100% - 24px);
+  padding-left: 6.4%;
+}
+@media screen and (max-width: 1700px) {
+  .partners__card__content {
+    padding-left: 3.2%;
+  }
+}
+@media screen and (max-width: 749px) {
+  .partners__card__content {
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin-top: 22px;
+  }
+}
+.partners__card__content div {
+  display: flex;
+}
+.partners__card__content h3 {
+  font-family: "Bebas Neue", Arial, sans-serif;
+  font-size: 24px;
+  color: #898989;
+}
+@media screen and (max-width: 1700px) {
+  .partners__card__content h3 {
+    font-size: 22px;
+  }
+}
+@media screen and (max-width: 1430px) {
+  .partners__card__content h3 {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 999px) {
+  .partners__card__content h3 {
+    font-size: 24px;
+  }
+}
+.partners__card__content ul {
+  width: -moz-max-content;
+  width: max-content;
+  margin: 0;
+  padding: 0;
+}
+.partners__card__content ul:first-of-type {
+  margin-right: 13px;
+}
+.partners__card__content ul:last-of-type li {
+  color: #000;
+  font-weight: 700;
+}
+.partners__card__content li {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-size: 16px;
+  color: #44565D;
+}
+@media screen and (max-width: 1700px) {
+  .partners__card__content li {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1430px) {
+  .partners__card__content li {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 1279px) {
+  .partners__card__content li {
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 999px) {
+  .partners__card__content li {
+    font-size: 16px;
+  }
+}
+
+.page-404 {
+  position: relative;
+  justify-content: end;
+  margin-bottom: 268px;
+}
+@media screen and (max-width: 999px) {
+  .page-404 {
+    margin-bottom: -150px;
+  }
+}
+@media screen and (max-width: 749px) {
+  .page-404 {
+    margin-bottom: -75px;
+  }
+}
+.page-404::before {
+  content: "";
+  position: absolute;
+  width: 280px;
+  height: 350px;
+  background: linear-gradient(90deg, rgb(244, 246, 249) 0%, rgba(244, 246, 249, 0) 100%);
+  left: 50%;
+  bottom: 0;
+  z-index: 1;
+}
+@media screen and (min-width: 1921px) {
+  .page-404::before {
+    left: auto;
+    right: 682px;
+  }
+}
+@media screen and (max-width: 999px) {
+  .page-404::before {
+    display: none;
+  }
+}
+.page-404__img-box {
+  position: relative;
+  width: 100%;
+  height: 540px;
+  overflow: hidden;
+}
+@media screen and (max-width: 749px) {
+  .page-404__img-box {
+    height: 475px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .page-404__img-box {
+    height: 400px;
+  }
+}
+@media screen and (max-width: 565px) {
+  .page-404__img-box {
+    height: 380px;
+  }
+}
+.page-404__img-box img {
+  position: absolute;
+  width: 962px;
+  left: 50%;
+  bottom: 0;
+}
+@media screen and (min-width: 1921px) {
+  .page-404__img-box img {
+    left: auto;
+    right: 0;
+  }
+}
+@media screen and (max-width: 999px) {
+  .page-404__img-box img {
+    width: 100%;
+    left: 0;
+  }
+}
+@media screen and (max-width: 962px) {
+  .page-404__img-box img {
+    width: 962px;
+  }
+}
+@media screen and (max-width: 749px) {
+  .page-404__img-box img {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 565px) {
+  .page-404__img-box img {
+    width: 565px;
+  }
+}
+@media screen and (max-width: 545px) {
+  .page-404__img-box img {
+    margin-left: -20px;
+  }
+}
+.page-404 h1 {
+  position: absolute;
+  font-family: "Bebas Neue", Arial, sans-serif;
+  font-size: 60px;
+  font-weight: 300;
+  color: #44565D;
+  z-index: 2;
+  top: 85px;
+  left: 30%;
+}
+@media screen and (max-width: 999px) {
+  .page-404 h1 {
+    font-size: 40px;
+    top: 30px;
+    left: 13px;
+  }
+}
+.page-404 p {
+  position: absolute;
+  font-family: "Bebas Neue", Arial, sans-serif;
+  font-size: 500px;
+  font-weight: 700;
+  line-height: 350px;
+  color: rgba(252, 157, 39, 0.9);
+  z-index: 2;
+  left: 27%;
+  bottom: 0;
+}
+@media screen and (max-width: 999px) {
+  .page-404 p {
+    font-size: 350px;
+    line-height: 245px;
+    left: calc(50% - 208px);
+    bottom: 480px;
+  }
+}
+@media screen and (max-width: 749px) {
+  .page-404 p {
+    font-size: 250px;
+    line-height: 150px;
+    left: calc(50% - 148.5px);
+  }
+}
+.page-404__menu {
+  position: absolute;
+  width: 337px;
+  background-color: #fff;
+  box-sizing: border-box;
+  padding: 40px 48px;
+  border-radius: 43px;
+  left: 14%;
+  bottom: 0;
+}
+@media screen and (max-width: 999px) {
+  .page-404__menu {
+    position: initial;
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 500px;
+    padding: 140px 48px 40px;
+    margin: 0 auto;
+    transform: translateY(-102px);
+  }
+}
+@media screen and (max-width: 749px) {
+  .page-404__menu {
+    width: 337px;
+    padding: 140px 16px 28px;
+  }
+}
+.page-404__menu h2 {
+  font-family: "Bebas Neue", Arial, sans-serif;
+  font-size: 20px;
+  line-height: 50px;
+  color: #AABFD4;
+}
+.page-404__menu nav {
+  display: flex;
+  flex-direction: column;
+}
+.page-404__menu a {
+  font-family: "Bebas Neue", Arial, sans-serif;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 50px;
+  text-decoration: none;
+  color: #44565D;
+  transition: all 0.1s linear;
+}
+.page-404__menu a:hover {
+  color: #4A7D98;
 }/*# sourceMappingURL=style.css.map */

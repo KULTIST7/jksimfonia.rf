@@ -20,51 +20,19 @@
 
         @media screen and (max-width: 435px) {
             height: 650px;
-            margin-bottom: 0;
-        }
-    }
-
-    &__title {
-        margin-top: 153px;
-        margin-bottom: 62px;
-        z-index: 3;
-
-        @media screen and (max-width: 1865px) {
-            margin-left: 50px;
+            margin-bottom: 100px;
+            overflow: initial;
         }
 
-        @media screen and (max-width: 1649px) {
-            max-width: 350px;
-            margin-top: 75px;
-        }
-
-        @media #{$tablet} {
-            margin-left: 12px;
-        }
-
-        @media #{$phone} {
-            max-width: 200px;
-            margin-top: 0;
-            margin-bottom: 20px;
-        }
-
-        &_callback {
-            max-width: max-content;
-            margin-top: 0;
-            margin-left: 8.5%;
-            margin-bottom: 0;
-            
-            @media screen and (max-width: 1168px) {
-                margin-left: 10px;
-            }
-
+        h2 {
             @media #{$phone} {
-                font-size: 40px;
-                line-height: 40px;
-                width: 265px;
                 transform: translateY(80px);
             }
         }
+    }
+
+    h2 {
+        z-index: 3;
     }
 
     &__form {
