@@ -34,6 +34,21 @@ $(document).ready(function() {
         }
     });
 
+    $('.up').on('click', () => {
+        const body = $("html, body");
+        body.animate({scrollTop:0}, 500, 'swing');
+    });
+
+    $(document).on('scroll', function() {
+        if ($(window).scrollTop() >= 800) {
+            $('.up').removeClass('up-invisible');
+            $('.up').removeClass('up-invisible');
+        } else {
+            $('.up').addClass('up-invisible');
+            $('.up').addClass('up-invisible');
+        }
+    });
+
     $("#ipoteka_price_all").slider({
         range: 'min',
         value: 7040000,

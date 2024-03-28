@@ -4,28 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="scripts/jquery-ui.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
     <link rel="stylesheet" href="styles/style.css">
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="scripts/jquery.inputmask.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <script src="scripts/rellax.min.js"></script>
-    <script src="scripts/jquery.nav.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
-    <script src="scripts/index.js"></script>
 
-    <title>Симфония</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="scripts/jquery-ui.min.js"></script>
+    <script src="scripts/jquery.ui.touch-punch.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script src="scripts/card.js"></script>
+
+    <title>Квартира 3-комнатная 106.2 кв. м 23 этаж</title>
 </head>
-<body class="body-main">
-    <header class="header">
+<body>
+    <header class="header header-inner">
         <div class="header__wrapper">
-            <img src="imgs/svg/header-logo.svg" alt="Симфония" class="header__logo">
-            <div class="header__menu invisible">
+            <a href="index.html"><img src="imgs/svg/header-logo.svg" alt="Симфония" class="header__logo"></a>
+            <div class="header__menu">
                 <nav class="header__nav">
                     <a href="select-apartment.html" class="header__nav__element">Квартиры</a>
                     <a href="#" class="header__nav__element">Ипотека</a>
-                    <a href="news.html" class="header__nav__element">Новости</a>
+                    <a href="#" class="header__nav__element">Новости</a>
                     <a href="building-progress.html" class="header__nav__element">Ход строительства</a>
                     <a href="contacts.html" class="header__nav__element">Контакты</a>
                 </nav>
@@ -50,9 +50,8 @@
                         </svg>
                     </a>
                 </div>
-                <a href="tel:+74951532643" class="header__tel">+7 (495) 153 26 43</a>
             </div>
-            <a href="select-apartment.html" class="header__button">Выбрать квартиру</a>
+            <a href="tel:+74951532643" class="header__button">+7 (495) 153 26 43</a>
             <button class="header__burger-button">
                 <svg width="41" height="14" viewBox="0 0 41 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0 0H41V2H0V0Z" fill="#306079"/>
@@ -74,7 +73,7 @@
             <nav class="burger__nav">
                 <a href="select-apartment.html" class="burger__nav__element">Квартиры</a>
                 <a href="#" class="burger__nav__element">Ипотека</a>
-                <a href="news.html" class="burger__nav__element">Новости</a>
+                <a href="#" class="burger__nav__element">Новости</a>
                 <a href="building-progress.html" class="burger__nav__element">Ход строительства</a>
                 <a href="contacts.html" class="burger__nav__element">Контакты</a>
                 <a href="#" class="burger__nav__element">Проектная документация</a>
@@ -110,59 +109,274 @@
     <div class="up up-invisible">
         <img src="imgs/svg/up.svg" alt="up">
     </div>
-    <ul class="page-nav" id="page-nav">
-        <li class="page-nav__link page-nav__link_selected"><a href="#screen"></a></li>
-        <li class="page-nav__link"><a href="#utp"></a></li>
-        <li class="page-nav__link"><a href="#advantages"></a></li>
-        <li class="page-nav__link"><a href="#scheme"></a></li>
-        <li class="page-nav__link"><a href="#life"></a></li>
-    </ul>
-    <section class="screen" id="screen">
-        <img src="imgs/svg/logo.svg" alt="Симфония" class="screen__logo">
-        <h1 class="screen__title">Жилой комплекс «Симфония»<span>— гармония внутри, гармония снаружи</span></h1>
-        <a href="select-apartment.html" class="header__button screen__button">Выбрать квартиру</a>
-        <div class="screen__desktop">
-            <img src="imgs/cloud-1.png" alt="cloud" class="screen__cloud-top parallax" data-rellax-speed="-8">
-            <img src="imgs/cloud-2.png" alt="cloud" class="screen__cloud-middle parallax"data-rellax-speed="1"> 
-            <img src="imgs/cloud-3.png" alt="cloud" class="screen__cloud-bottom parallax"data-rellax-speed="1">
-            <img src="imgs/screen-house.png" alt="house" class="screen__house parallax" data-rellax-speed="-2">
-            <img src="imgs/screen-light.png" alt="light" class="screen__light parallax" data-rellax-speed="-4">
-        </div>
-        <div class="screen__mobile">
-            <img src="imgs/mobile-cloud.png" alt="cloud" class="screen__cloud-middle parallax"data-rellax-speed="1">
-            <img src="imgs/mobile-house.png" alt="house" class="screen__house parallax" data-rellax-speed="-2">
-            <img src="imgs/mobile-light.png" alt="light" class="screen__light parallax" data-rellax-speed="-6">
-        </div>
-    </section>
-    <section class="utp" id="utp">
-        <h2 class="section-title utp__title">Ансамбль жилого<br>комплекса <span>«Симфония»</span></h2>
-        <p class="utp__description">состоит из домов разной этажности, что позволяет обеспечить достаточное количество света для всего двора.</p>
-        <div class="utp__squares">
-            <div class="utp__squares__wrapper">
-                <div class="utp__element">
-                    <p class="utp__element__text">Транспортная доступность</p>
+    <div class="nav-chain">
+        <a class="nav-chain__back" href="/">Главная   >  </a><a class="nav-chain__select" href="#">Квартира</a>
+    </div>
+    <section class="apartment">
+        <h1 class="section-title">Квартира 3-комнатная 106.2 кв. м 23 этаж</h1>
+        <div class="apartment__wrapper">
+            <div class="apartment__view">
+                <div class="apartment__select">
+                    <select name="view" id="view">
+                        <option value="with">Площадь, Мебель</option>
+                        <option value="without">Без мебели</option>
+                    </select>
+                    <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.0075 1L7.00377 7L1 1" stroke="#44565D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>                            
                 </div>
-                <div class="utp__element">
-                    <p class="utp__element__text">Квартиры<br>с отделкой</p>
-                </div>
-                <div class="utp__element">
-                    <p class="utp__element__text">Близко<br>к природе</p>
-                </div>
-                <div class="utp__element">
-                    <p class="utp__element__text">Всё рядом</p>
-                </div>
-                <div class="utp__element">
-                    <p class="utp__element__text">Повышенная комфортность</p>
+                <div class="apartment__floor-plan">
+                    <div class="apartment__swiper swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="imgs/apartment-photo-2.png" data-fancybox="floor">
+                                    <img src="imgs/apartment-photo-2.png" alt="">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="imgs/apartment-photo.png" data-fancybox="floor">
+                                    <img src="imgs/apartment-photo.png" alt="">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="imgs/apartment-photo-2.png" data-fancybox="floor">
+                                    <img src="imgs/apartment-photo-2.png" alt="">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="imgs/apartment-photo.png" data-fancybox="floor">
+                                    <img src="imgs/apartment-photo.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="apartment__mini-swiper swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="imgs/apartment-swiper-floor.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="imgs/apartment-swiper-apartment.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="imgs/apartment-swiper-floor.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="imgs/apartment-swiper-apartment.png" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
                 </div>
             </div>
+            <div class="apartment__control">
+                <div class="apartment__place">
+                    <p>Корпус 2, Этаж 5 из 23</p>
+                    <p>2 комнаты, 49,8 м²</p>
+                </div>
+                <div class="apartment__price">
+                    <p>22 387 456 ₽</p>
+                    <p>449 547 ₽ за м²</p>
+                </div>
+                <a href="#" class="apartment__mortgage">
+                    <div>
+                        <h3>Ипотека</h3>
+                        <div>
+                            <p>Ежемесячный платеж <span>113 242</span> <b>руб/мес</b></p>
+                            <p>Ставка от <span>7,7%</span></p>
+                        </div>
+                    </div>
+                    <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="23" cy="23" r="22" stroke="#D3E2EA" stroke-width="2"/>
+                        <path d="M21 29L28 22.5L21 16" stroke="#44565D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>                            
+                </a>
+                <div class="apartment__buy">
+                    <a href="#">Купить</a>
+                    <a href="#">
+                        <svg width="25" height="28" viewBox="0 0 25 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 23.4889C1 24.9345 1 25.6574 1.37425 26.1065C1.7485 26.5556 2.35086 26.5556 3.55556 26.5556C4.76026 26.5556 5.36261 26.5556 5.73686 26.1065C6.11111 25.6574 6.11111 24.9345 6.11111 23.4889V14.2889C6.11111 12.8433 6.11111 12.1204 5.73686 11.6713C5.36261 11.2222 4.76026 11.2222 3.55556 11.2222C2.35086 11.2222 1.7485 11.2222 1.37425 11.6713C1 12.1204 1 12.8433 1 14.2889V17.3556" stroke="#FC9D27" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M9.94434 9.03175C9.94434 7.65495 9.94434 6.96655 10.3186 6.53883C10.6928 6.11111 11.2952 6.11111 12.4999 6.11111C13.7046 6.11111 14.3069 6.11111 14.6812 6.53883C15.0554 6.96655 15.0554 7.65495 15.0554 9.03175V23.6349C15.0554 25.0117 15.0554 25.7001 14.6812 26.1278C14.3069 26.5556 13.7046 26.5556 12.4999 26.5556C11.2952 26.5556 10.6928 26.5556 10.3186 26.1278C9.94434 25.7001 9.94434 25.0117 9.94434 23.6349V9.03175Z" stroke="#FC9D27" stroke-width="2"/>
+                            <path d="M23.9998 14.5294V23.549C23.9998 24.9663 23.9998 25.675 23.6255 26.1153C23.2513 26.5556 22.6489 26.5556 21.4442 26.5556C20.2395 26.5556 19.6372 26.5556 19.2629 26.1153C18.8887 25.675 18.8887 24.9663 18.8887 23.549V4.00654C18.8887 2.58924 18.8887 1.88059 19.2629 1.4403C19.6372 1 20.2395 1 21.4442 1C22.6489 1 23.2513 1 23.6255 1.4403C23.9998 1.88059 23.9998 2.58924 23.9998 4.00654V8.51634" stroke="#FC9D27" stroke-width="2" stroke-linecap="round"/>
+                        </svg>                            
+                    </a>
+                </div>
+                <ul>
+                    <li>
+                        <span>Этаж</span>20 из 23
+                    </li>
+                    <li>
+                        <span>Корпус</span>2
+                    </li>
+                    <li>
+                        <span>Заселение</span>до 31 июля 2026
+                    </li>
+                    <li>
+                        <span>Отделка</span>Готовая отделка
+                    </li>
+                    <li>
+                        <span>Высота потолков</span>2.75 м
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div class="utp__photos">
-            <img src="imgs/photo-1.png" alt="1" loading="lazy">
-            <div>
-                <img src="imgs/photo-2.png" alt="2" loading="lazy">
-                <img src="imgs/photo-3.png" alt="3" loading="lazy">
-                <img src="imgs/photo-4.png" alt="4" loading="lazy">
-                <img src="imgs/photo-5.png" alt="5" loading="lazy">
+    </section>
+    <section class="calc-ipoteka">
+        <h2 class="section-title calc-ipoteka__title">Ипотека  от застройщика</h2>
+        <div class="calc-ipoteka__wrap">
+            <div class="calc-ipoteka__calc">
+                <div class="calc-ipoteka__content">
+                    <div class="calc-ipoteka__control">
+                        <div class="ipoteka-control">
+                            <div class="ipoteka-control__item">
+                                <div class="ipoteka-control__title">Стоимость недвижимости</div>
+                                <div class="ipoteka-control__input">
+                                    <input disabled type="text" id="ipoteka_price_all_text" value="7 040 000 руб." />
+                                </div>
+                                <div class="slider" id="ipoteka_price_all"></div>
+                            </div>
+                            <div class="ipoteka-control__item ipoteka-control__item--vznos">
+                                <div class="ipoteka-control__title">Первоначальный взнос</div>
+                                <div class="ipoteka-control__input">
+                                    <input disabled type="text" id="ipoteka_vznos_text" value="3 401 666 руб." />
+                                    <input value="" class="percent" disabled type="text" id="ipoteka_percent">
+                                </div>
+                                <div class="slider" id="ipoteka_vznos"></div>
+                            </div>
+                            <div class="ipoteka-control__item">
+                                <div class="ipoteka-control__title">Срок кредита</div>
+                                <div class="ipoteka-control__input">
+                                    <input disabled type="text" id="ipoteka_srok_text" value="300 мес." />
+                                </div>
+                                <div class="slider-range" id="ipoteka_srok"></div>
+                            </div>
+                            <div class="ipoteka-control__order">
+                                <a class="btn btn-new ipoteka-control__btn">оставить заявку</a>
+                                <p>Приведенные расчеты носят предварительный характер.Окончательный расчет суммы крелита и размер ежемесечного платежа производится банком после предоставления полного комплекта документов и проведения оценки платежеспосопности клиента.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="calc-ipoteka__banks">
+                <h3 class="calc-ipoteka__banks__title">Вам подходят программы:</h3>
+                <div class="calc-ipoteka__banks_list">
+                    <div 
+                    class="calc-ipoteka__banks_item"
+                    data-stavka="8.8"
+                    data-srok-min="1"
+                    data-srok-max="30"
+                    data-vznos="25"
+                    >
+                        <div class="calc-ipoteka__banks_item_logo"><img src="imgs/sber-logo.png" alt="logo"></div>
+                        <div class="calc-ipoteka__banks_item_footer">
+                            <div class="calc-ipoteka__banks_item_platezh">
+                                <div class="title">Ежемесячный платеж</div>
+                                <div class="value"><span>113 242</span> руб/мес</div>
+                            </div>
+                            <div class="calc-ipoteka__banks_item_stavka">
+                                <div class="title">Ставка от </div>
+                                <div class="value"><span>8,8%</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div 
+                    class="calc-ipoteka__banks_item"
+                    data-stavka="5.3"
+                    data-srok-min="3"
+                    data-srok-max="30"
+                    data-vznos="20"
+                    >
+                        <div class="calc-ipoteka__banks_item_logo"><img src="imgs/domrf-logo.png" alt="logo"></div>
+                        <div class="calc-ipoteka__banks_item_footer">
+                            <div class="calc-ipoteka__banks_item_platezh">
+                                <div class="title">Ежемесячный платеж</div>
+                                <div class="value"><span>113 242</span> руб/мес</div>
+                            </div>
+                            <div class="calc-ipoteka__banks_item_stavka">
+                                <div class="title">Ставка от </div>
+                                <div class="value"><span>5,3%</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                    class="calc-ipoteka__banks_item"
+                    data-stavka="5"
+                    data-srok-min="1"
+                    data-srok-max="30"
+                    data-vznos="20"
+                    >
+                        <div class="calc-ipoteka__banks_item_logo"><img src="imgs/vtb-logo.png" alt="logo"></div>
+                        <div class="calc-ipoteka__banks_item_footer">
+                            <div class="calc-ipoteka__banks_item_platezh">
+                                <div class="title">Ежемесячный платеж</div>
+                                <div class="value"><span>113 242</span> руб/мес</div>
+                            </div>
+                            <div class="calc-ipoteka__banks_item_stavka">
+                                <div class="title">Ставка от </div>
+                                <div class="value"><span>5%</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                    class="calc-ipoteka__banks_item"
+                    data-stavka="5"
+                    data-srok-min="1"
+                    data-srok-max="30"
+                    data-vznos="20"
+                    >
+                        <div class="calc-ipoteka__banks_item_logo"><img src="imgs/alphabank-logo.png" alt="logo"></div>
+                        <div class="calc-ipoteka__banks_item_footer">
+                            <div class="calc-ipoteka__banks_item_platezh">
+                                <div class="title">Ежемесячный платеж</div>
+                                <div class="value"><span>113 242</span> руб/мес</div>
+                            </div>
+                            <div class="calc-ipoteka__banks_item_stavka">
+                                <div class="title">Ставка от </div>
+                                <div class="value"><span>5%</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                    class="calc-ipoteka__banks_item"
+                    data-stavka="5"
+                    data-srok-min="1"
+                    data-srok-max="30"
+                    data-vznos="20"
+                    >
+                        <div class="calc-ipoteka__banks_item_logo"><img src="imgs/psb-logo.png" alt="logo"></div>
+                        <div class="calc-ipoteka__banks_item_footer">
+                            <div class="calc-ipoteka__banks_item_platezh">
+                                <div class="title">Ежемесячный платеж</div>
+                                <div class="value"><span>113 242</span> руб/мес</div>
+                            </div>
+                            <div class="calc-ipoteka__banks_item_stavka">
+                                <div class="title">Ставка от </div>
+                                <div class="value"><span>5%</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                    class="calc-ipoteka__banks_item"
+                    data-stavka="5"
+                    data-srok-min="1"
+                    data-srok-max="30"
+                    data-vznos="20"
+                    >
+                        <div class="calc-ipoteka__banks_item_logo"><img src="imgs/gasprombank-logo.png" alt="logo"></div>
+                        <div class="calc-ipoteka__banks_item_footer">
+                            <div class="calc-ipoteka__banks_item_platezh">
+                                <div class="title">Ежемесячный платеж</div>
+                                <div class="value"><span>113 242</span> руб/мес</div>
+                            </div>
+                            <div class="calc-ipoteka__banks_item_stavka">
+                                <div class="title">Ставка от </div>
+                                <div class="value"><span>5%</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -279,101 +493,6 @@
                 </div>
             </div>
         </div>
-    </section>
-    <section class="life" id="life">
-        <h2 class="section-title life__title">жизнь в симфонии</h2>
-        <div class="life__swiper swiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide"><a href="imgs/slide-1.png" data-fancybox="life"><img src="imgs/slide-1.png" alt="bg"></a></div>
-                <div class="swiper-slide"><a href="imgs/slide-2.png" data-fancybox="life"><img src="imgs/slide-2.png" alt="bg"></a></div>
-                <div class="swiper-slide"><a href="imgs/slide-3.png" data-fancybox="life"><img src="imgs/slide-3.png" alt="bg"></a></div>
-                <div class="swiper-slide"><a href="imgs/slide-4.png" data-fancybox="life"><img src="imgs/slide-4.png" alt="bg"></a></div>
-                <div class="swiper-slide"><a href="imgs/slide-5.png" data-fancybox="life"><img src="imgs/slide-5.png" alt="bg"></a></div>
-                <div class="swiper-slide"><a href="imgs/slide-6.png" data-fancybox="life"><img src="imgs/slide-6.png" alt="bg"></a></div>
-                <div class="swiper-slide"><a href="imgs/slide-7.png" data-fancybox="life"><img src="imgs/slide-7.png" alt="bg"></a></div>
-                <div class="swiper-slide"><a href="imgs/slide-8.png" data-fancybox="life"><img src="imgs/slide-8.png" alt="bg"></a></div>
-                <div class="swiper-slide"><a href="imgs/slide-8.png" data-fancybox="life"><img src="imgs/slide-8.png" alt="bg"></a></div>
-                <div class="swiper-slide"><a href="imgs/slide-7.png" data-fancybox="life"><img src="imgs/slide-7.png" alt="bg"></a></div>
-                <div class="swiper-slide"><a href="imgs/slide-6.png" data-fancybox="life"><img src="imgs/slide-6.png" alt="bg"></a></div>
-                <div class="swiper-slide"><a href="imgs/slide-5.png" data-fancybox="life"><img src="imgs/slide-5.png" alt="bg"></a></div>
-                <div class="swiper-slide"><a href="imgs/slide-4.png" data-fancybox="life"><img src="imgs/slide-4.png" alt="bg"></a></div>
-                <div class="swiper-slide"><a href="imgs/slide-3.png" data-fancybox="life"><img src="imgs/slide-3.png" alt="bg"></a></div>
-                <div class="swiper-slide"><a href="imgs/slide-2.png" data-fancybox="life"><img src="imgs/slide-2.png" alt="bg"></a></div>
-                <div class="swiper-slide"><a href="imgs/slide-1.png" data-fancybox="life"><img src="imgs/slide-1.png" alt="bg"></a></div>
-            </div>
-            <div class="swiper-pagination life__swiper-pagination"></div>
-        </div>
-    </section>
-    <section class="album">
-        <2 class="section-title album__title">альбом планировок</h2>
-        <form action="#" class="album__form">
-            <div class="album__form__content">
-                <input class="album__input album__input_email" type="email" placeholder="e-mail">
-                <input class="album__input album__input_tel" type="tel" placeholder="телефон">
-                <button class="album__form__button">скачать pdf
-                    <svg width="8" height="9" viewBox="0 0 8 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1 1L4 4L7 1" stroke="#FC9D27" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M1 5L4 8L7 5" stroke="#FC9D27" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>                        
-                </button>
-                <p class="album__form__warning">нажимая кнопку «скачать PDF», вы принимаете условия передачи указанной информации</p>
-            </div>
-        </form>
-        <img src="imgs/album-book.png" alt="book" class="album__book" loading="lazy">
-        <img src="imgs/album-light.png" alt="light" class="album__light">
-        <div class="album__desktop">
-            <img src="imgs/album-house.png" alt="house" class="album__house" loading="lazy">
-            <img src="imgs/leaves-2.png" alt="leaves" class="album__leaves" loading="lazy">
-            <img src="imgs/leaves-1.png" alt="leaves" class="album__leaves-bg" loading="lazy">
-        </div>
-        <div class="album__mobile">
-            <img src="imgs/mobile-album-house.png" alt="house" class="album__house" loading="lazy">
-            <img src="imgs/mobile-album-leaves.png" alt="leaves" class="album__leaves" loading="lazy">
-        </div>
-    </section>
-    <section class="news">
-        <h2 class="section-title news__title">Новости</h2>
-        <div class="news__content">
-            <a href="#" class="news__card">
-                <div class="news__card__wrapper">
-                    <p class="news__card__date">28 <span>/ 09 / 23</span></p>
-                    <h2 class="news__card__title">На строительной площадке Симфония ведется бетонирование фундаментной плиты</h2>
-                    <p class="news__card__text">На строительной площадке первой очереди семейного премиального жилого квартала PRIDE на конец сентября залито 1150 кубометров бетона фундаментных плит паркинга. Ведется подготовка к бетонированию фундаментных плит секций . . .</p>
-                    <svg class="news__card__button" width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="23" cy="23" r="22" stroke="#D3E2EA" stroke-width="2"/>
-                        <path d="M21 29L28 22.5L21 16" stroke="#44565D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </div>
-            </a>
-            <a href="#" class="news__card">
-                <div class="news__card__wrapper">
-                    <p class="news__card__date">28 <span>/ 09 / 23</span></p>
-                    <h2 class="news__card__title">На строительной площадке Симфония ведется бетонирование фундаментной плиты</h2>
-                    <p class="news__card__text">На строительной площадке первой очереди семейного премиального жилого квартала PRIDE на конец сентября залито 1150 кубометров бетона фундаментных плит паркинга. Ведется подготовка к бетонированию фундаментных плит секций . . .</p>
-                    <svg class="news__card__button" width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="23" cy="23" r="22" stroke="#D3E2EA" stroke-width="2"/>
-                        <path d="M21 29L28 22.5L21 16" stroke="#44565D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </div>
-            </a>
-            <a href="#" class="news__card">
-                <div class="news__card__wrapper">
-                    <p class="news__card__date">28 <span>/ 09 / 23</span></p>
-                    <h2 class="news__card__title">На строительной площадке Симфония ведется бетонирование фундаментной плиты</h2>
-                    <p class="news__card__text">На строительной площадке первой очереди семейного премиального жилого квартала PRIDE на конец сентября залито 1150 кубометров бетона фундаментных плит паркинга. Ведется подготовка к бетонированию фундаментных плит секций . . .</p>
-                    <svg class="news__card__button" width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="23" cy="23" r="22" stroke="#D3E2EA" stroke-width="2"/>
-                        <path d="M21 29L28 22.5L21 16" stroke="#44565D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </div>
-            </a>
-        </div>
-        <a href="#" class="news__all-news">все новости
-            <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1 7.5L4 4.5L1 1.5" stroke="#FC9D27" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M5 7.5L8 4.5L5 1.5" stroke="#FC9D27" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>                
-        </a>
     </section>
     <footer class="footer">
         <div class="footer__wrapper">

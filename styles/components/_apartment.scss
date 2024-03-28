@@ -1,157 +1,74 @@
 .apartment {
     display: flex;
     flex-direction: column;
+    margin-bottom: 96px;
 
-    &__title {
+    @media #{$tablet} {
+        margin-bottom: 76px;
+    }
+
+    h1 {
         font-size: 50px;
-        margin-top: 194px;
-        margin-bottom: 30px;
+
+        @media screen and (max-width: 1225px) {
+            font-size: 50px !important;
+        }
 
         @media #{$tablet} {
-            margin: 100px 0 33px 13px;
-            max-width: 700px;
-        }
-
-        @media #{$phone} {
-            margin: 100px 0 10px 13px;
-            max-width: 350px;
-        }
-
-        @media screen and (max-width: 600px) {
-            margin-left: 13px;
+            font-size: 40px !important;
         }
     }
 
     &__wrapper {
         width: 83%;
         margin: 0 auto;
-
-        @media screen and (max-width: 1450px) {
-            width: 90%;
-        }
-
-        @media screen and (max-width: 1350px) {
-            width: 92.5%;
-        }
-
-        @media #{$tablet} {
-            width: 100%;
-        }
-    }
-
-    &__content {
         display: flex;
         justify-content: space-between;
+
+        @media screen and (max-width: 1169px) {
+            width: calc(100% - 20px);
+            margin: 0 10px;
+        }
 
         @media #{$tablet} {
             flex-direction: column;
             align-items: center;
         }
     }
-
-    &__view,
-    &__control {
-        display: flex;
-        flex-direction: column;
-    }
-
-    &__view {
-        position: relative;
-    }
-
-    &__compass {
-        position: absolute;
-        width: max-content;
-        height: max-content;
-        top: 50px;
-        right: -200px;
-
-        @media screen and (max-width: 1800px) {
-            right: -100px;
-        }
-
-        @media screen and (max-width: 1070px) {
-            width: 80px;
-            right: -30px;
-        }
-
-        @media #{$tablet} {
-            width: max-content;
-            right: -150px;
-        }
-
-        @media #{$phone} {
-            width: max-content;
-            right: -50px;
-        }
-
-        @media screen and (max-width: 550px) {
-            width: 80px;
-            top: 75px;
-            right: -30px;
-        }
-
-        @media screen and (max-width: 400px) {
-            right: 0;
-        }
-    }
     
-    &__control {
-        width: 568px;
-        height: 783px;
-        padding: 35px 24px 0 24px;
-        box-sizing: border-box;
-        border-radius: 10px;
-        border: 1px solid #D9E3EB;
-        background: rgba(255, 255, 255, .2);
-        box-shadow: 0px 4px 50px 0px rgba(74, 125, 152, 0.10);
-
-        @media screen and (max-width: 1565px) {
-            width: 500px;
-        }
-
-        @media screen and (max-width: 1200px) {
-            width: 400px;
-        }
-
+    &__view {
         @media #{$tablet} {
-            width: 568px;
-        }
-
-        @media screen and (max-width: 600px) {
-            width: 400px;
-        }
-
-        @media screen and (max-width: 450px) {
-            width: 349px;
+            width: 100%;
         }
     }
 
     &__select {
-        font-family: $second-color;
-        font-size: 18px;
-        font-weight: $font-weight-base;
-        color: $color-gray;
-        width: calc(100% + 16px);
-        height: 100%;
-        padding: 14px 0 14px 16px;
-        border: none;
-        cursor: pointer;
+        position: relative;
+        max-width: 282px;
+        border-radius: 10px;
+        border: 1px solid #C8D9E3;
+        margin-top: 18px;
+        margin-bottom: 47px;
+        overflow: hidden;
 
-        &-box {
-            position: relative;
-            max-width: 282px;
-            border-radius: 10px;
-            border: 1px solid #C8D9E3;
-            margin-bottom: 47px;
-            overflow: hidden;
-
-            @media #{$tablet} {
-                margin-bottom: 75px;
-            }
+        @media #{$tablet} {
+            margin-bottom: 75px;
         }
 
-        &__arrow {
+        select {
+            font-family: $second-font;
+            font-size: 18px;
+            font-weight: $font-weight-base;
+            background-color: transparent;
+            color: $color-gray;
+            width: calc(100% + 16px);
+            height: 100%;
+            padding: 14px 0 14px 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        svg {
             position: absolute;
             top: 22px;
             right: 20px;
@@ -159,73 +76,161 @@
         }
     }
 
-    &__photo {
-        margin: 0 0 110px 73px;
+    &__floor-plan {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    &__swiper,
+    &__mini-swiper {
+        width: 810px;
 
         @media screen and (max-width: 1700px) {
-            width: 500px;
+            width: 610px;
         }
 
         @media screen and (max-width: 1300px) {
-            width: 400px;
+            width: 510px;
         }
-
-        @media #{$tablet} {
-            margin: 0 0 50px 0;
-        }
-
+        
         @media screen and (max-width: 550px) {
-            width: 300px;
+            width: 360px;
+        }
+
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
         }
     }
 
-    &__floor-plan {
-        &__title {
-            font-family: $main-font;
-            font-size: 30px;
-            font-weight: $font-weight-bold;
-            color: $color-gray;
-            margin-bottom: 10px;
+    &__swiper {
+        margin-bottom: 110px;
+
+        .swiper-slide {
+            a {
+                max-width: 100%;
+                img {
+                    max-width: 100%;
+                    pointer-events: none;
+                }
+            }
+        }
+    }
+
+    &__mini-swiper {
+        .swiper-slide {
+            img {
+                pointer-events: none;
+
+                @media screen and (max-width: 1700px) {
+                    height: 160px;
+                }
+
+                @media screen and (max-width: 1300px) {
+                    height: 120px;
+                }
+
+                @media screen and (max-width: 550px) {
+                    height: 100px;
+                }
+            }
+        }
+
+        .swiper-button-next::after,
+        .swiper-button-prev::after {
+            font-size: 17px;
+            color: #AABFD4;
+        }
+
+        .swiper-button-prev::after {
+            @media screen and (max-width: 550px) {
+                margin-right: 25px;
+            }
+        }
+
+        .swiper-button-next::after {
+            @media screen and (max-width: 550px) {
+                margin-left: 25px;
+            }
+        }
+    }
+
+    &__control {
+        width: 35.6%;
+        height: max-content;
+        padding: 35px 24px 58px;
+        box-sizing: border-box;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, .2);
+        box-shadow: 0px 4px 50px 0px rgba(74, 125, 152, 0.10);
+
+        @media #{$desktop} {
+            width: 40%;
+        }
+
+        @media #{$tablet} {
+            width: 75%;
+        }
+
+        @media #{$phone} {
+            padding: 24px 15px 48px 11px;
+            width: 100%;
         }
     }
 
     &__place {
-        font-family: $second-font;
-        font-size: $font-size-base;
-        font-weight: $font-weight-base;
-        line-height: 20px;
-        color: #8EA4B0;
-        margin-left: 17px;
-    }
+        padding: 0 0 27px 17px;
+        border-bottom: 1px #DFE7EE solid;
 
-    &__square {
-        font-family: $second-font;
-        font-size: 30px;
-        font-weight: $font-weight-base;
-        line-height: 31px;
-        color: #373737;
-        margin: 0 0 60px 17px;
+        @media #{$phone} {
+            padding-bottom: 0;
+            border: none;
+        }
+
+        p:nth-of-type(1) {
+            font-family: $second-font;
+            font-size: $font-size-base;
+            font-weight: $font-weight-base;
+            line-height: 20px;
+            color: #8EA4B0;
+        }
+
+        p:nth-of-type(2) {
+            font-family: $second-font;
+            font-size: 30px;
+            font-weight: $font-weight-base;
+            line-height: 31px;
+            color: #373737;
+        }
     }
 
     &__price {
-        font-family: $second-font;
-        font-size: 40px;
-        font-weight: $font-weight-base;
-        line-height: 31px;
-        color: #FC9D27;
-        margin: 0 0 10px 17px;
+        margin: 34px 0 44px 17px;
 
-        &-meter {
+        @media #{$phone} {
+            margin: 27px 0 27px 17px;
+        }
+
+        p:nth-of-type(1) {
+            font-family: $second-font;
+            font-size: 40px;
+            font-weight: $font-weight-base;
+            line-height: 31px;
+            color: #FC9D27;
+            margin-bottom: 10px;
+        }
+
+        p:nth-of-type(2) {
             font-family: $second-font;
             font-size: 25px;
             font-weight: $font-weight-base;
             line-height: 20px;
             color: #8EA4B0;
-            margin: 0 0 44px 17px;
         }
     }
 
     &__mortgage {
+        position: relative;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -238,12 +243,7 @@
         border: 1px solid #DDE6ED;
         margin-bottom: 20px;
 
-        &__content {
-            display: flex;
-            flex-direction: column;
-        }
-
-        &__title {
+        h3 {
             font-family: $main-font;
             font-size: 25px;
             font-weight: $font-weight-bold;
@@ -252,109 +252,129 @@
             margin: 8px 0 4px 0;
         }
 
-        &__bottom {
+        div>div {
             display: flex;
             align-items: flex-end;
+
+            p {
+                max-width: 145px;
+                font-family: $second-font;
+                font-size: 14px;
+                font-weight: $font-weight-base;
+                line-height: 24.5px;
+                color: #A1ADB4;
+
+                &:nth-of-type(1) {
+                    margin-right: 36px;
+
+                    @media screen and (max-width: 450px) {
+                        margin-right: 0;
+                    }
+                }
+
+                span {
+                    font-family: $main-font;
+                    font-size: 25px;
+                    font-weight: $font-weight-bold;
+                    color: #45809F;
+                }
+    
+                b {
+                    font-size: 18px;
+                    color: #0F0F0F;
+                }
+            }
         }
 
-        &__payment,
-        &__bid {
-            max-width: 145px;
-            font-family: $second-font;
-            font-size: 14px;
-            font-weight: $font-weight-base;
-            line-height: 24.5px;
-            color: #A1ADB4;
-            margin-right: 36px;
-
-            @media screen and (max-width: 1200px) {
-                max-width: none;
-            }
-
-            @media #{$tablet} {
-                max-width: 145px;
-            }
-
-            @media screen and (max-width: 600px) {
-                max-width: none;
-            }
-
-            @media screen and (max-width: 450px) {
-                margin-right: 0;
-            }
-
-            span {
-                font-family: $main-font;
-                font-size: 25px;
-                font-weight: $font-weight-bold;
-                color: #45809F;
-            }
-
-            b {
-                font-size: 18px;
-                color: #0F0F0F;
+        svg {
+            @media #{$phone} {
+                position: absolute;
+                width: 36px;
+                height: 36px;
+                top: 13px;
+                right: 15px;
             }
         }
     }
 
     &__buy {
-        font-family: $main-font;
-        font-size: 20px;
-        font-weight: $font-weight-bold;
-        color: $color-white;
-        text-align: center;
-        text-decoration: none;
-        background-color: #FC9D27;
-        padding: 16px 0;
-        border-radius: 10px;
-        margin-bottom: 50px;
-        transition: all .1s linear;
+        display: flex;
+        margin-bottom: 45px;
 
-        &:hover {
-            color: $second-color;
+        @media #{$phone} {
+            margin-bottom: 10px;
+        }
+
+        a:nth-of-type(1) {
+            font-family: $main-font;
+            font-size: 20px;
+            font-weight: $font-weight-bold;
+            line-height: 49px;
+            color: $color-white;
+            text-align: center;
+            text-decoration: none;
+            width: 100%;
+            background-color: #FC9D27;
+            border-radius: 10px;
+            transition: all .1s linear;
+    
+            &:hover {
+                color: $second-color;
+            }
+        }
+
+        a:nth-of-type(2) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 68px;
+            background-color: $color-white;
+            border-radius: 10px;
+            box-shadow: 0 0 25px rgba($color: #08212E, $alpha: 0.08);
+            margin-left: 5px;
+
+            &:hover {
+                path {
+                    stroke: $second-color;
+                }
+            }
+
+            svg {
+                width: 23px;
+
+                path {
+                    transition: all .1s linear;
+                }
+            }
         }
     }
 
-    &__characteristic {
-        margin-left: 17px;
+    ul {
+        margin: 0;
+        padding-left: 26px;
 
-        &__element {
+        @media #{$phone} {
+            padding-left: 17px;
+        }
+
+        li {
+            display: flex;
+            font-family: $second-font;
+            font-size: 18px;
+            font-weight: $font-weight-base;
+            color: $color-gray;
             padding: 17px 0;
             border-bottom: 1px solid #DFE7EE;
 
             &:last-child {
                 border-bottom: none;
             }
-        }
-
-        &__text {
-            display: flex;
-            font-family: $second-font;
-            font-size: 18px;
-            font-weight: $font-weight-base;
-            color: $color-gray;
 
             span {
-                width: 218px;
+                width: 50%;
                 font-family: $main-font;
                 font-size: 20px;
                 font-weight: $font-weight-bold;
-                
-                @media screen and (max-width: 1565px) {
-                    width: 180px;
-                }
-
-                @media screen and (max-width: 1200px) {
-                    width: 130px;
-                }
-
-                @media #{$tablet} {
-                    width: 218px;
-                }
-
-                @media screen and (max-width: 600px) {
-                    width: 130px;
-                }
             }
         }
     }
