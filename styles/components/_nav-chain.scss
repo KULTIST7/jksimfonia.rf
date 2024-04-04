@@ -1,8 +1,8 @@
 .nav-chain {
-    margin: 150px 8.5% 35px;
+    margin: 150px 8.5% 0;
 
     @media screen and (max-width: 1169px) {
-        margin: 150px 10px 25px;
+        margin: 150px 10px 0;
     }
 
     @media #{$tablet} {

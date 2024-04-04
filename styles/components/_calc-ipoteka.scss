@@ -1,11 +1,11 @@
 .calc-ipoteka {
     position: relative;
     width: 83%;
-    margin: 0 auto 175px;
+    margin: 0 auto;
 
     @media #{$phone} {
         width: calc(100% - 26px);
-        margin: 25px 13px 175px;
+        margin: 25px 13px 0;
     }
 
     &__wrap {
@@ -13,7 +13,7 @@
         justify-content: space-between;
         align-items: center;
         height: 531px;
-        margin-top: 100px;
+        margin-top: 45px;
         border-radius: 87px;
         border: 1px solid #DEE7EE;
 

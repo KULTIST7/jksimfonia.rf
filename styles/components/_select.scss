@@ -296,8 +296,8 @@
             }
         }
 
-        &__price,
-        &__place {
+        &__price-box,
+        &__place-box {
             display: flex;
             flex-direction: column;
             width: 50%;
@@ -309,7 +309,7 @@
 
         &__price-box {
             border-right: 1px #CADAE4 solid;
-            padding-right: 9.4%;
+            padding-right: 16.6%;
 
             @media #{$tablet} {
                 padding-right: 2.5%;
@@ -359,7 +359,7 @@
         &__place-box {
             justify-content: space-between;
             box-sizing: border-box;
-            padding: 0 0 0 9.4%;
+            padding: 0 0 0 16.6%;
             height: auto;
 
             @media #{$tablet} {

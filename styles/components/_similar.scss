@@ -1,0 +1,13 @@
+.similar {
+    @media #{$tablet} {
+        margin-top: 50px;
+    }
+
+    &__content {
+        margin-top: 57px;
+
+        @media #{$tablet} {
+            margin-top: 20px;
+        }
+    }
+}
